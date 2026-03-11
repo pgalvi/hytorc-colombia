@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Capacitación CECH | HYTORC Colombia</title>
+    <link rel="apple-touch-icon" href="assets/Logo col.png">
+    <meta name="theme-color" content="#dc143c">
+  <meta name="description"
+    content="Capacitación CECH de HYTORC. Centro de Evaluación y Certificación HYTORC. Cursos de formación certificados por ASME." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.hytorc.com.co/capacitacion-cech.html" />
+  <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile-fixes.css" />
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <style>
+    /* ===== CECH / CAPACITACIÓN PAGE SCOPED STYLES ===== */
+    .cech-page { font-family: 'Source Sans 3', Arial, sans-serif; }
+    .cech-section { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
+
+    /* Banner */
+    .cech-banner {
+      background: url('assets/dim-background-black.png') no-repeat center center;
+      background-size: cover;
+      padding: 100px 0 50px;
+      position: relative;
+    }
+    .cech-banner::before {
+      content: '';
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.45);
+      z-index: 0;
+    }
+    .cech-banner .cech-section {
+      position: relative; z-index: 1;
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 30px;
+    }
+    .cech-banner-text h1 {
+      font-size: 36px; color: #fff; font-weight: 700;
+      text-transform: uppercase; margin-bottom: 8px;
+    }
+    .cech-banner-text h2 { font-size: 18px; color: #fff; font-weight: 400; margin: 0; }
+    .cech-banner-text h2.gold { color: goldenrod; }
+    .cech-banner-logo img { width: 160px; }
+
+    /* Title style (red left border) */
+    .cech-title {
+      font-size: 26px; font-weight: 700; color: #1a2936;
+      border-left: 3px solid #e42528; padding-left: 15px;
+      text-transform: uppercase; margin-bottom: 25px;
+    }
+    .cech-title span { font-weight: 400; }
+
+    /* Asociaciones */
+    .cech-asociaciones { padding: 60px 0; }
+    .cech-asociaciones-grid {
+      display: flex; flex-wrap: wrap; gap: 40px; align-items: center;
+    }
+    .cech-asoc-text { flex: 1 1 450px; }
+    .cech-asoc-text p { font-size: 15px; line-height: 1.7; color: #555; }
+    .cech-asoc-text p strong { color: #333; }
+    .cech-asoc-logos {
+      flex: 1 1 300px;
+      display: flex; align-items: center; justify-content: flex-end; gap: 20px;
+    }
+    .cech-asoc-logos img { height: 80px; }
+    .cech-asoc-logos .cech-separator {
+      width: 1px; height: 80px; background: #ccc;
+    }
+
+    /* Formación (image left, text right) */
+    .cech-formacion { padding: 0; }
+    .cech-formacion-grid {
+      display: flex; flex-wrap: wrap; align-items: stretch;
+    }
+    .cech-formacion-img { flex: 1 1 50%; }
+    .cech-formacion-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .cech-formacion-content { flex: 1 1 50%; padding: 50px 40px; }
+    .cech-formacion-content p { font-size: 14px; color: #777; line-height: 1.7; margin-bottom: 25px; }
+
+    .cech-features-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 25px;
+    }
+    .cech-feature { display: flex; gap: 12px; }
+    .cech-feature-icon { width: 30px; height: 30px; flex-shrink: 0; margin-top: 3px; }
+    .cech-feature-icon img { width: 100%; height: 100%; object-fit: contain; }
+    .cech-feature h5 { font-size: 15px; font-weight: 700; color: #333; margin-bottom: 6px; }
+    .cech-feature ul { padding-left: 18px; margin: 0; }
+    .cech-feature li { font-size: 13px; color: #777; line-height: 1.6; }
+    .cech-feature p { font-size: 13px; color: #777; margin: 0; }
+
+    /* Certificaciones */
+    .cech-certificaciones { padding: 60px 0; }
+    .cech-cert-grid {
+      display: flex; flex-wrap: wrap; gap: 60px; justify-content: center;
+      margin-top: 30px;
+    }
+    .cech-cert-card { flex: 1 1 350px; max-width: 500px; }
+    .cech-cert-card h3 {
+      font-size: 22px; font-weight: 700; color: #1a2936;
+      text-align: center; margin-bottom: 15px;
+    }
+    .cech-cert-card p, .cech-cert-card li {
+      font-size: 14px; color: #555; line-height: 1.7;
+    }
+    .cech-cert-card ul { padding-left: 20px; }
+    .cech-cert-card a.cech-read-more {
+      color: #555; font-size: 14px; text-decoration: none;
+      cursor: pointer;
+    }
+    .cech-cert-card a.cech-read-more:hover { text-decoration: underline; }
+    .cech-cert-card .cech-hidden-text { display: none; }
+    .cech-cert-card .cech-hidden-text.cech-expanded { display: block; }
+
+    /* Entrenar es fácil */
+    .cech-training {
+      background: url('assets/bk-WhiteTools.jpg') no-repeat center center;
+      background-size: cover; position: relative;
+      padding: 60px 0; color: #fff;
+    }
+    .cech-training::before {
+      content: '';
+      position: absolute; top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.65);
+      z-index: 0;
+    }
+    .cech-training .cech-section { position: relative; z-index: 1; }
+    .cech-training-grid {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 40px;
+    }
+    .cech-training-text { flex: 1 1 300px; }
+    .cech-training-text h2 {
+      font-size: 28px; font-weight: 400; color: #fff;
+      border-left: 3px solid goldenrod; padding-left: 15px; margin-bottom: 15px;
+    }
+    .cech-training-text h2 b { font-weight: 700; }
+    .cech-training-text p { font-size: 14px; color: #ddd; line-height: 1.7; }
+
+    .cech-training-features { flex: 1 1 500px; }
+    .cech-training-feat-grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 25px;
+    }
+    .cech-train-feat { display: flex; gap: 12px; }
+    .cech-train-feat-icon { width: 40px; height: 40px; flex-shrink: 0; }
+    .cech-train-feat-icon img { width: 100%; }
+    .cech-train-feat h5 {
+      font-size: 14px; font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: 5px;
+    }
+    .cech-train-feat p { font-size: 13px; color: #ccc; margin: 0; line-height: 1.6; }
+
+    /* Cursos */
+    .cech-cursos { padding: 60px 0; }
+    .cech-cursos-grid {
+      display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px;
+    }
+    .cech-curso-card { flex: 1 1 300px; }
+    .cech-curso-card img { width: 100%; border-radius: 4px; margin-bottom: 15px; }
+    .cech-curso-card h4 {
+      font-size: 14px; font-weight: 700; color: #1a2936;
+      text-transform: uppercase; margin-bottom: 10px;
+    }
+    .cech-curso-card p { font-size: 13px; color: #555; line-height: 1.7; }
+    .cech-curso-card p b { color: #333; }
+
+    /* Contacto form */
+    .cech-contacto { padding: 60px 0; background: #f8f8f8; }
+    .cech-contacto .cech-title { margin-bottom: 30px; }
+    .cech-form-grid { display: flex; flex-wrap: wrap; gap: 30px; }
+    .cech-form-left { flex: 1 1 350px; }
+    .cech-form-right { flex: 1 1 350px; }
+    .cech-form-group { margin-bottom: 20px; }
+    .cech-form-group label {
+      font-size: 12px; text-transform: uppercase; color: #999;
+      letter-spacing: 1px; display: block; margin-bottom: 6px;
+    }
+    .cech-form-group input, .cech-form-group textarea {
+      width: 100%; border: none; border-bottom: 1px solid #ccc;
+      background: transparent; padding: 8px 0;
+      font-size: 14px; color: #333; outline: none;
+      font-family: 'Source Sans 3', Arial, sans-serif;
+    }
+    .cech-form-group textarea { resize: vertical; min-height: 180px; }
+    .cech-form-submit {
+      text-align: right; margin-top: 15px;
+    }
+    .cech-form-submit button {
+      background: #1a2936; color: #fff; border: none;
+      padding: 10px 30px; font-size: 14px; font-weight: 600;
+      text-transform: uppercase; letter-spacing: 1px; cursor: pointer;
+      transition: background 0.3s;
+    }
+    .cech-form-submit button:hover { background: #333; }
+
+    @media (max-width: 991px) {
+      .cech-formacion-grid { flex-direction: column; }
+      .cech-features-grid { grid-template-columns: 1fr; }
+      .cech-training-feat-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 575px) {
+      .cech-banner-text h1 { font-size: 26px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- .......... HEADER .......... -->
+  <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
+                <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="productos.html">PRODUCTOS</a>
+                        <div class="dropdown">
+                            <div class="product-nav-banner" style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
+                                <a href="productos_hidraulica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png" alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
+                                    <span class="product-nav-text">Hidráulicas</span>
+                                </a>
+                                <a href="productos_neumatica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
+                                    <span class="product-nav-text">Neumáticas</span>
+                                </a>
+                                <a href="productos_electricas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Eléctricas</span>
+                                </a>
+                                <a href="herramienta-manual.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Manual</span>
+                                </a>
+                                <a href="productos_tensionadores_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Tensionadores</span>
+                                </a>
+                                <a href="productos_sujetadores.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Sujetadores</span>
+                                </a>
+                                <a href="productos_accesorios.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Accesorios</span>
+                                </a>
+                                <a href="productos_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+                                    <span class="product-nav-text">Bombas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                                                  <li class="has-dropdown mega-dropdown">
+            <a href="servicios.html">SERVICIOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="taller-servicios.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/taller .png" alt="Taller de Servicios" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Taller de Servicios</span>
+                </a>
+                <a href="calibracion.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/calibracion.png" alt="Calibración" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Calibración</span>
+                </a>
+                <a href="software.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/software.png" alt="Softwares" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Softwares</span>
+                </a>
+                <a href="capacitacion-cech.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/capacitacion.png" alt="Capacitación CECH" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Capacitación CECH</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                              <li class="has-dropdown mega-dropdown">
+            <a href="#">QUIÉNES SOMOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="sobre-nosotros.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-1.png" alt="Sobre nosotros" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Acerca de nosotros</span>
+                </a>
+                <a href="industrias.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-5.png" alt="Industria" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Industria</span>
+                </a>
+                <a href="estandar-hytorc.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/hytorc_standard.png" alt="Hytorc Standard" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Hytorc Standard</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="contacto.html">CONTÁCTANOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="contacto-ubicacion.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-4.png" alt="Ubicación" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                                    </div>
+                                    <span>Ubicación</span>
+                                </a>
+                                <a href="quejas-y-sugerencias.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                                    </div>
+                                    <span>Quejas y Sugerencias</span>
+                                </a>
+                                <a href="cotizaciones.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-3.png" alt="Cotizar" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                                    </div>
+                                    <span>Cotizar</span>
+                                </a>
+                                <a href="bolsa-trabajo.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+                                    </div>
+                                    <span>Bolsa de Trabajo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <div class="header-social">
+                    <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+                    <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z"/></svg></a>
+                    <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+                    <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+  <!-- .......... MAIN .......... -->
+  <main class="page-content cech-page">
+
+    <!-- BANNER -->
+    <section class="cech-banner">
+      <div class="cech-section">
+        <div class="cech-banner-text">
+          <h1>CAPACITACIÓN HYTORC</h1>
+          <h2>NO TE LIMITES A CAPACITARTE,</h2>
+          <h2 class="gold">¡CAPACÍTATE EN EL CECH!</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ASOCIACIONES PERFECTAS -->
+    <section class="cech-asociaciones">
+      <div class="cech-section">
+        <div class="cech-asociaciones-grid">
+          <div class="cech-asoc-text">
+            <h2 class="cech-title">ASOCIACIONES <span>PERFECTAS</span></h2>
+            <p>HYTORC es la <strong>ÚNICA</strong> empresa de torque que ofrece capacitación certificada por ASME.</p>
+            <p><strong>Norma de Competencia Técnica:</strong> Operación de Equipos Hytorc certificada por ANCE.</p>
+            <p>• <strong>AGENTE CAPACITADOR STPS: CIS8803057Z6</strong></p>
+            <p>•Acreditados por <strong>ANCE</strong> como Centro Evaluador de la Norma de Competencia Técnica: <strong>Operación de Equipos HYTORC de Torque/Tensión.</strong></p>
+          </div>
+          <div class="cech-asoc-logos">
+            <img src="assets/Captura de pantalla 2026-03-04 191551.png" alt="HYTORC" loading="lazy" decoding="async">
+            <div class="cech-separator"></div>
+            <img src="assets/Captura de pantalla 2026-03-04 182125.png" alt="ASME" loading="lazy" decoding="async">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ¿POR QUÉ FORMACIÓN HYTORC? -->
+    <section class="cech-formacion">
+      <div class="cech-formacion-grid">
+        <div class="cech-formacion-img">
+          <img src="assets/Captura de pantalla 2026-03-04 114134.png" alt="Formación HYTORC" loading="lazy" decoding="async">
+        </div>
+        <div class="cech-formacion-content">
+          <h2 class="cech-title">¿POR QUÉ FORMACIÓN HYTORC?</h2>
+          <p>En el Centro de Evaluación y Certificación HYTORC (CECH), nuestro objetivo es elevar la seguridad de sus requisitos operativos y de mantenimiento, mejorando los principios y prácticas de empernado industrial y ayudándolo a mejorar sus habilidades en el manejo de herramientas para satisfacer sus necesidades de mantenimiento.</p>
+          <div class="cech-features-grid">
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/Captura de pantalla 2026-03-04 182217.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>¡Ahorra dinero!</h5>
+                <ul>
+                  <li>Tasas de lesiones más bajas.</li>
+                  <li>Tiempo de inactividad reducido.</li>
+                  <li>Menos reelaboración.</li>
+                  <li>Soporte continuo.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/Captura de pantalla 2026-03-04 182112.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>Formación de expertos</h5>
+                <ul>
+                  <li>Seguridad incorporada en cada curso.</li>
+                  <li>Evaluaciones prácticas durante las clases.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/Captura de pantalla 2026-03-04 182129.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>Personal Certificado</h5>
+                <ul>
+                  <li>Agente Capacitador con Registro STPS.</li>
+                  <li>Instructores Certificados ante CONOCER.</li>
+                  <li>Personal Certificado en la Norma de Competencia Técnica: Operación de Equipos Hytorc.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/Captura de pantalla 2026-03-04 182200.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>Asociado ASME y ANCE</h5>
+                <ul>
+                  <li>Cursos alineados con ASME PCC-1 – 2022.</li>
+                  <li>Certificación en Norma de Competencia Técnica Operación de Equipos Hytorc.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/m.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>Excelencia Operativa</h5>
+                <ul>
+                  <li>Equipos capacitados contribuyen a operaciones más fluidas y confiables.</li>
+                  <li>Menos retrabajos y tiempo de inactividad.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cech-feature">
+              <div class="cech-feature-icon"><img src="assets/Captura de pantalla 2026-03-04 182155.png" alt="" loading="lazy" decoding="async"></div>
+              <div>
+                <h5>Cumplimiento normativo</h5>
+                <p>Garantizar el cumplimiento de estándares y regulaciones de la industria.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LAS CERTIFICACIONES -->
+    <section class="cech-certificaciones">
+      <div class="cech-section">
+        <h2 class="cech-title">LAS CERTIFICACIONES</h2>
+        <div class="cech-cert-grid">
+          <div class="cech-cert-card">
+            <h3>¿POR QUÉ ASME?</h3>
+            <p>Certificación mundial reconocida en 114 países.</p>
+            <p>Contenido aprobado por ASME, manteniendo los más altos estándares de la industria.</p>
+            <div class="cech-hidden-text" id="asme-extra">
+              <ul>
+                <li>Cursos impartidos por instructores certificados por ASME que garantizan una experiencia de aprendizaje superior.</li>
+                <li>Cumplir con los requisitos en el sitio, ya que puede ser necesaria una certificación para acceder al sitio.</li>
+                <li>Evaluaciones integrales que proporcionan ejercicios prácticos con evaluaciones escritas.</li>
+                <li>De acuerdo con las pautas PCC-1, los propietarios de los sitios tienen la responsabilidad de certificar a las cuadrillas. HYTORC ofrece amplios sistemas de capacitación y retención de registros, lo que garantiza el cumplimiento y la competencia en las actividades de empernado.</li>
+              </ul>
+            </div>
+            <a href="#" class="cech-read-more" onclick="event.preventDefault(); var el=document.getElementById('asme-extra'); el.classList.toggle('cech-expanded'); this.textContent=el.classList.contains('cech-expanded')?'Leer menos':'Leer más';">Leer más</a>
+          </div>
+          <div class="cech-cert-card">
+            <h3>¿POR QUÉ ANCE?</h3>
+            <p>Asociación de Normalización y Certificación (ANCE), organismo mexicano, líder en evaluación de la conformidad, mismo que certifica nuestra NORMA DE COMPETENCIA TÉCNICA: OPERACIÓN DE EQUIPOS HYTORC DE TORQUE/TENSIÓN.</p>
+            <div class="cech-hidden-text" id="ance-extra">
+              <ul>
+                <li>Avalada por organismos internacionales.</li>
+                <li>Certificación realizada por Instructores y Evaluadores certificados ante CONOCER en el EC. 0217.01 y EC.076.</li>
+                <li>Evaluar y certificar la competencia de personas que realizan la función de operación de los equipos de torque y tensión HYTORC, facilitando las acciones de ensamblaje, mantenimiento y/o construcción industriales costa afuera y terrestres en el tema de empernado a diferentes equipos y/o estructuras dentro de las normativas, estándares y especificaciones vigentes.</li>
+              </ul>
+            </div>
+            <a href="#" class="cech-read-more" onclick="event.preventDefault(); var el=document.getElementById('ance-extra'); el.classList.toggle('cech-expanded'); this.textContent=el.classList.contains('cech-expanded')?'Leer menos':'Leer más';">Leer más</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENTRENAR ES FÁCIL CON HYTORC -->
+    <section class="cech-training">
+      <div class="cech-section">
+        <div class="cech-training-grid">
+          <div class="cech-training-text">
+            <h2>Entrenar es fácil<br><b>con HYTORC</b></h2>
+            <p>Capacite a su equipo en nuestro Centro de capacitación y Certificación HYTORC (CECH) para lograr la excelencia en empernado.</p>
+          </div>
+          <div class="cech-training-features">
+            <div class="cech-training-feat-grid">
+              <div class="cech-train-feat">
+                <div class="cech-train-feat-icon"><img src="assets/Captura de pantalla 2026-03-04 182045.png" alt="" loading="lazy" decoding="async"></div>
+                <div>
+                  <h5>PEQUEÑAS CLASES</h5>
+                  <p>Los tamaños limitados de las clases permiten instrucción individualizada y mayor seguridad.</p>
+                </div>
+              </div>
+              <div class="cech-train-feat">
+                <div class="cech-train-feat-icon"><img src="assets/Captura de pantalla 2026-03-04 182143.png" alt="" loading="lazy" decoding="async"></div>
+                <div>
+                  <h5>EXPERIENCIA INIGUALABLE</h5>
+                  <p>Benefíciese de nuestro profundo conocimiento y comprensión de métodos de cierre de juntas.</p>
+                </div>
+              </div>
+              <div class="cech-train-feat">
+                <div class="cech-train-feat-icon"><img src="assets/Captura de pantalla 2026-03-04 182212.png" alt="" loading="lazy" decoding="async"></div>
+                <div>
+                  <h5>ALQUILE/COMPRE Y AHORRE</h5>
+                  <p>Ofrecemos descuentos al comprar o alquilar herramientas, comodidad sin comprometer calidad.</p>
+                </div>
+              </div>
+              <div class="cech-train-feat">
+                <div class="cech-train-feat-icon"><img src="assets/Captura de pantalla 2026-03-04 182138.png" alt="" loading="lazy" decoding="async"></div>
+                <div>
+                  <h5>LLEGAMOS A TI</h5>
+                  <p>Nuestros instructores certificados visitan las instalaciones de nuestros clientes.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CURSOS DE FORMACIÓN MÁS POPULARES -->
+    <section class="cech-cursos">
+      <div class="cech-section">
+        <h2 class="cech-title"><strong>CURSOS DE FORMACIÓN</strong> <span>MÁS POPULARES</span></h2>
+        <div class="cech-cursos-grid">
+          <div class="cech-curso-card">
+            <img src="assets/Captura de pantalla 2026-03-04 182050.png" alt="Operación de Equipos" loading="lazy" decoding="async">
+            <h4>OPERACIÓN DE EQUIPOS HYTORC DE TORQUE/TENSIÓN</h4>
+            <p><b>Entregable:</b> DC-3 Curso presencial Duración del curso: 16 horas Registro STPS</p>
+          </div>
+          <div class="cech-curso-card">
+            <img src="assets/Captura de pantalla 2026-03-04 182119.png" alt="Certificación NCT" loading="lazy" decoding="async">
+            <h4>CERTIFICACIÓN DE OPERADOR HYTORC EN LA NCT: OPERACIÓN DE EQUIPOS HYTORC DE TORQUE/TENSIÓN</h4>
+            <p><b>Entregable:</b> Certificado ANCE + DC-3 + Credencial Curso presencial Duración de proceso de certificación: 24 horas Registro STPS Avalado por ANCE</p>
+          </div>
+          <div class="cech-curso-card">
+            <img src="assets/Captura de pantalla 2026-03-04 182223.png" alt="ASME PCC1-2022" loading="lazy" decoding="async">
+            <h4>ASME PCC1-2022 FUNDAMENTOS DE ENSAMBLAJE DE PERNOS</h4>
+            <p><b>Entregable:</b> Certificado Digital Curso presencial Duración: 16 horas</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTÁCTENOS PARA CAPACITACIÓN -->
+    <section class="cech-contacto">
+      <div class="cech-section">
+        <h2 class="cech-title"><strong>CONTÁCTENOS</strong> <span>PARA CAPACITACIÓN</span></h2>
+        <form action="https://api.web3forms.com/submit" method="POST" id="form_capacitacion_co">
+          <input type="hidden" name="access_key" value="c6cd6aa2-f390-411d-89d3-09805629f5c5">
+          <div class="cech-form-grid">
+            <div class="cech-form-left">
+              <div class="cech-form-group">
+                <label>Nombre</label>
+                <input type="text" name="nombre" placeholder="Escribe tu nombre" required>
+              </div>
+              <div class="cech-form-group">
+                <label>Correo electrónico</label>
+                <input type="email" name="email" placeholder="tucorreo@ejemplo.com" required>
+              </div>
+              <div class="cech-form-group">
+                <label>País o Ciudad</label>
+                <input type="text" name="ciudad" placeholder="Ej. Colombia, Bogotá" required>
+              </div>
+            </div>
+            <div class="cech-form-right">
+              <div class="cech-form-group">
+                <label>Mensaje</label>
+                <textarea name="mensaje" placeholder="Escribe tu mensaje" required></textarea>
+              </div>
+            </div>
+          </div>
+          <div class="cech-form-submit">
+            <button type="submit">ENVIAR MENSAJE</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+  </main>
+
+  <!-- ?.??.??.??.??.??.??.??.??.??.? FOOTER ?.??.??.??.??.??.??.??.??.??.? -->
+  <!-- *************************************** FOOTER *************************************** -->
+  <section class="wrapFooter">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12 col-md-4 text-center">
+          <h4 class="titLineRed">Ubicación</h4>
+          <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cund.</p>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <h4 class="titLineRed">Síguenos</h4>
+                    <div class="social-links-container" style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
+            <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg></a>
+            <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" /></svg></a>
+            <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg></a>
+            <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg></a>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <h4 class="titLineRed">Links</h4>
+          <div class="links-col">
+            <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a>
+            <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a>
+            <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank" class="linkFinal">Política de Privacidad</a>
+          </div>
+        </div>
+
+        <!-- SITEMAP HEADER -->
+        <div class="col-12">
+          <div class="sitemap-header" id="sitemap-toggle">
+            Mapa de sitio
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div><!-- /.container -->
+  </section>
+  <!-- *************************************** FOOTER *************************************** -->
+    
+
+
+  <script src="js/nav.js"></script>
+  <script src="js/prod-carousel.js"></script>
+  <script src="js/animations.js"></script>
+
+    <!-- *************************************** CREDITS *************************************** -->
+    <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
+        <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
+            <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
+        </div>
+    </section>
+    <!-- *************************************** CREDITS *************************************** -->
+</body>
+
+</html>

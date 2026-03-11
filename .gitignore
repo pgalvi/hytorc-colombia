@@ -1,0 +1,23 @@
+# ── Scripts de desarrollo ────────────────
+fix_encoding.ps1
+
+# ── Sistema Operativo ────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── Editores ────────────────────────────
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# ── Node (por si se agrega build) ───────
+node_modules/
+npm-debug.log*
+
+# ── Archivos temporales ──────────────────
+*.tmp
+*.log

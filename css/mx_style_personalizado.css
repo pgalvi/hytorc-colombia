@@ -1,0 +1,2697 @@
+:root {
+	--body-font: 'Acumin Pro', serif;
+	--font-sizexx: 10px;
+	--color-black: #222325;
+	--color-white: #ffffff;
+
+	--transition-link: all .3s ease;
+}
+
+/* GENERAL ------------------------------------------- */
+html,
+body {
+	font-family: var(--body-font);
+	font-weight: normal;
+	color: var(--color-black);
+	text-align: justify;
+}
+
+.acuminProBold {
+	font-family: 'AcuminProBold';
+	font-weight: 900;
+}
+
+/* GENERAL ------------------------------------------- */
+
+/* MAIN-MENU ------------------------------------------- */
+.menu-Hytorc .navbar-brand img {
+	width: 230px;
+}
+
+.menu-Hytorc .navbar-nav>.dropdown {
+	position: inherit;
+	color: var(--color-black);
+}
+
+.menu-Hytorc .nav-item {
+	margin: 0 6px;
+}
+
+.menu-Hytorc .dropdown-menu {
+	width: 100%;
+	text-align: center;
+	margin-top: 0;
+	border-radius: 0;
+	border: none;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.menu-Hytorc .dropdown-menu li {
+	display: inline-block;
+	padding: 4px 20px;
+}
+
+.menu-Hytorc .dropdown-item {
+	font-size: 13px;
+	font-weight: 600;
+
+}
+
+.menu-Hytorc .dropdown-item img {
+	display: block;
+	margin: 2px auto;
+	width: 32px;
+}
+
+.menu-Hytorc .navbar-nav .nav-link {
+	text-transform: uppercase;
+	font-weight: 600;
+	color: var(--color-black);
+}
+
+.firstRed {
+	margin-left: 40px !important;
+}
+
+.sociaLink {
+	margin: 0;
+}
+
+.sociaLink a {
+	padding: 2px 0 0 !important;
+	display: inline-block;
+	margin: 0 4px;
+}
+
+.sociaLink img {
+	width: 30px;
+}
+
+.sticky-top {
+	padding: 20px;
+}
+
+.navbar-toggler {
+	padding: 6px 10px;
+
+}
+
+.navbar-toggler span {
+	display: block;
+	width: 26px;
+	height: 2px;
+	background-color: #999;
+	margin: 5px;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+	box-shadow: none;
+}
+
+.menu-Hytorc .dropdown-item.active,
+.menu-Hytorc .dropdown-item:active {
+	background-color: var(--bs-dropdown-link-hover-bg);
+	color: var(--color-black);
+}
+
+/* MAIN-MENU ------------------------------------------- */
+
+/* BANNER ------------------------------------------- */
+.banner-home {
+	position: relative;
+	color: var(--color-white);
+	text-align: center;
+	overflow: hidden;
+	height: calc(100vh - 80px);
+}
+
+.banner-home video {
+	position: absolute;
+	left: 0;
+	right: 0;
+	min-height: 100%;
+	min-width: 100%;
+}
+
+.banner-txt {
+	position: relative;
+	z-index: 1;
+	background-color: rgba(0, 0, 0, 0.6);
+	text-align: center;
+}
+
+.banner-txt img {
+	margin: 0 auto 20px;
+	width: 90%;
+	max-width: 1000px;
+	display: block;
+}
+
+.banner-txt a {
+	font-family: 'Acumin Pro Condensed';
+	font-size: 28px;
+	padding: 8px 50px 4px;
+	text-transform: uppercase;
+	color: var(--color-white);
+	text-decoration: none;
+	border: 1px solid;
+	display: inline-block;
+	border-radius: 14px;
+	margin-top: 10px;
+}
+
+/* BANNER ------------------------------------------- */
+
+/* CARRUSEL ICONS ------------------------------------------- */
+.bkToolsWhite {
+	background: url(../img/var/bk-WhiteTools.jpg) center/cover;
+	padding: 120px 0;
+}
+
+.bkToolsWhite #carouselOptions {
+	padding-bottom: 40px;
+}
+
+.bkToolsWhite .carousel-indicators {
+	margin-bottom: 0;
+	bottom: -20px;
+}
+
+.bkToolsWhite .carousel-indicators [data-bs-target] {
+	background-color: #8b9397;
+	width: 12px;
+	height: 12px;
+	border-radius: 100%;
+	margin: 0 6px;
+}
+
+.bkToolsWhite .carousel-indicators .active {
+	background-color: #fcda4f;
+}
+
+.wrapItemCarru {
+	font-family: 'Acumin Pro Condensed';
+	font-size: 24px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.wrapItemCarru a {
+	color: var(--color-black);
+	text-decoration: none;
+	transition: var(--transition-link);
+	display: inline-block;
+}
+
+.wrapItemCarru button {
+	border: none;
+	background: transparent;
+}
+
+.wrapItemCarru a:hover,
+.wrapItemCarru a:focus,
+.wrapItemCarru button:hover,
+.wrapItemCarru button:focus {
+	opacity: .7;
+}
+
+.wrapItemCarru img {
+	display: block;
+	width: 140px;
+	margin: 10px auto;
+}
+
+/* CARRUSEL ICONS ------------------------------------------- */
+
+/* CARRUSEL PRODUCTOS ------------------------------------------- */
+.bkCarruselProd {
+	background: rgb(255, 255, 255);
+	background: radial-gradient(circle, rgba(255, 255, 255, 1) 40%, rgba(215, 215, 215, 1) 100%);
+	padding: 40px 0;
+	margin: 20px 0;
+}
+
+.carruselProductos {
+	position: relative;
+}
+
+.carruselProductos .swiper-slide {
+	text-align: center;
+}
+
+.carruselProductos .swiper-slide a {
+	opacity: .7;
+	transition: var(--transition-link);
+}
+
+.carruselProductos .swiper-slide a:hover,
+.carruselProductos .swiper-slide a:focus,
+.carruselProductos .swiper-slide a:hover span,
+.carruselProductos .swiper-slide a:focus span {
+	opacity: 1;
+}
+
+.carruselProductos .swiper-slide span {
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	padding: 2px 8px;
+	opacity: 0;
+	transition: var(--transition-link);
+	font-size: 13px;
+}
+
+.tagVerde {
+	background-color: #669933;
+}
+
+.tagNaranja {
+	background-color: #f46f22;
+}
+
+.btnsProdCarru {
+	background: transparent;
+	border: none;
+	position: absolute;
+	top: 50%;
+	margin-top: -38px;
+}
+
+.btnsProdCarru img {
+	display: block;
+	width: 32px;
+}
+
+#button-prev {
+	left: -36px;
+}
+
+#button-next {
+	right: -36px;
+}
+
+/* CARRUSEL PRODUCTOS ------------------------------------------- */
+
+/* CARRUSEL ACCESORIOS ------------------------------------------- */
+.carruselAccesorios {
+	position: relative;
+}
+
+.carruselAccesorios a {
+	color: initial;
+	text-decoration: none;
+}
+
+/* CARRUSEL ACCESORIOS ------------------------------------------- */
+
+/* BANNERS BOX ------------------------------------------- */
+.banner-box {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-box img {
+	width: 100%;
+	height: auto;
+	display: block;
+}
+
+.banner-box .text-content {
+	position: absolute;
+	bottom: 10px;
+	left: 20px;
+	text-align: left;
+	color: var(--color-white);
+	z-index: 2;
+	transform: translateY(0);
+	transition: transform 0.5s ease-in-out;
+
+}
+
+.banner-box:hover .text-content {
+	transform: translateY(-40px);
+}
+
+.text-content h3 {
+	font-family: 'Acumin Pro Condensed';
+	font-size: 52px;
+	font-weight: 700;
+}
+
+.text-content h3::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 2px;
+	background-color: var(--color-white);
+	margin-top: 10px;
+}
+
+.text-content p {
+	font-size: 26px;
+	font-weight: 500;
+}
+
+/* BANNERS BOX ------------------------------------------- */
+
+
+/* FOOTER ------------------------------------------- */
+.wrapFooter {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.wrapFooter p {
+	text-align: center;
+}
+
+.titLineRed {
+	font-size: 20px;
+	border-bottom: 2px #d6111c solid;
+	color: #6c6931;
+	margin: 20px 0;
+	padding-bottom: 14px;
+	text-align: center;
+}
+
+.linkRedFinal {
+	display: inline-block;
+	width: 40px;
+	display: inline-block;
+	margin: 2px 6px;
+}
+
+.linkRedFinal img {
+	display: block;
+	width: 100%;
+}
+
+.linkFinal {
+	display: inline-block;
+	color: var(--color-black);
+	text-decoration: none;
+}
+
+.sitemap {
+	margin-top: 20px;
+}
+
+.sitemap .accordion-item {
+	border: none;
+}
+
+.sitemap .accordion-button {
+	padding: 0;
+	font-size: 15px;
+	color: #6c6931;
+	position: relativew;
+}
+
+.sitemap .accordion-button span {
+	margin: 0 auto;
+	display: inline-block;
+	padding: 2px 32px 2px 16px;
+	z-index: 1;
+	background: url(../img/icons/arrowsMS.png) 90% center/14px auto no-repeat var(--color-white);
+}
+
+.sitemap .accordion-button::after {
+	display: none;
+}
+
+.sitemap .accordion-button::before {
+	content: '';
+	position: absolute;
+	top: 11px;
+	left: 0;
+	right: 0;
+	display: block;
+	height: 2px;
+	background-color: #d6111c;
+}
+
+.sitemap .accordion-button:not(.collapsed) {
+	background: none;
+	box-shadow: none;
+}
+
+.sitemap .accordion-button:focus {
+	box-shadow: none
+}
+
+.sitemapLink ul {
+	padding: 0;
+	list-style: none;
+	text-align: left;
+}
+
+.sitemapLink ul>li {
+	padding: 2px 1px;
+	text-transform: uppercase;
+}
+
+.sitemapLink ul>li>a {
+	color: var(--color-black);
+	text-decoration: none;
+	transition: var(--transition-link);
+	font-size: 14px;
+}
+
+.sitemapLink ul>li>a:hover,
+.sitemapLink ul>li>a:focus {
+	color: #d6111c;
+}
+
+.sitemapLink h4 {
+	font-size: 16px;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+}
+
+/* FOOTER ------------------------------------------- */
+
+/* NO SÉ COMO LLAMARLO ------------------------------------------- */
+.bk-DarkTool {
+	background: url(../img/var/dim-background-black.png) center/cover;
+	padding: 80px 0;
+	margin-top: 20px;
+	position: relative;
+}
+
+.bk-DarkTool::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.hitorStandard {
+	display: block;
+	margin: 0 auto;
+	width: 90%;
+	max-width: 660px;
+	position: relative;
+	z-index: 1;
+}
+
+/* NO SÉ COMO LLAMARLO ------------------------------------------- */
+
+/* PRODUCTOS ------------------------------------------- */
+.banner-productos {
+	background: url('../img/var/dim-background-black.png') center/cover fixed;
+	padding: 200px 0 80px;
+}
+
+.banner-productos h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+}
+
+.banner-productos h3 {
+	font-family: 'Acumin Pro';
+	color: #ffffff;
+	font-weight: 600;
+	font-size: 1.1rem;
+	text-transform: uppercase;
+}
+
+.banner-productos p {
+	font-family: 'Acumin Pro';
+	color: #ffffff;
+	font-weight: 600;
+	font-size: .9rem;
+}
+
+.thumb-producto {
+	color: grey;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	position: relative;
+	margin-bottom: 40px;
+}
+
+.thumb-producto h5 {
+	font-weight: 600;
+}
+
+.thumb-producto p {
+	font-style: italic;
+}
+
+.thumb-producto:hover {
+	transform: translateY(-10px);
+	opacity: 0.7;
+}
+
+.thumb-producto a {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	cursor: pointer;
+}
+
+.productos {
+	padding-top: 5em;
+	padding-bottom: 2em;
+}
+
+/* PRODUCTOS ------------------------------------------- */
+
+/* BLOQUE NUESTROS PRODUCTOS ------------------------------------------- */
+.bk-nuestrosProductos {
+	background-color: #f2f2f2;
+}
+
+.title-products {
+	display: flex;
+	align-items: center;
+	position: relative;
+	font-family: 'Acumin Pro Condensed';
+	font-size: 2.4rem;
+	font-weight: 300;
+	text-transform: uppercase;
+	color: #4b4e53;
+	gap: 4px;
+}
+
+.title-products span {
+	font-weight: 700;
+}
+
+.title-products::before {
+	content: "";
+	width: 2px;
+	height: 80px;
+	background-color: #d63031;
+	display: inline-block;
+	position: relative;
+	left: -32.3px;
+}
+
+/* BLOQUE NUESTROS PRODUCTOS ---------------------------------------- */
+
+/* BLOQUE CONTACTANOS ---------------------------------------- */
+.bk-contactanos {
+	background-color: #546670;
+	text-align: center;
+}
+
+.bk-contactanos button {
+	padding: 40px 0;
+	background: transparent;
+	border: none;
+	width: 100%;
+}
+
+.bk-contactanos h1 {
+	color: var(--color-white);
+	text-decoration: none;
+	font-family: 'Acumin Pro Condensed';
+	font-size: 1.5rem;
+	font-weight: 600;
+	letter-spacing: .4rem;
+	margin: 0;
+}
+
+.bk-contactanos:hover {
+	background-color: #000000;
+}
+
+/* BLOQUE CONTACTANOS ---------------------------------------- */
+
+
+/* DETALLE PROD ---------------------------------------- */
+.wrapSection80 {
+	padding: 80px 0;
+}
+
+.tit-LineRedLeft {
+	border-left: 2px solid #d63031;
+	padding: 10px 10px 10px 25px;
+	font-size: 30px;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+}
+
+.tit-LineRedLeft span {
+	display: block;
+	font-size: 40px;
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+}
+
+.txt-PL25 {
+	padding-left: 25px;
+}
+
+.btnProductos .dropdown {
+	display: inline-block;
+	width: 48%;
+}
+
+.btnProductos .dropdown>a {
+	padding: 10px 14px 6px;
+	border: 1px solid #dee3e9;
+	border-radius: 0;
+	display: block;
+	text-align: left;
+}
+
+.btnProductos .dropdown .dropdown-toggle::after {
+	float: right;
+	margin-top: 8px;
+}
+
+.btnProductos .dropdown-menu {
+	width: 100%;
+}
+
+.btnRequestQuote {
+	padding: 10px 30px 6px;
+	text-align: center;
+	color: var(--color-white);
+	text-transform: uppercase;
+	text-align: center;
+	background-color: rgb(89, 89, 89);
+	text-decoration: none;
+	display: inline-block;
+	width: 49%;
+	margin-right: 16px;
+	border: none;
+	transition-link: var(--transition-link);
+}
+
+.btnRequestQuote:hover {
+	background-color: var(--color-black);
+}
+
+.btnshareProd {
+	float: right;
+	border: none;
+	background-color: transparent;
+	height: 40px;
+	width: 40px;
+	padding: 8px;
+	transition: var(--transition-link);
+	display: none;
+	opacity: 0;
+}
+
+.btnshareProd:hover {
+	opacity: .7;
+}
+
+.btnshareProd img {
+	width: 100%;
+}
+
+.wrapSpecToolWhite,
+.wrapSpecToolGray {
+	padding: 40px 0;
+}
+
+.wrapSpecToolGray {
+	background-color: rgba(238, 238, 238);
+}
+
+.wrapSpecToolGray h2,
+.wrapSpecToolWhite h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 34px;
+	border-left: 2px solid #d63031;
+	padding: 10px 0 5px 20px;
+	margin-bottom: 30px;
+}
+
+.wrapSpecToolGray h2 strong,
+.wrapSpecToolWhite h2 strong {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+}
+
+.colSpecTool h4,
+.tab-tuercaHytorc .tab-content .tab-pane h4 {
+	color: #999966;
+	margin: 34px 0 16px;
+	font-size: 17px;
+	font-family: 'AcuminProBold';
+}
+
+.cardSpecTool {
+	display: inline-block;
+	background-color: var(--color-white);
+	box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.6);
+	padding: 20px;
+	vertical-align: top;
+	height: 100%;
+}
+
+.cardSpecTool h4 {
+	font-size: 18px;
+	font-weight: bolder;
+	border-bottom: 4px solid #999966;
+	padding-bottom: 6px;
+	font-family: 'AcuminProBold';
+	text-align: left;
+}
+
+.wrapToolsRelated {
+	height: 100%;
+	padding: 30px 30px 100px;
+	position: relative;
+}
+
+.wrapToolsRelated.active,
+.wrapToolsRelated:hover {
+	background-color: #f7f7f7;
+}
+
+.wrapToolsRelated h3 {
+	font-family: 'AcuminProBold';
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+.wrapToolsRelated img {
+	width: 100%;
+	max-width: 260px;
+	display: block;
+	margin: 0 auto 40px;
+}
+
+.wrapToolsRelated ul {
+	padding: 0 0 10px;
+	list-style: none;
+}
+
+.wrapToolsRelated ul>li {
+	margin: 20px 0;
+}
+
+.wrapToolsRelated a {
+	padding: 8px 10px 6px;
+	font-family: 'AcuminProBold';
+	background-color: #666;
+	color: var(--color-white);
+	text-align: center;
+	text-decoration: none;
+	display: block;
+	width: 70%;
+	border: 3px solid var(--color-black);
+	position: absolute;
+	bottom: 40px;
+	left: 50%;
+	margin-left: -35%;
+	transition: var(--transition-link);
+}
+
+.wrapToolsRelated a:hover {
+	background-color: var(--color-black);
+}
+
+.wrapToolsRelated a.disabled {
+	background-color: transparent;
+	color: var(--color-black);
+}
+
+/* Estilo de las imágenes en la galería */
+.imgGalProd {
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.imgGalProd img {
+	width: 100%;
+	transition: var(--transition-link);
+	filter: grayscale(100%);
+}
+
+.imgGalProd img:hover {
+	filter: grayscale(0%);
+	transform: scale(1.05);
+}
+
+.galeryHytorc .modal {
+	background: rgba(0, 0, 0, 0.9);
+}
+
+.galeryHytorc .modal-content {
+	background: transparent;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.galeryHytorc .modal-img {
+	width: auto;
+	max-width: 90vw;
+	max-height: 90vh;
+	display: block;
+	margin: auto;
+}
+
+
+.galeryHytorc .close-btn {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	font-size: 35px;
+	color: white;
+	cursor: pointer;
+	background: none;
+	border: none;
+}
+
+.tableTools .nav-tabs .nav-link {
+	border-radius: 0;
+	text-transform: uppercase;
+	color: #996;
+	padding: 14px 20px 10px;
+}
+
+.tableTools .nav-tabs .nav-link.active {
+	color: var(--color-black);
+}
+
+.tableTools table th {
+	background-color: #999966;
+	color: var(--color-white) !important;
+	padding-top: 12px;
+}
+
+.tit-Compara {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 34px;
+	border-left: 2px solid #d63031;
+	padding: 10px 0 5px 20px;
+	margin-bottom: 30px;
+}
+
+/* DETALLE PROD ---------------------------------------- */
+
+/* BOMBAS ---------------------------------------- */
+.banner-bombas {
+	background: url('../img/productos/bombas/Copia\ de\ pumps.jpg') center/cover fixed;
+	padding: 200px 0 80px;
+	position: relative;
+}
+
+.banner-bombas::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-bombas h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+}
+
+/* BOMBAS ---------------------------------------- */
+
+/* TENSIONADORES ---------------------------------------- */
+.banner-tensionadores {
+	background: url('../img/productos/tensionadores/banner-tensioning.webp') center/cover fixed;
+	padding: 200px 0 80px;
+	position: relative;
+}
+
+.banner-tensionadores::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-tensionadores h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+}
+
+/* TENSIONADORES ---------------------------------------- */
+
+/* SUJETADORES ---------------------------------------- */
+.banner-sujetadores {
+	background: url('../img/productos/arandelas/banner-sujetadores.webp') center/cover fixed;
+	padding: 200px 0 80px;
+	position: relative;
+}
+
+.banner-sujetadores::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-sujetadores h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+}
+
+.bk-arandelasSistem {
+	background: url(../img/productos/arandelas/Washer_System_bg.jpg) center/cover fixed;
+	padding-top: 60px;
+	color: #fff;
+}
+
+.bk-arandelasSistem::after {
+	content: '';
+	width: 70%;
+	height: 460px;
+	background: url(../img/productos/arandelas/Washer_System_fg_glow.png) left top/100% auto no-repeat transparent;
+	position: relative;
+	right: 0;
+	display: block;
+	margin-left: auto;
+	margin-top: -60px;
+}
+
+.bk-arandelasSistem h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 34px;
+	border-left: 2px solid #d63031;
+	padding: 10px 0 5px 20px;
+	margin-bottom: 30px;
+}
+
+.tab-tuercaHytorc {
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.tab-tuercaHytorc .tab-content {
+	padding: 20px 0;
+}
+
+.bk-arandelasSistem h2 strong {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+}
+
+.btnsTuercasHytorc button {
+	width: 25%;
+}
+
+.btnsTuercasHytorc button>img {
+	height: 130px;
+	margin: 22px auto 4px;
+}
+
+.btnsTuercasHytorc button>span {
+	display: block;
+	font-size: 20px;
+	opacity: .6;
+	text-transform: uppercase;
+	font-family: 'Acumin Pro Condensed';
+	padding: 10px;
+	color: initial;
+}
+
+.btnsTuercasHytorc .nav-link.active {
+	background-color: rgba(220, 220, 220, 0.25);
+}
+
+/* SUJETADORES ---------------------------------------- */
+
+/* ACCESORIOS ---------------------------------------- */
+.banner-accesorios {
+	background: url('../img/productos/accesorios/accessories-banner.png') center/cover fixed;
+	padding: 200px 0 80px;
+	position: relative;
+}
+
+.banner-accesorios::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-accesorios h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+	position: relative;
+	z-index: 1;
+}
+
+.modalFormAccesorio {
+	position: relative;
+}
+
+.modalFormAccesorio .modal-content {
+	border-radius: 0;
+	min-width: 660px;
+}
+
+.modalFormAccesorio .modal-header {
+	padding: 24px 30px 30px;
+	border: none;
+}
+
+.modalFormAccesorio .modal-body {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.modalFormAccesorio input,
+.modalFormAccesorio textarea {
+	border: none;
+	border-bottom: 1px solid rgb(153, 153, 153);
+	margin-bottom: 20px;
+	width: 100%;
+}
+
+.modalFormAccesorio textarea {
+	height: 80px;
+	resize: none;
+	margin-bottom: 0;
+}
+
+.modalFormAccesorio .modal-footer {
+	border: none;
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-bottom: 30px;
+}
+
+.modalFormAccesorio .btn-secondary {
+	text-transform: uppercase;
+	border-radius: 0;
+	border: none;
+}
+
+.modalFormAccesorio .btn-close {
+	position: absolute;
+	top: -26px;
+	right: 4px;
+}
+
+.titFormModal {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 34px;
+	border-bottom: 2px solid #d63031;
+	margin: 0;
+	width: 100%;
+}
+
+.titFormModal strong {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+}
+
+/* ACCESORIOS ---------------------------------------- */
+
+/* SOBRE NOSOTROS ---------------------------------------- */
+.topNosotros {
+	background-color: var(--color-black);
+	color: var(--color-white);
+	padding: 100px 40px;
+	position: relative;
+}
+
+.topNosotros::before {
+	content: '';
+	background: url(../img/var/oficinas.jpg) center/cover no-repeat;
+	position: absolute;
+	left: calc(50% + 140px);
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.topNosotros h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	color: #cbcb97;
+	text-transform: uppercase;
+	font-size: 50px;
+}
+
+.titNosotrosBasic {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 500;
+	color: #4b4e53;
+}
+
+.titNosotrosBasic span {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+}
+
+.parrafos-20mb p {
+	margin-bottom: 30px;
+}
+
+.pl-nosotros {
+	padding-left: 20px;
+}
+
+.btn-outlineNosotros {
+	padding: 7px 10px 5px;
+	color: #5d686e;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 500;
+	border: 2px solid var(--color-black);
+	text-decoration: none;
+	font-size: 18px;
+	transition: var(--transition-link);
+	background-color: transparent;
+}
+
+.btn-outlineNosotros:hover {
+	background-color: var(--color-black);
+	color: var(--color-white);
+}
+
+.trayectoriaHytorc {
+	background-color: #f2f2f2;
+	padding: 60px 0;
+	margin-bottom: 80px;
+}
+
+.trayectoriaHytorc h3 {
+	color: #6c6931;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	margin-top: 18px;
+	font-size: 24px;
+}
+
+.fraseTit {
+	font-size: 15px;
+	font-family: 'Acumin Pro Condensed' !important;
+	font-weight: 600 !important;
+	display: block;
+	margin-bottom: 30px;
+}
+
+.hitorc-distribucion {
+	width: 100%;
+	padding-left: 20px;
+}
+
+/* SOBRE NOSOTROS ---------------------------------------- */
+
+/* TALLER DE SERVICIO ---------------------------------------- */
+.banner-tallerServicio {
+	background: url('../img/var/banner-taller.jpg') center/cover fixed;
+	padding: 160px 0 80px;
+	position: relative;
+	color: #fff;
+}
+
+.banner-tallerServicio::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-tallerServicio .col-12 {
+	z-index: 1;
+}
+
+.banner-tallerServicio h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+}
+
+.banner-tallerServicio h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 26px;
+}
+
+.vidaUtilActivos {
+	background-color: #f2f2f2;
+	padding: 100px 40px;
+	position: relative;
+}
+
+.vidaUtilActivos::before {
+	content: '';
+	background: url(../img/var/protege-la-vida-util.jpg) center/cover no-repeat;
+	position: absolute;
+	left: calc(50% + 140px);
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
+.block-NuestroTaller {
+	float: left;
+	padding: 18px;
+	width: 20%;
+	color: #4b4e53;
+}
+
+.block-NuestroTaller strong {
+	display: block;
+}
+
+.bk-contactanos-taller {
+	background-color: #cbcb9d;
+	padding: 40px 0 20px;
+}
+
+/* TALLER DE SERVICIO ---------------------------------------- */
+
+/* SOFTWARE ---------------------------------------- */
+.banner-software {
+	background: url('../img/servicios/software/banner.jpg') center/cover fixed;
+	padding: 160px 0 80px;
+	position: relative;
+	color: #fff;
+}
+
+.banner-software::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-software .col-12 {
+	z-index: 1;
+}
+
+.banner-software h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+	color: #999966;
+}
+
+.banner-software h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 26px;
+}
+
+.store-badge {
+	max-height: 50px;
+	width: auto;
+}
+
+/* SOFTWARE ---------------------------------------- */
+
+/* CAPACITACION ---------------------------------------- */
+.banner-capacitacion {
+	background: url('../img/servicios/capacitacion/banner.jpg') center/cover fixed;
+	padding: 160px 0 80px;
+	position: relative;
+	color: #fff;
+}
+
+.banner-capacitacion::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-capacitacion .col-12 {
+	z-index: 1;
+}
+
+.banner-capacitacion h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+}
+
+.banner-capacitacion h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 26px;
+}
+
+.partner-logo {
+	max-height: 120px;
+	width: auto;
+}
+
+.separator {
+	width: 1px;
+	height: 40px;
+	background-color: #dee2e6;
+	margin: 0 1rem;
+}
+
+.feature-icon {
+	width: 32px;
+	height: auto;
+	flex-shrink: 0;
+}
+
+.icon-pequeño {
+	max-width: 24px;
+	max-height: 24px;
+	width: auto;
+	height: auto;
+}
+
+.section-form-title {
+	border-left: 4px solid #dc3545;
+	padding-left: 0.75rem;
+	font-family: 'Acumin Pro Condensed';
+}
+
+.underline-input {
+	border: none;
+	border-bottom: 2px solid #6c6c6c;
+	border-radius: 0;
+}
+
+.underline-input:focus {
+	box-shadow: none;
+	border-color: #000;
+}
+
+.collapse-container {
+	max-height: 200px;
+	overflow: hidden;
+	position: relative;
+}
+
+.collapse-container::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 4rem;
+	background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.collapse-container.expanded {
+	max-height: none;
+}
+
+.collapse-container.expanded::after {
+	display: none;
+}
+
+#toggle-asme,
+#toggle-ance {
+	color: #555;
+	text-decoration: none;
+}
+
+#toggle-asme:hover,
+#toggle-ance:hover {
+	color: #f1bc00;
+}
+
+.text-cap {
+	text-align: left;
+}
+
+/* CAPACITACION ---------------------------------------- */
+
+/* ENTRENAR ---------------------------------------- */
+.training-section {
+	position: relative;
+	background: url('../img/servicios/capacitacion/fondo\ ENTRENAR.jpg') center/cover no-repeat;
+	color: #fff;
+	min-height: 400px;
+}
+
+.training-section h2 {
+	font-family: 'Acumin Pro Condensed';
+}
+
+.training-section::before {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background: rgba(0, 0, 0, 0.8);
+}
+
+/* Contenido sobre el overlay */
+.training-content {
+	position: relative;
+	z-index: 1;
+}
+
+.training-title {
+	border-left: 4px solid #ffc107;
+	padding-left: .75rem;
+}
+
+.feature-icon-wrap img {
+	max-width: 48px;
+	max-height: 48px;
+	display: block;
+}
+
+.feature-title {
+	font-size: 1rem;
+	text-transform: uppercase;
+	margin-bottom: .25rem;
+}
+
+.feature-desc {
+	font-size: .9rem;
+	margin: 0;
+}
+
+/* ENTRENAR ---------------------------------------- */
+
+/* CALIBRACION ---------------------------------------- */
+.banner-calibracion {
+	background: url('../img/var/banner-calibracion.jpg') center/cover fixed;
+	padding: 160px 0 80px;
+	position: relative;
+	color: #fff;
+}
+
+.banner-calibracion h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 60px;
+}
+
+.banner-calibracion h2 {
+	font-size: 20px;
+}
+
+.banner-calibracion::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.banner-calibracion .col-12 {
+	z-index: 1;
+}
+
+.acreditaciones {
+	text-align: center;
+}
+
+.acreditaciones img {
+	display: inline-block;
+	width: 200px;
+	margin: 0px auto 40px;
+}
+
+.acreditaciones img:nth-child(2) {
+	margin-left: 22%;
+	margin-right: 22%;
+}
+
+.laboratorioCalibra {
+	position: relative;
+	padding: 20px 0;
+}
+
+.laboratorioCalibra::before {
+	content: '';
+	background: url(../img/var/bk-labCalibra.jpg) center/cover no-repeat;
+	position: absolute;
+	left: 0;
+	right: 52%;
+	top: 0;
+	bottom: 0;
+}
+
+.titLaboratorioCalibra {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 500;
+}
+
+.iconLabCalibra {
+	padding: 2px 6px 2px 50px;
+	background: url(../img/icons/medal.svg) left top/26px auto no-repeat;
+}
+
+.btnCalibracion {
+	padding: 11px 16px 7px;
+	color: #fff;
+	background-color: #999966;
+	text-decoration: none;
+	width: 40%;
+	display: inline-block;
+	text-align: center;
+	min-width: 170px;
+}
+
+.mrCalbtn {
+	margin-right: 30px;
+}
+
+.rutaMovil {
+	padding: 70px 0;
+}
+
+.servCalibra {
+	padding: 80px 0;
+}
+
+.tableCalibra {
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.tableCalibra th {
+	background-color: #666;
+	color: #fff;
+}
+
+.gris1Table {
+	background-color: rgba(100, 100, 100, 0.25);
+}
+
+.gris2Table {
+	background-color: rgba(100, 100, 100, 0.45);
+}
+
+/* CALIBRACION ---------------------------------------- */
+
+/* INDUSTRIAS ---------------------------------------- */
+.thumb-industria {
+	text-align: center;
+	transition: transform 0.3s ease, opacity 0.3s ease;
+	margin-bottom: 20px;
+	position: relative;
+}
+
+.thumb-industria:hover {
+	transform: translateY(-10px);
+	opacity: 0.7;
+}
+
+.thumb-industria img {
+	border-radius: 100%;
+	overflow: hidden;
+}
+
+.thumb-industria h5 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+}
+
+.thumb-industria a {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0
+}
+
+.bannerIndustrias {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 120px 0;
+	text-align: center;
+	color: #fff;
+}
+
+.bannerIndustrias:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bannerIndustrias .col-12 {
+	z-index: 1;
+}
+
+.bannerIndustrias h1 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+	padding-bottom: 10px;
+}
+
+.bannerIndustrias hr {
+	border: 2px solid #d6111c;
+	width: 660px;
+	margin: 0 auto 22px;
+	opacity: 1;
+}
+
+.bannerIndustrias h1>span {
+	display: block;
+	font-weight: 500;
+}
+
+.txt-industrias {
+	color: #625d5d;
+	padding: 2px 20px;
+}
+
+.txt-industrias h2 {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 900;
+	border-bottom: 4px solid #d6111c;
+	margin-bottom: 26px;
+}
+
+.txt-industrias h2>span {
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+}
+
+.fraseIndustrias {
+	position: relative;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 80px 0;
+	color: #fff;
+	font-family: 'Acumin Pro Condensed';
+}
+
+.fraseIndustrias:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fraseIndustrias .col-12 {
+	z-index: 1;
+}
+
+.fraseIndustrias h3 {
+	font-weight: 900;
+	margin: 20px auto 10px;
+	border-left: 4px solid #ffb408;
+	padding: 4px 20px 0;
+	width: 800px;
+}
+
+.contactanosIndustrias {
+	background-color: #26303e;
+	text-align: center;
+	font-family: 'Acumin Pro Condensed';
+	font-weight: 600;
+	font-size: 32px;
+	transition: var(--transition-link);
+}
+
+.contactanosIndustrias:hover {
+	background-color: #546670;
+}
+
+.contactanosIndustrias button {
+	padding: 60px 0;
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	background-color: transparent;
+	border: none;
+	width: 100%;
+	font-weight: 600;
+}
+
+/* INDUSTRIAS ---------------------------------------- */
+
+/* INDUSTRIA CONSTRUCCION PUENTES ---------------------------------------- */
+#ContrucPuente {
+	background-image: url(../img/industrias/bridges/construccion_puente.jpeg);
+}
+
+#frasePuente {
+	background-image: url(../img/industrias/bridges/construccion_puente_3.jpeg);
+}
+
+/* INDUSTRIA CONSTRUCCION PUENTES ---------------------------------------- */
+
+/* INDUSTRIA OIL&GAS ---------------------------------------- */
+#oil-and-gas {
+	background-image: url(../img/industrias/oil-and-gas/oil&gas_planta.jpeg);
+}
+
+#fraseOil-and-gas {
+	background-image: url(../img/industrias/oil-and-gas/oil&gas_planta_3.jpeg);
+}
+
+/* INDUSTRIA OIL&GAS ---------------------------------------- */
+
+/* INDUSTRIA MINERIA ---------------------------------------- */
+#mining {
+	background-image: url(../img/industrias/mining/mineria_Maquinaria.jpeg);
+}
+
+#fraseMining {
+	background-image: url(../img/industrias/mining/mineria_Maquinaria_3.jpeg);
+}
+
+/* INDUSTRIA MINERIA ---------------------------------------- */
+
+/* INDUSTRIA EOLICO ---------------------------------------- */
+#eolico {
+	background-image: url(../img/industrias/eolico/eolico_aerogeneradores.jpeg);
+}
+
+#fraseEolico {
+	background-image: url(../img/industrias/eolico/eolico_aerogeneradores.jpeg);
+}
+
+/* INDUSTRIA EOLICO ---------------------------------------- */
+
+/* INDUSTRIA OFFSHORE ---------------------------------------- */
+#offshore {
+	background-image: url(../img/industrias/offshore/offshore_plataforma.jpeg);
+}
+
+#fraseOffshore {
+	background-image: url(../img/industrias/offshore/offshore_plataforma.jpeg);
+}
+
+/* INDUSTRIA OFFSHORE ---------------------------------------- */
+
+/* INDUSTRIA FERROVIARIO ---------------------------------------- */
+#ferroviario {
+	background-image: url(../img/industrias/ferroviario/ferroviario_trenes.jpeg);
+}
+
+#fraseFerroviario {
+	background-image: url(../img/industrias/ferroviario/ferroviario_trenes.jpeg);
+}
+
+/* INDUSTRIA FERROVIARIO ---------------------------------------- */
+
+/* INDUSTRIA PETROQUIMICA ---------------------------------------- */
+#petroquimica {
+	background-image: url(../img/industrias/petroquimica/petroquimica_Planta.jpeg);
+}
+
+#frasePetroquimica {
+	background-image: url(../img/industrias/petroquimica/petroquimica_Planta_3.jpeg);
+}
+
+/* INDUSTRIA PETROQUIMICA ---------------------------------------- */
+
+/* INDUSTRIA POWER GEN ---------------------------------------- */
+#petroquimica {
+	background-image: url(../img/industrias/power-gen/power-gen-3.jpeg);
+}
+
+#frasePetroquimica {
+	background-image: url(../img/industrias/power-gen/power-gen-3.jpeg);
+}
+
+/* INDUSTRIA POWER GEN ---------------------------------------- */
+
+/* HYTORC STANDAR ---------------------------------------- */
+.txtStandarHytorc {
+	padding: 0 30px 30px;
+}
+
+/* HYTORC STANDAR ---------------------------------------- */
+
+/* UBICACION ---------------------------------------- */
+.banner-ubica-bolsa {
+	background: url('../img/var/dim-background-black.png') center/cover fixed;
+	padding: 200px 0 80px;
+}
+
+.banner-ubica-bolsa h1 {
+	font-family: 'Acumin Pro ExtraCondensed';
+	font-weight: 900;
+	letter-spacing: 2px;
+	color: #999966;
+	font-size: 2.4rem;
+	text-transform: uppercase;
+}
+
+.sectionMap {
+	background-color: #eeeeee;
+	margin-top: 80px;
+}
+
+.dirUbicacion {
+	padding-left: 66px;
+	background: url(../img/icons/gps-ubicacion.svg) left 4px/50px auto no-repeat;
+}
+
+.dirUbicacion a {
+	display: inline-block;
+	margin: 0 4px;
+	width: 28px;
+}
+
+.mapaOficina {
+	width: 100%;
+	height: 400px;
+}
+
+.sectionRepresentanteMx {
+	margin-top: 80px;
+}
+
+.representanteMexico {
+	background-color: #afa77e;
+	padding: 6px 20px 2px;
+	text-align: center;
+	margin: 0;
+}
+
+.mapaMx {
+	width: 100%;
+	padding: 26px;
+	background-color: #f9f9f9;
+}
+
+.formUbicacion h3 {
+	font-size: 20px;
+	margin-bottom: 30px;
+}
+
+.formUbicacion input,
+.formUbicacion textarea {
+	background-color: #f9f9f9;
+	padding: 4px;
+	border: #f9f9f9;
+	width: 100%;
+}
+
+.formUbicacion textarea {
+	height: 120px;
+	resize: none;
+}
+
+.formUbicacion label {
+	text-transform: uppercase;
+	display: block;
+	margin: 2px 1px;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+.enviarFormUbica {
+	background-color: #afa77e !important;
+	border: none !important;
+	padding: 6px 20px 3px !important;
+	width: auto !important;
+	text-transform: uppercase;
+}
+
+/* UBICACION ---------------------------------------- */
+
+/* BOLSA DE TRABAJO ---------------------------------------- */
+.bolsaTrabajo {
+	position: relative;
+	padding: 40px 0;
+}
+
+.bolsaTrabajo::before {
+	content: '';
+	background: url(../img/var/collaboration-People.jpg) center/cover no-repeat;
+	position: absolute;
+	left: 0;
+	right: 52%;
+	top: 0;
+	bottom: 0;
+}
+
+.bolsaTrabajoIcon {
+	padding: 2px 6px 2px 54px;
+	background-position: left top;
+	background-size: 38px auto;
+	background-repeat: no-repeat;
+}
+
+#bolsa01 {
+	background-image: url(../img/icons/bolsaTrabajo01.svg);
+}
+
+#bolsa02 {
+	background-image: url(../img/icons/bolsaTrabajo02.svg);
+}
+
+#bolsa03 {
+	background-image: url(../img/icons/bolsaTrabajo03.svg);
+}
+
+.bolsaAsegurafuturo {
+	padding: 80px 0;
+}
+
+.iconsBolsa {
+	padding: 10px 4px;
+	text-align: left;
+	margin-bottom: 40px;
+}
+
+.iconsBolsa img {
+	display: inline-block;
+	margin-right: 10px;
+	vertical-align: middle;
+	width: 28px;
+}
+
+.vidaHyctor {
+	position: relative;
+	padding: 80px 0;
+	background: url(../img/var/bk-vidaHytorc.jpg) center/cover;
+	color: #fff;
+}
+
+.vidaHyctor::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.65);
+}
+
+.vidaHyctor .container-xxl {
+	position: relative;
+	z-index: 1;
+}
+
+.vidaHyctor .tit-Compara {
+	color: #fff;
+	border-color: #f3c734;
+}
+
+.btn-CV {
+	background: url(../img/icons/upload.svg) 88% 7px/40px auto #f3c734 no-repeat;
+	padding: 8px 70px 8px 10px;
+	font-weight: bold;
+	font-size: 20px;
+	border-radius: 4px;
+	border: none;
+	font-family: 'Acumin Pro Condensed';
+}
+
+.vidaHyctor .accordion-item {
+	background-color: transparent;
+	border: none;
+}
+
+.vidaHyctor .accordion-body {
+	padding: 20px 0 0;
+}
+
+.formCV label {
+	color: #fff;
+	display: block;
+	font-size: 12px;
+}
+
+.formCV input {
+	width: 100%;
+	padding: 4px;
+	margin-bottom: 16px;
+}
+
+.cvWrap {
+	margin: 40px 0;
+}
+
+.txtVidaHytorc {
+	padding-left: 70px;
+	margin-bottom: 40px;
+	background-position: left top;
+	background-repeat: no-repeat;
+	background-size: 54px;
+}
+
+.txtVidaHytorc h4 {
+	font-family: 'Acumin Pro Condensed';
+	text-align: left;
+}
+
+#vida01 {
+	background-image: url(../img/icons/iconVidaHytor01.svg);
+}
+
+#vida02 {
+	background-image: url(../img/icons/iconVidaHytor02.svg);
+}
+
+#vida03 {
+	background-image: url(../img/icons/iconVidaHytor03.svg);
+}
+
+#vida04 {
+	background-image: url(../img/icons/iconVidaHytor04.svg);
+}
+
+/* BOLSA DE TRABAJO ---------------------------------------- */
+
+
+/* MODAL FORMS ---------------------------------------- */
+.formsModal .modal-dialog {
+	max-width: 700px;
+	width: 90%;
+}
+
+.formsModal .modal-header {
+	border: none;
+}
+
+.formsModal .modal-body {
+	padding: 20px 20px 30px;
+}
+
+.formsModal .form-control {
+	padding-right: 30px;
+}
+
+.formsModal textarea.form-control {
+	height: 120px;
+}
+
+.error {
+	border-color: #c60000 !important;
+	background-color: #fffad7 !important;
+	background-image: url(../img/icons/errorForm.svg);
+	background-size: 20px;
+	background-position: 98% 8px;
+	background-repeat: no-repeat;
+}
+
+.txtGraciasForm {
+	padding: 40px;
+	min-height: 390px;
+}
+
+.txtGraciasForm img {
+	width: 180px;
+	margin-bottom: 26px;
+}
+
+.txtGraciasForm h3 {
+	font-size: 20px;
+}
+
+.txtGraciasForm h3 span {
+	text-transform: uppercase;
+	color: #dc3545;
+	display: block;
+	font-size: 15px;
+	padding-top: 6px;
+}
+
+/* MODAL FORMS ---------------------------------------- */
+
+/* QUEJAS SUGERENCIAS ---------------------------------------- */
+.sectionFormDark {
+	background-color: #353535;
+	margin: 80px 0;
+	color: #fff;
+	padding: 60px 0;
+}
+
+.sectionFormDark .section-form-title {
+	border-left-color: #f3c734;
+	margin-bottom: 36px;
+}
+
+.contacto_quejas_y_sugerencias label {
+	font-size: 14px;
+	text-align: left;
+}
+
+.contacto_quejas_y_sugerencias textarea.form-control {
+	height: 140px;
+	resize: none;
+}
+
+.btn-quejas {
+	margin-top: 60px;
+}
+
+/* QUEJAS SUGERENCIAS ---------------------------------------- */
+
+/* COTIZA FORM ---------------------------------------- */
+.contacto_cotiza label {
+	font-size: 14px;
+	text-align: left;
+}
+
+.contacto_cotiza textarea.form-control {
+	height: 140px;
+	resize: none;
+}
+
+.btn-cotizaForm {
+	margin-top: 274px;
+}
+
+/* COTIZA FORM ---------------------------------------- */
+
+/* TALLER SERVICIO FORM ---------------------------------------- */
+.contacto_tallerServicio textarea {
+	height: 226px;
+}
+
+/* TALLER SERVICIO FORM ---------------------------------------- */
+
+/* CAPACITACION SERVICIO FORM ---------------------------------------- */
+.contacto_capacitacion textarea {
+	height: 226px;
+}
+
+/* CAPACITACION SERVICIO FORM ---------------------------------------- */
+
+/* BOLSA TRABAJO FORM ---------------------------------------- */
+.contacto_bolsatrabajo textarea {
+	height: 120px;
+}
+
+.curriculum {
+	color: rgba(255, 255, 255, 0.66);
+	;
+}
+
+.formCV .txtGraciasForm,
+.formCV .txtGraciasForm h3 span {
+	color: #fff !important;
+}
+
+/* BOLSA TRABAJO FORM ---------------------------------------- */
+
+/* ENCUESTA SATISFACCION ---------------------------------------- */
+.instruccionesEncuesta {
+	padding-left: 610px;
+	font-style: italic;
+	font-size: 14px;
+	margin-bottom: -60px;
+}
+
+.instruccionesEncuesta h6 {
+	font-weight: bold;
+}
+
+.instruccionesEncuesta p {
+	margin: 0;
+}
+
+.seccion-titulo-encuesta {
+	border-left: 3px solid #ffc107;
+	padding: 10px 0 6px 14px;
+	margin: 2rem 0 1rem;
+	font-weight: 300;
+	font-family: 'Acumin Pro Condensed';
+	font-size: 26px;
+}
+
+.wrapQuestion {
+	display: block;
+	padding: 2px 0 6px;
+	margin: 6px 0 10px 16px;
+}
+
+.wrapQuestion label {
+	width: 590px;
+	text-align: left;
+}
+
+.wrapQuestion.error {
+	border: 1px solid red;
+	border-radius: 6px;
+	padding: 10px;
+	color: #000;
+}
+
+/* ENCUESTA SATISFACCION ---------------------------------------- */
+
+
+/* ---------------------------------------------------------- MEDIA QUERY  ---------------------------------------------------------- */
+@media (max-width: 1399px) {
+
+	/* MAIN-MENU ------------------------------------------- */
+	.firstRed {
+		margin-left: 30px !important;
+	}
+
+	/* MAIN-MENU ------------------------------------------- */
+}
+
+@media (max-width: 1199px) {
+
+	/* MAIN-MENU ------------------------------------------- */
+	.menu-Hytorc .navbar-brand {
+		margin-right: 0;
+	}
+
+	.menu-Hytorc .navbar-brand img {
+		width: 180px;
+	}
+
+	.menu-Hytorc .nav-item {
+		margin: 0 2px;
+	}
+
+	.firstRed {
+		margin-left: 10px !important;
+	}
+
+	.sociaLink a {
+		margin: 0 2px;
+	}
+
+	/* MAIN-MENU ------------------------------------------- */
+
+	/* DETALLE PROD ---------------------------------------- */
+	.btnRequestQuote {
+		padding-left: 10px;
+		padding-right: 10px;
+		/* width: 44%;*/
+		width: 47%;
+	}
+
+	/* DETALLE PROD ---------------------------------------- */
+
+	/* SUJETADORES ---------------------------------------- */
+	.bk-arandelasSistem::after {
+		height: 400px;
+		margin-top: -40px;
+	}
+
+	/* SUJETADORES ---------------------------------------- */
+
+	/* SOBRE NOSOTROS ---------------------------------------- */
+	.topNosotros::before {
+		left: calc(40% + 140px);
+	}
+
+	/* SOBRE NOSOTROS ---------------------------------------- */
+
+	/* CALIBRACION ---------------------------------------- */
+	.acreditaciones img:nth-child(2) {
+		margin-left: 16%;
+		margin-right: 16%;
+	}
+
+	/* CALIBRACION ---------------------------------------- */
+
+	/* INDUSTRIAS ---------------------------------------- */
+	.txt-industrias {
+		padding-top: 20px;
+		padding: 20px;
+	}
+
+	/* INDUSTRIAS ---------------------------------------- */
+
+	/* UBICACION ---------------------------------------- */
+	.banner-ubica-bolsa {
+		background: url('../img/var/dim-background-black.png') center/cover fixed;
+		padding: 160px 0 80px;
+	}
+
+	/* UBICACION ---------------------------------------- */
+}
+
+@media (max-width: 991px) {
+
+	/* MAIN-MENU ------------------------------------------- */
+	.menu-Hytorc .dropdown-menu {
+		text-align: left;
+		box-shadow: none;
+		border-bottom: 2px solid #f2f2f2;
+		margin-bottom: 10px;
+	}
+
+	.menu-Hytorc .dropdown-menu li {
+		width: 40%;
+	}
+
+	.menu-Hytorc .dropdown-item img {
+		display: inline-block;
+		margin: 2px 8px 2px 0;
+	}
+
+	.sociaLink {
+		margin: 10px 0 6px !important;
+	}
+
+	.sociaLink a {
+		margin: 0 6px;
+	}
+
+	/* MAIN-MENU ------------------------------------------- */
+
+	/* CARRUSEL ICONS ------------------------------------------- */
+	.wrapItemCarru {
+		min-height: 232px;
+	}
+
+	/* CARRUSEL ICONS ------------------------------------------- */
+
+	/* CARRUSEL PRODUCTOS ------------------------------------------- */
+	#button-prev {
+		left: -20px;
+	}
+
+	#button-next {
+		right: -20px;
+	}
+
+	.btnsProdCarru img {
+		width: 24px;
+	}
+
+	/* CARRUSEL PRODUCTOS ------------------------------------------- */
+
+	/* SUJETADORES ---------------------------------------- */
+	.bk-arandelasSistem::after {
+		height: 340px;
+		margin-top: -10px;
+		width: 75%;
+	}
+
+	/* SUJETADORES ---------------------------------------- */
+
+	/* ACCESORIOS ---------------------------------------- */
+	.modalFormAccesorio .modal-content {
+		border-radius: 0;
+		min-width: auto;
+	}
+
+	/* ACCESORIOS ---------------------------------------- */
+
+	/* SOBRE NOSOTROS ---------------------------------------- */
+	.topNosotros {
+		padding: 80px 40px;
+	}
+
+	.topNosotros::before {
+		display: none;
+	}
+
+	.pl-nosotros,
+	.hitorc-distribucion {
+		padding-left: 0;
+	}
+
+	/* SOBRE NOSOTROS ---------------------------------------- */
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+	.vidaUtilActivos::before {
+		display: none;
+	}
+
+	.block-NuestroTaller {
+		width: 33%;
+	}
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+
+	/* CALIBRACION ---------------------------------------- */
+	.acreditaciones img:nth-child(2) {
+		margin-left: 6%;
+		margin-right: 6%;
+	}
+
+	.laboratorioCalibra::before {
+		display: none;
+	}
+
+	/* CALIBRACION ---------------------------------------- */
+
+	/* INDUSTRIAS ---------------------------------------- */
+	.fraseIndustrias h3 {
+		width: 90%;
+	}
+
+	/* INDUSTRIAS ---------------------------------------- */
+
+	/* UBICACION ---------------------------------------- */
+	.banner-ubica-bolsa {
+		background: url('../img/var/dim-background-black.png') center/cover fixed;
+		padding: 100px 0 60px;
+	}
+
+	/* UBICACION ---------------------------------------- */
+
+	/* BOLSA DE TRABAJO ---------------------------------------- */
+	.bolsaTrabajo::before {
+		display: none;
+	}
+
+	.bolsaAsegurafuturo {
+		padding: 40px 0 60px;
+	}
+
+	/* BOLSA DE TRABAJO ---------------------------------------- */
+
+	/* ENCUESTA SATISFACCION ---------------------------------------- */
+	.instruccionesEncuesta {
+		padding-left: 0;
+		margin-bottom: 6px;
+	}
+
+	.wrapQuestion {
+		margin-bottom: 20px;
+	}
+
+	.wrapQuestion label {
+		width: 100%;
+	}
+
+	.wrapQuestion.error {
+		padding-right: 20px;
+	}
+
+	/* ENCUESTA SATISFACCION ---------------------------------------- */
+}
+
+@media (max-width: 767px) {
+
+	/* BANNER-BOX ------------------------------------------- */
+	.text-content h3 {
+		font-size: 36px;
+	}
+
+	.text-content p {
+		font-size: 20px;
+	}
+
+	.banner-box {
+		margin: 12px 8px;
+	}
+
+	/* BANNER-BOzX ------------------------------------------- */
+
+	/* DETALLE PROD ---------------------------------------- */
+	.wrapToolsRelated a {
+		width: 190px;
+		margin-left: -95px;
+	}
+
+	/* DETALLE PROD ---------------------------------------- */
+
+	/* SUJETADORES ---------------------------------------- */
+	.bk-arandelasSistem::after {
+		height: 280px;
+		margin-top: -10px;
+		width: 80%;
+	}
+
+	/* SUJETADORES ---------------------------------------- */
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+	.block-NuestroTaller {
+		width: 50%;
+	}
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+
+	/* UBICACION ---------------------------------------- */
+	.dirUbicacion {
+		padding-top: 60px;
+		padding-bottom: 60px;
+		background-position: left 60px;
+	}
+
+	/* UBICACION ---------------------------------------- */
+}
+
+@media (max-width: 575px) {
+
+	/* MAIN-MENU ------------------------------------------- */
+	.menu-Hytorc .dropdown-menu li {
+		width: 98%;
+		padding: 4px;
+	}
+
+	/* MAIN-MENU ------------------------------------------- */
+
+	/* CARRUSEL PRODUCTOS ------------------------------------------- */
+	#button-prev {
+		left: -6px;
+	}
+
+	#button-next {
+		right: -6px;
+	}
+
+	/* CARRUSEL PRODUCTOS ------------------------------------------- */
+
+	/* DETALLE PROD ---------------------------------------- */
+	.btnRequestQuote {
+		width: 100%;
+		margin-bottom: 14px;
+		margin-right: 0;
+	}
+
+	.btnProductos .dropdown {
+		/*width: 82%;*/
+		width: 100%;
+	}
+
+	.tableTools {
+		position: relative;
+	}
+
+	.tableTools::before {
+		content: '';
+		position: absolute;
+		top: -8px;
+		right: 0;
+		width: 30px;
+		height: 66px;
+		display: block;
+		z-index: 1;
+		background: rgb(255, 255, 255);
+		background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%);
+	}
+
+	.tableTools nav {
+		overflow-x: scroll;
+	}
+
+	.btnsTabsTable {
+		width: 540px;
+	}
+
+	/* DETALLE PROD ---------------------------------------- */
+
+	/* SUJETADORES ---------------------------------------- */
+	.bk-arandelasSistem::after {
+		height: 180px;
+		margin-top: -10px;
+		width: 90%;
+	}
+
+	/* SUJETADORES ---------------------------------------- */
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+	.block-NuestroTaller {
+		width: 100%;
+	}
+
+	/* TALLER DE SERVICIO ---------------------------------------- */
+
+	/* CALIBRACION ---------------------------------------- */
+	.acreditaciones img,
+	.acreditaciones img:nth-child(2) {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 10px;
+	}
+
+	.mrCalbtn {
+		margin-right: 0;
+		margin-bottom: 20px;
+	}
+
+	.rutaMovil {
+		padding: 50px 0 60px;
+	}
+
+	.servCalibra {
+		padding: 50px 0;
+	}
+
+	/* CALIBRACION ---------------------------------------- */
+
+	/* UBICACION ---------------------------------------- */
+	.banner-ubica-bolsa {
+		background: url('../img/var/dim-background-black.png') center/cover fixed;
+		padding: 80px 0 40px;
+	}
+
+	/* UBICACION ---------------------------------------- */
+}

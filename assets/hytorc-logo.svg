@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 88" aria-label="HYTORC">
+  <!-- HYT text — y=72 gives enough space above and below for full glyphs -->
+  <text x="2" y="72" font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="72" letter-spacing="-2" fill="#111111">HYT</text>
+  <!-- Red circle replacing the "O" — centred vertically in the 88px canvas -->
+  <circle cx="216" cy="42" r="36" fill="#CC1111"/>
+  <!-- White diagonal slash through circle -->
+  <line x1="196" y1="68" x2="236" y2="16" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round"/>
+  <!-- RC text -->
+  <text x="253" y="72" font-family="'Arial Black', Impact, 'Helvetica Neue', Arial, sans-serif" font-weight="900" font-size="72" letter-spacing="-2" fill="#111111">RC</text>
+</svg>

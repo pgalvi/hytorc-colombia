@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bolsa de Trabajo | HYTORC Colombia</title>
+    <link rel="apple-touch-icon" href="assets/Logo col.png">
+    <meta name="theme-color" content="#dc143c">
+
+    <!-- Bootstrap 5.3.0 (Requerido para el diseño clonado) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos fuente de México -->
+    <link href="css/mx_style_fonts.css" rel="stylesheet" type="text/css" />
+    <link href="css/mx_style_personalizado.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilos base de Colombia (Cargados al final para prevalecer en el Header/Footer) -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile-fixes.css" />
+
+    <style>
+        /* SOBREESCRITURAS PARA AJUSTE PERFECTO Y COMPATIBILIDAD CON COLOMBIA */
+
+        /* Banner Principal */
+        .banner-ubica-bolsa {
+            background: url('assets/dim-background-black.png') center/cover fixed !important;
+            padding: 200px 0 80px;
+        }
+
+        .banner-ubica-bolsa h1 {
+            color: #afa77e !important;
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Imagen Lateral de Colaboración (Pseudo-elemento) */
+        .bolsaTrabajo::before {
+            background: url('assets/Captura de pantalla 2026-03-05 124302.png') center/cover no-repeat !important;
+        }
+
+        @media (max-width: 991px) {
+            .bolsaTrabajo::before {
+                display: none;
+            }
+        }
+
+        /* Iconos Bolsa Trabajo */
+        #bolsa01 {
+            background-image: url('https://www.hytorc.com.mx/img/icons/bolsaTrabajo01.svg') !important;
+        }
+
+        #bolsa02 {
+            background-image: url('https://www.hytorc.com.mx/img/icons/bolsaTrabajo02.svg') !important;
+        }
+
+        #bolsa03 {
+            background-image: url('https://www.hytorc.com.mx/img/icons/bolsaTrabajo03.svg') !important;
+        }
+
+        /* Iconos Vida Hytorc */
+        #vida01 {
+            background-image: url('assets/Captura de pantalla 2026-03-05 124400.png') !important;
+        }
+
+        #vida02 {
+            background-image: url('assets/Captura de pantalla 2026-03-05 124409.png') !important;
+        }
+
+        #vida03 {
+            background-image: url('assets/Captura de pantalla 2026-03-05 124415.png') !important;
+        }
+
+        #vida04 {
+            background-image: url('assets/Captura de pantalla 2026-03-05 124420.png') !important;
+        }
+
+        /* Forzar visibilidad y estilo de iconos en Asegure su Futuro */
+        .iconsBolsa img {
+            width: 28px !important;
+            height: auto !important;
+            margin-right: 15px !important;
+            display: inline-block !important;
+        }
+
+        /* Botón CV */
+        .btn-CV {
+            background: url('https://www.hytorc.com.mx/img/icons/upload.svg') 88% 7px/40px auto #f3c734 no-repeat !important;
+            width: 100%;
+            border: none;
+            padding: 15px;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        /* Ajustes Formulario */
+        .formCV .underline-input {
+            border: none !important;
+            border-bottom: 2px solid #ccc !important;
+            background: transparent !important;
+            color: white !important;
+            border-radius: 0 !important;
+            padding-left: 0 !important;
+        }
+
+        .formCV label {
+            color: #fff !important;
+            font-weight: 600 !important;
+            letter-spacing: 0.5px !important;
+        }
+
+        .enviarFormUbica {
+            background-color: #afa77e !important;
+            color: #fff !important;
+            padding: 10px 30px !important;
+            font-weight: bold !important;
+        }
+
+        /* Ajuste Específico para Bolsa de Trabajo para evitar el cuadro negro */
+        /* Eliminamos los estilos forced row de la nav que rompen el móvil */
+
+        @media (max-width: 991px) {
+            .site-header .main-nav {
+                display: none;
+                flex-direction: column;
+                position: fixed;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: #000;
+                z-index: 9999;
+                padding: 20px;
+                overflow-y: auto;
+            }
+
+            .site-header .main-nav.open {
+                display: flex !important;
+            }
+
+            .site-header .main-nav li a {
+                color: #fff !important;
+                font-weight: bold;
+                padding: 15px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                display: block;
+            }
+        }
+
+        .txtVidaHytorc {
+            background-size: 60px !important;
+            background-position: center 20px !important;
+            /* Icon top centered */
+            background-repeat: no-repeat !important;
+            padding: 100px 20px 20px !important;
+            /* Massive top padding to clear icon */
+            text-align: center !important;
+            position: relative !important;
+            background-color: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        .txtVidaHytorc h4 {
+            margin-top: 0 !important;
+            color: #cbcb97 !important;
+        }
+
+        /* Essential background rules for Vida Hytorc icons - Desktop & Tablet */
+        .txtVidaHytorc {
+            background-repeat: no-repeat !important;
+            background-size: 60px !important;
+            background-position: 20px 20px !important;
+            padding: 20px 20px 20px 100px !important;
+            /* Padding left to clear icon on desktop/wide */
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media (max-width: 575px) {
+            .txtVidaHytorc {
+                padding: 100px 20px 20px !important;
+                background-position: center 20px !important;
+                text-align: center !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
+                <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="productos.html">PRODUCTOS</a>
+                        <div class="dropdown">
+                            <div class="product-nav-banner"
+                                style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
+                                <a href="productos_hidraulica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png"
+                                            alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Hidráulicas</span>
+                                </a>
+                                <a href="productos_neumatica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" decoding="async">
+                                    </div>
+                                    <span class="product-nav-text">Neumáticas</span>
+                                </a>
+                                <a href="productos_electricas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Eléctricas</span>
+                                </a>
+                                <a href="herramienta-manual.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Manual</span>
+                                </a>
+                                <a href="productos_tensionadores_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Tensionadores</span>
+                                </a>
+                                <a href="productos_sujetadores.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Sujetadores</span>
+                                </a>
+                                <a href="productos_accesorios.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Accesorios</span>
+                                </a>
+                                <a href="productos_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Bombas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                                                  <li class="has-dropdown mega-dropdown">
+            <a href="servicios.html">SERVICIOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="taller-servicios.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/taller .png" alt="Taller de Servicios" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Taller de Servicios</span>
+                </a>
+                <a href="calibracion.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/calibracion.png" alt="Calibración" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Calibración</span>
+                </a>
+                <a href="software.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/software.png" alt="Softwares" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Softwares</span>
+                </a>
+                <a href="capacitacion-cech.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/capacitacion.png" alt="Capacitación CECH" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Capacitación CECH</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                              <li class="has-dropdown mega-dropdown">
+            <a href="#">QUIÉNES SOMOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="sobre-nosotros.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-1.png" alt="Sobre nosotros" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Acerca de nosotros</span>
+                </a>
+                <a href="industrias.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-5.png" alt="Industria" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Industria</span>
+                </a>
+                <a href="estandar-hytorc.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/hytorc_standard.png" alt="Hytorc Standard" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Hytorc Standard</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="contacto.html">CONTÁCTANOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="contacto-ubicacion.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-4.png" alt="Ubicación"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Ubicación</span>
+                                </a>
+                                <a href="quejas-y-sugerencias.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Quejas y Sugerencias</span>
+                                </a>
+                                <a href="cotizaciones.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-3.png" alt="Cotizar"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Cotizar</span>
+                                </a>
+                                <a href="bolsa-trabajo.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Bolsa de Trabajo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <div class="header-social">
+                    <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                        target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                        aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link"
+                        aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                        </svg></a>
+                    <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                        aria-label="YouTube"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg></a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+        <!-- *************************************** BANNER PRINCIPAL *************************************** -->
+        <section class="banner-ubica-bolsa">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1">
+                        <h1>BOLSA DE TRABAJO</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *************************************** BLOQUE INTRODUCTORIO *************************************** -->
+        <section class="bolsaTrabajo">
+            <div class="container-xxl">
+                <div class="row justify-content-lg-end">
+
+                    <div class="col-12 d-block d-lg-none mb-5">
+                        <img src="assets/Captura de pantalla 2026-03-05 124302.png" class="img-fluid"
+                            alt="Colaboración en Hytorc" loading="lazy" decoding="async">
+                    </div>
+
+                    <div class="col-12 col-lg-6">
+                        <h2 class="titLaboratorioCalibra mb-4"
+                            style="color:#4b4e53; font-family:'Acumin Pro Condensed', sans-serif; font-weight:700;">
+                            HYTORC: Donde la innovación se encuentra con el impacto
+                        </h2>
+                        <p>
+                            Bienvenido a HYTORC, donde estarás a la vanguardia de la innovación. Durante más de 37 años,
+                            hemos revolucionado la
+                            tecnología de atornillado y establecido los estándares de precisión, seguridad y eficiencia
+                            en el atornillado industrial. <br>
+                            ¡Únete a nuestro equipo en crecimiento y deja huella en el mundo!
+                        </p>
+                        <div class="row mt-5">
+                            <div class="col-12 col-sm-6 mb-4">
+                                <div class="bolsaTrabajoIcon" id="bolsa01">
+                                    <h5 style="color:#6c6931; font-weight:bold;">Siempre innovando</h5>
+                                    <p>Cada día es una oportunidad para superar los límites de lo posible.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 mb-4">
+                                <div class="bolsaTrabajoIcon" id="bolsa02">
+                                    <h5 style="color:#6c6931; font-weight:bold;">Soporte Global</h5>
+                                    <p>Nuestras herramientas están diseñadas en EE. UU. y se utilizan en industrias
+                                        críticas en todo el mundo.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 mb-4">
+                                <div class="bolsaTrabajoIcon" id="bolsa03">
+                                    <h5 style="color:#6c6931; font-weight:bold;">Construye tu futuro</h5>
+                                    <p>
+                                        En HYTORC, no solo se crean herramientas, sino soluciones que impulsan las
+                                        industrias y transforman el mundo. ¿Listo
+                                        para ayudar a construir el futuro?
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- *************************************** BLOQUE ASEGURE SU FUTURO *************************************** -->
+        <section class="bolsaAsegurafuturo">
+            <div class="container-xxl">
+                <div class="row justify-content-center">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="tit-Compara"
+                            style="font-family:'Acumin Pro Condensed', sans-serif; font-size:36px; color:#4b4e53;">
+                            ASEGURE <strong style="color:#d4002e;">SU FUTURO</strong></h2>
+                    </div>
+                    <div class="col-12 col-md-10">
+                        <div class="row g-4 text-center justify-content-center">
+                            <div class="col-6 col-md-4">
+                                <div class="iconsBolsa">
+                                    <img src="https://www.hytorc.com.mx/img/icons/iconBolsa01.svg" alt="Admin"
+                                        loading="lazy" decoding="async">
+                                    <span style="display:block; margin-top:10px; font-weight:600;">Administración</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="iconsBolsa">
+                                    <img src="https://www.hytorc.com.mx/img/icons/iconBolsa03.svg" alt="Ing"
+                                        loading="lazy" decoding="async">
+                                    <span style="display:block; margin-top:10px; font-weight:600;">Ingeniería</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="iconsBolsa">
+                                    <img src="https://www.hytorc.com.mx/img/icons/iconBolsa11.svg" alt="Mark"
+                                        loading="lazy" decoding="async">
+                                    <span style="display:block; margin-top:10px; font-weight:600;">Marketing</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="iconsBolsa">
+                                    <img src="https://www.hytorc.com.mx/img/icons/iconBolsa13.svg" alt="Sales"
+                                        loading="lazy" decoding="async">
+                                    <span style="display:block; margin-top:10px; font-weight:600;">Ventas</span>
+                                </div>
+                            </div>
+                            <div class="col-6 col-md-4">
+                                <div class="iconsBolsa">
+                                    <img src="https://www.hytorc.com.mx/img/icons/iconBolsa09.svg" alt="IT"
+                                        loading="lazy" decoding="async">
+                                    <span style="display:block; margin-top:10px; font-weight:600;">Tecnología IT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- *************************************** BLOQUE LA VIDA EN HYTORC *************************************** -->
+        <section class="vidaHyctor" style="background-color:#1a1a1a; color:white; padding:80px 0;">
+            <div class="container-xxl">
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-5 mb-5 mb-lg-0">
+                        <h2 class="tit-Compara"
+                            style="font-family:'Acumin Pro Condensed', sans-serif; font-size:36px; color:#fff; margin-bottom:20px;">
+                            LA VIDA <strong style="color:#cbcb97;">EN HYTORC</strong></h2>
+                        <p class="mb-4" style="font-size:18px;">
+                            HYTORC es una empresa familiar que opera y crece a nivel mundial. ¡Postúlate hoy mismo y
+                            forma parte de nuestra familia!
+                        </p>
+
+                        <div class="accordion" id="accordionBolsa">
+                            <div class="accordion-item" style="background:transparent; border:none;">
+                                <button class="btn-CV" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseCV" aria-expanded="false"
+                                    style="background-color:#afa77e; color:#000;">
+                                    CARGA TU C.V.
+                                </button>
+                                <div id="collapseCV" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionBolsa">
+                                    <div class="accordion-body" style="padding:30px 0;">
+                                        <form action="https://api.web3forms.com/submit" method="POST" enctype="multipart/form-data" class="formCV"
+                                            id="form_bolsatrabajo">
+                                            <input type="hidden" name="access_key" value="c6cd6aa2-f390-411d-89d3-09805629f5c5">
+                                            <input type="hidden" name="subject" value="Nueva Postulación Laboral - HYTORC Colombia">
+                                            <input type="hidden" name="from_name" value="Talento Humano HYTORC">
+                                            <div class="row g-3">
+                                                <div class="col-12 col-md-6">
+                                                    <label>Nombre</label>
+                                                    <input type="text" name="nombre"
+                                                        class="form-control underline-input"
+                                                        placeholder="Nombre completo" required>
+                                                </div>
+                                                <div class="col-12 col-md-6">
+                                                    <label>Teléfono</label>
+                                                    <input type="text" name="telefono"
+                                                        class="form-control underline-input"
+                                                        placeholder="Teléfono/Celular" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label>Correo electrónico</label>
+                                                    <input type="email" name="email"
+                                                        class="form-control underline-input"
+                                                        placeholder="tucorreo@ejemplo.com" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label>Mensaje</label>
+                                                    <textarea name="mensaje" class="form-control underline-input"
+                                                        rows="3" placeholder="Cuéntanos sobre ti" required></textarea>
+                                                </div>
+                                                <div class="col-12">
+                                                    <label>ADJUNTA TU C.V. (PDF, max 5MB)</label>
+                                                    <input type="file" name="attachment" accept=".pdf"
+                                                        class="form-control"
+                                                        style="background:rgba(255,255,255,0.1); color:white; border:1px solid #666;" required>
+                                                </div>
+                                                <div class="col-12">
+                                                    <button type="submit" class="enviarFormUbica"
+                                                        style="width:100%;">ENVIAR POSTULACIÓN</button>
+                                                </div>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-lg-7">
+                        <div class="row g-4">
+                            <div class="col-12 col-sm-6">
+                                <div class="txtVidaHytorc" id="vida01"
+                                    style="background-color:rgba(255,255,255,0.05); border-radius:10px;">
+                                    <h4 style="color:#cbcb97;">CULTURA COLABORATIVA</h4>
+                                    <p>Nuestro éxito se basa en el poder de la colaboración. Al trabajar juntos, podemos
+                                        centrarnos en la innovación.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="txtVidaHytorc" id="vida02"
+                                    style="background-color:rgba(255,255,255,0.05); border-radius:10px;">
+                                    <h4 style="color:#cbcb97;">CRECIMIENTO PROFESIONAL</h4>
+                                    <p>Queremos que crezcas junto con la empresa. HYTORC ofrece desarrollo profesional
+                                        continuo.</p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="txtVidaHytorc" id="vida03"
+                                    style="background-color:rgba(255,255,255,0.05); border-radius:10px;">
+                                    <h4 style="color:#cbcb97;">BENEFICIOS</h4>
+                                    <p>Ofrecemos los recursos y el apoyo que necesita dentro y fuera del ámbito laboral.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6">
+                                <div class="txtVidaHytorc" id="vida04"
+                                    style="background-color:rgba(255,255,255,0.05); border-radius:10px;">
+                                    <h4 style="color:#cbcb97;">EQUILIBRIO LABORAL</h4>
+                                    <p>Somos una empresa familiar. Disfrute de un ambiente sano y equilibrado.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- .......... FOOTER (COLOMBIA) .......... -->
+    <section class="wrapFooter">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Ubicación</h4>
+                    <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota,
+                        Cund.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Síguenos</h4>
+                    <div class="social-links-container"
+                        style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
+                        <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                            target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                            aria-label="Instagram"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                            </svg></a>
+                        <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank"
+                            class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg></a>
+                        <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                            aria-label="YouTube"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Links</h4>
+                    <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a><br>
+                    <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a><br>
+                    <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank"
+                        class="linkFinal">Política de Privacidad</a>
+                </div>
+                <div class="col-12">
+                    <div class="sitemap-header" id="sitemap-toggle">
+                        Mapa de sitio
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    
+
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/nav.js"></script>
+
+    <!-- Web3Forms AJAX submission for bolsa de trabajo (con adjunto PDF) -->
+    <script>
+    (function () {
+        const form = document.getElementById('form_bolsatrabajo');
+        if (!form) return;
+
+        // Quitar action/method del HTML para que el navegador no navegue a api.web3forms.com
+        form.removeAttribute('action');
+        form.removeAttribute('method');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const btn = form.querySelector('[type="submit"]');
+            const originalText = btn.textContent;
+            btn.textContent = 'Enviando…';
+            btn.disabled = true;
+
+            // FormData captura automáticamente el archivo adjunto (attachment)
+            const data = new FormData(form);
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                    // NO agregar Content-Type: el navegador lo pone con el boundary correcto
+                });
+                const json = await res.json();
+
+                if (json.success) {
+                    form.reset();
+                    form.innerHTML = '<p style="color:#cbcb97; font-size:1.1rem; text-align:center; padding:20px 0;">'
+                        + '¡Postulación enviada con éxito! Nos pondremos en contacto contigo pronto.</p>';
+                } else {
+                    btn.textContent = 'Error al enviar. Intenta de nuevo.';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                btn.textContent = 'Error de conexión. Intenta de nuevo.';
+                btn.disabled = false;
+            }
+        });
+    })();
+    </script>
+
+    <!-- *************************************** CREDITS *************************************** -->
+    <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
+        <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
+            <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
+        </div>
+    </section>
+    <!-- *************************************** CREDITS *************************************** -->
+</body>
+
+</html>

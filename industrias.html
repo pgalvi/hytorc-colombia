@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industrias - HYTORC Colombia</title>
+    <link rel="apple-touch-icon" href="assets/Logo col.png">
+    <meta name="theme-color" content="#dc143c">
+
+    <meta name="site_name" property="og:site_name" content="Industrias - HYTORC Colombia" />
+    <meta name="title" property="og:title" content="Industrias - HYTORC Colombia" />
+    <meta name="description" property="og:description"
+        content="HYTORC Colombia atiende los sectores más críticos: petróleo y gas, minería, energía, petroquémica, construcción y más. Soluciones de torque industrial." />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://www.hytorc.com.co/industrias.html" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile-fixes.css" />
+    <link href="mx_style_personalizado.css" rel="stylesheet" type="text/css" />
+    <link href="mx_style_fonts.css" rel="stylesheet" type="text/css" />
+
+    <style>
+        /* Banner hero for industrias */
+        .banner-productos {
+            background: url('assets/dim-background-black.png') center/cover fixed;
+            padding: 200px 0 80px;
+            position: relative;
+        }
+
+        .banner-productos::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .banner-productos h1 {
+            font-family: 'Acumin Pro ExtraCondensed', sans-serif;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: #999966;
+            font-size: 2.4rem;
+            text-transform: uppercase;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Industry thumbnails */
+        .productos {
+            padding: 60px 0;
+            background-color: #f0f0f0;
+        }
+
+        .thumb-industria {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .thumb-industria img {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 50%;
+            aspect-ratio: 1;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .thumb-industria h5 {
+            font-family: 'AcuminProBold', 'Acumin Pro Condensed', sans-serif;
+            font-weight: 700;
+            color: #4b4e53;
+            font-size: 18px;
+            margin-top: 16px;
+            text-transform: none;
+        }
+
+        .thumb-industria p {
+            font-size: 14px;
+            color: #666;
+            padding: 0 10px;
+            line-height: 1.6;
+        }
+
+        .thumb-industria a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2;
+        }
+
+        /* Container and grid */
+        .container-xxl {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-4 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-6 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .offset-md-1 {
+            margin-left: 8.333%;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+        }
+
+        .p-4 {
+            padding: 1.5rem;
+        }
+
+        .img-fluid {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        /* Contact banner */
+        .bk-CONTÁCTANOS {
+            background-color: #4b4e53;
+            padding: 0;
+        }
+
+        .bk-CONTÁCTANOS a {
+            display: block;
+            width: 100%;
+            text-decoration: none;
+            padding: 40px 0;
+            transition: background-color 0.3s;
+        }
+
+        .bk-CONTÁCTANOS:hover {
+            background-color: #3a3d41;
+        }
+
+        .bk-CONTÁCTANOS h1 {
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 600;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 8px;
+            font-size: 28px;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- .......... HEADER .......... -->
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
+                <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="productos.html">PRODUCTOS</a>
+                        <div class="dropdown">
+                            <div class="product-nav-banner"
+                                style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
+                                <a href="productos_hidraulica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png"
+                                            alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Hidráulicas</span>
+                                </a>
+                                <a href="productos_neumatica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" decoding="async">
+                                    </div>
+                                    <span class="product-nav-text">Neumáticas</span>
+                                </a>
+                                <a href="productos_electricas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Eléctricas</span>
+                                </a>
+                                <a href="herramienta-manual.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Manual</span>
+                                </a>
+                                <a href="productos_tensionadores_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Tensionadores</span>
+                                </a>
+                                <a href="productos_sujetadores.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Sujetadores</span>
+                                </a>
+                                <a href="productos_accesorios.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Accesorios</span>
+                                </a>
+                                <a href="productos_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Bombas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                                                  <li class="has-dropdown mega-dropdown">
+            <a href="servicios.html">SERVICIOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="taller-servicios.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/taller .png" alt="Taller de Servicios" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Taller de Servicios</span>
+                </a>
+                <a href="calibracion.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/calibracion.png" alt="Calibración" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Calibración</span>
+                </a>
+                <a href="software.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/software.png" alt="Softwares" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Softwares</span>
+                </a>
+                <a href="capacitacion-cech.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/capacitacion.png" alt="Capacitación CECH" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Capacitación CECH</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                              <li class="has-dropdown mega-dropdown">
+            <a href="#">QUIÉNES SOMOS</a>
+            <div class="dropdown">
+              <div class="mega-menu-grid">
+                <a href="sobre-nosotros.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-1.png" alt="Sobre nosotros" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Acerca de nosotros</span>
+                </a>
+                <a href="industrias.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/Sin título-5.png" alt="Industria" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Industria</span>
+                </a>
+                <a href="estandar-hytorc.html" class="mega-menu-item">
+                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                    <img src="assets/hytorc_standard.png" alt="Hytorc Standard" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+                  </div>
+                  <span>Hytorc Standard</span>
+                </a>
+              </div>
+            </div>
+          </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="contacto.html">CONTÁCTANOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="contacto-ubicacion.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-4.png" alt="Ubicación"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Ubicación</span>
+                                </a>
+                                <a href="quejas-y-sugerencias.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Quejas y Sugerencias</span>
+                                </a>
+                                <a href="cotizaciones.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-3.png" alt="Cotizar"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Cotizar</span>
+                                </a>
+                                <a href="bolsa-trabajo.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Bolsa de Trabajo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <div class="header-social">
+                    <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                        target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                        aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link"
+                        aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                        </svg></a>
+                    <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                        aria-label="YouTube"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg></a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <!-- *************************************** BANNER PRINCIPAL INDUSTRIAS *************************************** -->
+        <section class="banner-productos">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1">
+                        <h1>INDUSTRIAS</h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- *************************************** BANNER PRINCIPAL INDUSTRIAS *************************************** -->
+
+        <!-- *************************************** INDUSTRIAS *************************************** -->
+        <section class="productos">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003134.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Construcción (Puentes y estructuras)</h5>
+                        <p>Aplicando un torque preciso para la seguridad de su proyecto de construcción.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003144.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Oil&amp;Gas</h5>
+                        <p>Dedicado a proteger los empaques de sus bridas, lo que se refleja en mayor seguridad y una
+                            eficiencia productiva.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003151.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Minería</h5>
+                        <p>Maximizando su seguridad y mejorando la rentabilidad en sus proyectos con las mejores
+                            herramientas para su maquinaría.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003159.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Eólico</h5>
+                        <p>Asegurando que cada ráfaga de viento se aproveche al máximo.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003208.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Offshore</h5>
+                        <p>Evite costosos tiempos de inactividad y garantice la seguridad.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003215.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Ferroviario</h5>
+                        <p>Soluciones de mantenimiento de última generación.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003222.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Petroquímica</h5>
+                        <p>Elimina fugas y evita paros inesperados.</p>
+                    </div>
+
+                    <div class="col-12 col-md-4 thumb-industria">
+                        <img src="assets/Captura de pantalla 2026-03-05 003228.png" class="img-fluid p-4" loading="lazy"
+                            decoding="async">
+                        <h5>Generación de energía</h5>
+                        <p>Maximiza la disponibilidad, reduce la incertidumbre.</p>
+                    </div>
+
+
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+        <!-- *************************************** INDUSTRIAS *************************************** -->
+
+
+        <!-- *************************************** CONTÁCTANOS *************************************** -->
+        <section class="bk-CONTÁCTANOS">
+            <a href="contacto.html" style="text-decoration: none;">
+                <div class="container-xxl">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <h1>CONTÁCTANOS PARA MÁS INFORMACIÓN</h1>
+                        </div>
+                    </div><!-- /.row -->
+                </div><!-- /.container -->
+            </a>
+        </section>
+        <!-- *************************************** CONTÁCTANOS *************************************** -->
+
+    </main>
+
+    <!-- *************************************** FOOTER *************************************** -->
+    <section class="wrapFooter">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Ubicación</h4>
+                    <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota,
+                        Cund.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Síguenos</h4>
+                    <div class="social-links-container"
+                        style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
+                        <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                            target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                            aria-label="Instagram"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                            </svg></a>
+                        <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank"
+                            class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg></a>
+                        <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                            aria-label="YouTube"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Links</h4>
+                    <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a><br>
+                    <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a><br>
+                    <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank"
+                        class="linkFinal">Política de Privacidad</a>
+                </div>
+                <div class="col-12">
+                    <div class="sitemap-header" id="sitemap-toggle">
+                        Mapa de sitio
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    <!-- *************************************** FOOTER *************************************** -->
+    
+
+
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+
+    <!-- *************************************** CREDITS *************************************** -->
+    <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
+        <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
+            <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
+        </div>
+    </section>
+    <!-- *************************************** CREDITS *************************************** -->
+</body>
+
+</html>

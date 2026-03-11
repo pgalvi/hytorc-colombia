@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quejas y Sugerencias - HYTORC Colombia</title>
+    <link rel="apple-touch-icon" href="assets/Logo col.png">
+    <meta name="theme-color" content="#dc143c">
+
+    <meta name="site_name" property="og:site_name" content="Quejas y Sugerencias - HYTORC Colombia" />
+    <meta name="title" property="og:title" content="Quejas y Sugerencias - HYTORC Colombia" />
+    <meta name="description" property="og:description"
+        content="Buzón de Quejas, Sugerencias y/o Reclamaciones de HYTORC Colombia. Envíanos tus comentarios, con gusto te atenderemos." />
+    <meta name="type" property="og:type" content="website" />
+    <meta name="url" property="og:url" content="https://www.hytorc.com.co/quejas-y-sugerencias.html" />
+
+    <!-- Bootstrap 5.3.0 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos fuente de México -->
+    <link href="css/mx_style_fonts.css" rel="stylesheet" type="text/css" />
+    <link href="css/mx_style_personalizado.css" rel="stylesheet" type="text/css" />
+
+    <!-- Estilos base de Colombia (Cargados al final para prevalecer en el Header/Footer) -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/mobile-fixes.css" />
+
+    <style>
+        /* Banner */
+        .banner-ubica-bolsa {
+            background: url('assets/dim-background-black.png') center/cover fixed !important;
+            padding: 200px 0 80px;
+        }
+
+        /* Container and grid */
+        .container-xxl {
+            max-width: 1320px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 -12px;
+        }
+
+        .col-12 {
+            flex: 0 0 100%;
+            max-width: 100%;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-4 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-5 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-7 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-10 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-md-11 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .col-lg-4 {
+            padding: 0 12px;
+            box-sizing: border-box;
+        }
+
+        .offset-md-1 {
+            margin-left: 8.333%;
+        }
+
+        @media (min-width: 768px) {
+            .col-md-4 {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+
+            .col-md-5 {
+                flex: 0 0 41.666%;
+                max-width: 41.666%;
+            }
+
+            .col-md-6 {
+                flex: 0 0 50%;
+                max-width: 50%;
+            }
+
+            .col-md-7 {
+                flex: 0 0 58.333%;
+                max-width: 58.333%;
+            }
+
+            .col-md-10 {
+                flex: 0 0 83.333%;
+                max-width: 83.333%;
+            }
+
+            .col-md-11 {
+                flex: 0 0 91.666%;
+                max-width: 91.666%;
+            }
+        }
+
+        @media (min-width: 992px) {
+            .col-lg-4 {
+                flex: 0 0 33.333%;
+                max-width: 33.333%;
+            }
+        }
+
+        .mb-3 {
+            margin-bottom: 1rem;
+        }
+
+        .mb-4 {
+            margin-bottom: 1.5rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-uppercase {
+            text-transform: uppercase;
+        }
+
+        .justify-content-center {
+            justify-content: center;
+        }
+
+        .justify-content-around {
+            justify-content: space-around;
+        }
+
+        /* Dark form section */
+        .sectionFormDark {
+            background-color: #4b4e53;
+            padding: 60px 0;
+        }
+
+        .section-form-title {
+            font-family: 'Acumin Pro ExtraCondensed', 'Acumin Pro Condensed', sans-serif;
+            font-weight: 900;
+            font-size: 24px;
+            color: #999966;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 40px;
+        }
+
+        .contacto_quejas_y_sugerencias {
+            color: #ccc;
+        }
+
+        .contacto_quejas_y_sugerencias .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #aaa;
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .contacto_quejas_y_sugerencias .form-control {
+            display: block;
+            width: 100%;
+            padding: 0.5rem 0;
+            font-size: 1rem;
+            color: #fff;
+            background-color: transparent;
+            border: none;
+            border-bottom: 1px solid #888;
+            outline: none;
+            box-sizing: border-box;
+            border-radius: 0;
+        }
+
+        .contacto_quejas_y_sugerencias .form-control::placeholder {
+            color: #888;
+        }
+
+        .contacto_quejas_y_sugerencias .form-control:focus {
+            border-bottom-color: #999966;
+        }
+
+        .contacto_quejas_y_sugerencias textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
+        }
+
+        .contacto_quejas_y_sugerencias p {
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            color: #999966;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        .contacto_quejas_y_sugerencias input[type="radio"] {
+            accent-color: #999966;
+            margin-right: 8px;
+            cursor: pointer;
+        }
+
+        .contacto_quejas_y_sugerencias label {
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 14px;
+            color: #ccc;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-quejas {
+            margin-top: 30px;
+        }
+
+        .enviarFormUbica {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 12px 40px;
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .enviarFormUbica:hover {
+            background-color: #999966;
+        }
+
+        /* Thank you message */
+        .txtGraciasForm {
+            padding: 40px 0;
+        }
+
+        .txtGraciasForm h3 {
+            font-family: 'Acumin Pro Condensed', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: #999966;
+        }
+
+        .txtGraciasForm h3 span {
+            display: block;
+            font-weight: 400;
+            font-size: 16px;
+            color: #ccc;
+            margin-top: 10px;
+        }
+
+        /* Footer */
+        .wrapFooter {
+            background-color: #f5f5f5;
+            padding: 60px 0 20px;
+        }
+
+
+        .linkFinal {
+            color: #555;
+            text-decoration: none;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .linkFinal:hover {
+            color: #d63031;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- .......... HEADER .......... -->
+    <!-- HEADER -->
+    <header class="site-header" role="banner">
+        <div class="header-inner">
+            <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
+                <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
+            </a>
+
+            <nav aria-label="Navegación principal">
+                <ul class="main-nav" id="main-nav">
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="productos.html">PRODUCTOS</a>
+                        <div class="dropdown">
+                            <div class="product-nav-banner"
+                                style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
+                                <a href="productos_hidraulica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png"
+                                            alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Hidráulicas</span>
+                                </a>
+                                <a href="productos_neumatica.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" decoding="async">
+                                    </div>
+                                    <span class="product-nav-text">Neumáticas</span>
+                                </a>
+                                <a href="productos_electricas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Eléctricas</span>
+                                </a>
+                                <a href="herramienta-manual.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Manual</span>
+                                </a>
+                                <a href="productos_tensionadores_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Tensionadores</span>
+                                </a>
+                                <a href="productos_sujetadores.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Sujetadores</span>
+                                </a>
+                                <a href="productos_accesorios.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Accesorios</span>
+                                </a>
+                                <a href="productos_bombas.html" class="product-nav-item">
+                                    <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas"
+                                            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy"
+                                            decoding="async"></div>
+                                    <span class="product-nav-text">Bombas</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="servicios.html">SERVICIOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="taller-servicios.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/taller .png" alt="Taller de Servicios"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Taller de Servicios</span>
+                                </a>
+                                <a href="calibracion.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/calibracion.png" alt="Calibración"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Calibración</span>
+                                </a>
+                                <a href="software.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/software.png" alt="Softwares"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Softwares</span>
+                                </a>
+                                <a href="capacitacion-cech.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/capacitacion.png" alt="Capacitación CECH"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Capacitación CECH</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="#">QUIÉNES SOMOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="sobre-nosotros.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/Sin título-1.png" alt="Sobre nosotros"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Acerca de nosotros</span>
+                                </a>
+                                <a href="industrias.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/Sin título-5.png" alt="Industria"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Industria</span>
+                                </a>
+                                <a href="estandar-hytorc.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon"
+                                        style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+                                        <img src="assets/hytorc_standard.png" alt="Hytorc Standard"
+                                            style="width: 38px; height: 38px; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Hytorc Standard</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-dropdown mega-dropdown">
+                        <a href="contacto.html">CONTÁCTANOS</a>
+                        <div class="dropdown">
+                            <div class="mega-menu-grid">
+                                <a href="contacto-ubicacion.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-4.png" alt="Ubicación"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Ubicación</span>
+                                </a>
+                                <a href="quejas-y-sugerencias.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Quejas y Sugerencias</span>
+                                </a>
+                                <a href="cotizaciones.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-3.png" alt="Cotizar"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Cotizar</span>
+                                </a>
+                                <a href="bolsa-trabajo.html" class="mega-menu-item">
+                                    <div class="mega-menu-icon" style="width: 50px;">
+                                        <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo"
+                                            style="width: 100%; height: auto; object-fit: contain;" loading="lazy"
+                                            decoding="async">
+                                    </div>
+                                    <span>Bolsa de Trabajo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-cta">
+                <div class="header-social">
+                    <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                        target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                        </svg></a>
+                    <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                        aria-label="Instagram"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                        </svg></a>
+                    <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link"
+                        aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                        </svg></a>
+                    <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                        aria-label="YouTube"><svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg></a>
+                </div>
+                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-content">
+
+        <!-- *************************************** BANNER PRINCIPAL *************************************** -->
+        <section class="banner-ubica-bolsa">
+            <div class="container-xxl">
+                <div class="row">
+                    <div class="col-12 col-md-6 offset-md-1">
+                        <h1 style="text-align: left; color: #999966;">BUZÓN DE QUEJAS, SUGERENCIAS Y/O RECLAMACIONES
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- *************************************** BANNER PRINCIPAL *************************************** -->
+
+        <!-- *************************************** FORMULARIO *************************************** -->
+        <section class="sectionFormDark">
+            <div class="container-xxl">
+                <div class="row justify-content-center">
+
+                    <div class="col-12 col-md-10">
+                        <h2 class="section-form-title">ENVÍANOS TUS COMENTARIOS, CON GUSTO TE ATENDEREMOS</h2>
+                        <div class="contacto_quejas_y_sugerencias">
+                            <!-- Formulario Contacto Modal -->
+                            <form action="https://api.web3forms.com/submit" method="POST" id="form_quejas_y_sugerencias">
+                                <input type="hidden" name="access_key" value="c6cd6aa2-f390-411d-89d3-09805629f5c5">
+                                <div class="row justify-content-around">
+                                    <div class="col-12 col-md-7">
+                                        <div class="row">
+                                            <div class="col-12 col-md-6">
+                                                <div class="mb-4">
+                                                    <label for="nombre-qsm"
+                                                        class="form-label text-uppercase">Nombre*</label>
+                                                    <input type="text" id="nombre-qsm" name="nombre"
+                                                        class="nombre form-control underline-input"
+                                                        placeholder="Escribe tu nombre" required>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="telefono-qsm"
+                                                        class="form-label text-uppercase">Teléfono*</label>
+                                                    <input type="phone" id="telefono-qsm" name="telefono"
+                                                        class="telefono form-control underline-input"
+                                                        placeholder="Ej. 316 740 3580" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12 col-md-6">
+                                                <div class="mb-4">
+                                                    <label for="pais-qsm" class="form-label text-uppercase">Ciudad de
+                                                        Residencia:</label>
+                                                    <input type="text" id="pais-qsm" name="ciudad"
+                                                        class="pais form-control underline-input"
+                                                        placeholder="Ej. Colombia, Bogotá" required>
+                                                </div>
+                                                <div class="mb-4">
+                                                    <label for="email-qsm" class="form-label text-uppercase">Correo
+                                                        electrónico*</label>
+                                                    <input type="email" id="email-qsm" name="email"
+                                                        class="email form-control underline-input"
+                                                        placeholder="tucorreo@ejemplo.com" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <div class="mb-4" style="flex-grow: 1;">
+                                                    <label for="comentario-qsm"
+                                                        class="form-label text-uppercase">Mensaje</label>
+                                                    <textarea id="comentario-qsm" name="mensaje"
+                                                        class="comentario form-control underline-input" rows="10"
+                                                        placeholder="Escribe tu mensaje" required></textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- col-12 col-md-7 -->
+
+                                    <div class="col-12 col-md-5 col-lg-4">
+                                        <p>DIRIGIDO A:</p>
+                                        <div class="mb-3">
+                                            <input type="radio" id="laboratorio-calibracion" name="dirigido-para"
+                                                value="laboratorio-calibracion" />
+                                            <label for="laboratorio-calibracion">LABORATORIO DE CALIBRACIÓN</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="radio" id="taller-mantenimiento" name="dirigido-para"
+                                                value="taller-mantenimiento" />
+                                            <label for="taller-mantenimiento">TALLER-MANTENIMIENTO</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="radio" id="capacitacion" name="dirigido-para"
+                                                value="capacitacion" />
+                                            <label for="capacitacion">CAPACITACIÓN</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="radio" id="ventas" name="dirigido-para" value="ventas" />
+                                            <label for="ventas">VENTAS</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="radio" id="asistencia-tecnica" name="dirigido-para"
+                                                value="asistencia-tecnica" />
+                                            <label for="asistencia-tecnica">ASISTENCIA TÉCNICA</label>
+                                        </div>
+                                        <div class="mb-3">
+                                            <input type="radio" id="otros" name="dirigido-para" value="otros" checked />
+                                            <label for="otros">OTROS</label>
+                                        </div>
+                                        <div class="btn-quejas">
+                                            <button type="submit" class="enviarFormUbica" id="btn-quejas"
+                                                name="btn-quejas">ENVIAR MENSAJE</button>
+                                        </div>
+                                    </div><!-- col-12 col-md-5 -->
+                                </div><!-- row justify-content-around -->
+                            </form>
+                        </div> <!-- /contacto -->
+
+                        <div class="row txtGraciasForm gracias_contacto_qsm text-center" style="display:none">
+                            <div class="col-12">
+                                <h3>
+                                    Gracias por ayudarnos a mejorar
+                                    <span>Recibimos sus comentarios, le contactaremos en caso de ser
+                                        necesario.</span>
+                                </h3>
+                            </div>
+                        </div><!-- .contact -->
+
+                    </div><!-- col-12 col-md-10 -->
+
+                </div><!-- /.row -->
+            </div><!-- /.container -->
+        </section>
+        <!-- *************************************** FORMULARIO *************************************** -->
+
+    </main>
+
+    <!-- *************************************** FOOTER *************************************** -->
+    <section class="wrapFooter">
+        <div class="container-xxl">
+            <div class="row">
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Ubicación</h4>
+                    <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota,
+                        Cund.</p>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Síguenos</h4>
+                    <div class="social-links-container"
+                        style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
+                        <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#"
+                            target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" />
+                            </svg></a>
+                        <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link"
+                            aria-label="Instagram"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" />
+                            </svg></a>
+                        <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank"
+                            class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
+                            </svg></a>
+                        <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link"
+                            aria-label="YouTube"><svg viewBox="0 0 24 24">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                    <h4 class="titLineRed">Links</h4>
+                    <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a><br>
+                    <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a><br>
+                    <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank"
+                        class="linkFinal">Política de Privacidad</a>
+                </div>
+                <div class="col-12">
+                    <div class="sitemap-header" id="sitemap-toggle">
+                        Mapa de sitio
+                    </div>
+                </div>
+            </div><!-- /.row -->
+        </div><!-- /.container -->
+    </section>
+    <!-- *************************************** FOOTER *************************************** -->
+    
+
+
+    <script src="js/nav.js"></script>
+    <script src="js/animations.js"></script>
+
+    <!-- Web3Forms AJAX submission for quejas-y-sugerencias form -->
+    <script>
+    (function () {
+        const form = document.getElementById('form_quejas_y_sugerencias');
+        const successBox = document.querySelector('.gracias_contacto_qsm');
+        if (!form) return;
+
+        form.removeAttribute('action');
+        form.removeAttribute('method');
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            const btn = form.querySelector('[type="submit"]');
+            btn.textContent = 'Enviando…';
+            btn.disabled = true;
+
+            try {
+                const res = await fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: { 'Accept': 'application/json' }
+                });
+                const json = await res.json();
+
+                if (json.success) {
+                    form.closest('.contacto_quejas_y_sugerencias').style.display = 'none';
+                    if (successBox) successBox.style.display = 'flex';
+                } else {
+                    btn.textContent = 'Error al enviar. Intenta de nuevo.';
+                    btn.disabled = false;
+                }
+            } catch (err) {
+                btn.textContent = 'Error de conexión. Intenta de nuevo.';
+                btn.disabled = false;
+            }
+        });
+    })();
+    </script>
+
+    <!-- *************************************** CREDITS *************************************** -->
+    <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
+        <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
+            <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
+        </div>
+    </section>
+    <!-- *************************************** CREDITS *************************************** -->
+</body>
+
+</html>
