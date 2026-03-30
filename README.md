@@ -69,7 +69,7 @@ No se requieren preprocesadores. Para ver el sitio con todas sus funcionalidades
 ## 🏢 Contacto y Ubicación
 
 **HYTORC Colombia** 
-📍 PARQUE INDUSTRIAL OIKOS CIEM | BODEGA G 106 
+📍 PARQUE INDUSTRIAL 100 OIKOS | BODEGA G 106 
 Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cundinamarca. 
 📧 contactanos@hytorccolombia.com.co 
 🌐 [www.hytorc.com.co](https://www.hytorc.com.co)

@@ -3,7 +3,7 @@ const path = require('path');
 
 const directoryPath = 'C:\\Users\\EIADMIN\\.gemini\\antigravity\\scratch\\hytorc-colombia';
 
-const newAddressText = '<p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cund.</p>';
+const newAddressText = '<p>PARQUE INDUSTRIAL 100 OIKOS | BODEGA G 106<br>AUTOPISTA BOGOTÁ – MEDELLÍN KM 2,0<br>ENTRANDO 900 METROS | VÍA PARCELAS DE COTA<br>COTA — CUNDINAMARCA — COLOMBIA</p>';
 
 // Match any paragraph immediately following the Ubicación header, regardless of its content
 const superRegex = /(<h4 class="titLineRed">Ubicación<\/h4>\s*)<p>[\s\S]*?<\/p>/g;
