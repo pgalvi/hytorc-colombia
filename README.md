@@ -30,18 +30,18 @@ Sitio web institucional de **HYTORC Colombia**, distribuidores oficiales de solu
 
 ```text
 hytorc-colombia/
-├── index.html              # Landing Page
+├── index.html # Landing Page
 ├── css/
-│   ├── styles.css          # Estilos globales y core design
-│   ├── mobile-fixes.css    # Parches específicos para UX móvil (Crucial)
-│   └── mx_style_fonts.css  # Tipografías corporativas
+│ ├── styles.css # Estilos globales y core design
+│ ├── mobile-fixes.css # Parches específicos para UX móvil (Crucial)
+│ └── mx_style_fonts.css # Tipografías corporativas
 ├── assets/
-│   ├── Logo col.png        # Identidad visual
-│   ├── img/                # Iconos y activos SVG/PNG
-│   └── LIGHTNING PUMP.mp4  # Fondo de video para Hero
+│ ├── Logo col.png # Identidad visual
+│ ├── img/ # Iconos y activos SVG/PNG
+│ └── LIGHTNING PUMP.mp4 # Fondo de video para Hero
 └── js/
-    ├── nav.js              # Lógica de Mega Menú y Hamburger
-    └── animations.js       # Efectos de aparición (scroll-reveal)
+ ├── nav.js # Lógica de Mega Menú y Hamburger
+ └── animations.js # Efectos de aparición (scroll-reveal)
 ```
 
 ## 🎨 Especificaciones Técnicas
@@ -50,9 +50,9 @@ hytorc-colombia/
 - **Frameworks:** Bootstrap 5.3 (Cargado en páginas específicas de formularios).
 - **Tipografías:** Acumin Pro Condensed, Montserrat y fuentes corporativas Hytorc.
 - **Ajustes Móviles:** 
-  - Altura de encabezado dinámica (120px en móvil).
-  - Logo escalado a 102px de alto para impacto de marca.
-  - Menú hamburguesa táctil optimizado (48x48px).
+ - Altura de encabezado dinámica (120px en móvil).
+ - Logo escalado a 102px de alto para impacto de marca.
+ - Menú hamburguesa táctil optimizado (48x48px).
 
 ## 🛠️ Desarrollo Manual (Uso Local)
 
@@ -60,18 +60,18 @@ No se requieren preprocesadores. Para ver el sitio con todas sus funcionalidades
 
 1. Clona el repositorio.
 2. Abre un servidor local:
-   ```bash
-   # Usando Python
-   python -m http.server 8000
-   ```
+ ```bash
+ # Usando Python
+ python -m http.server 8000
+ ```
 3. Navega a `http://localhost:8000`.
 
 ## 🏢 Contacto y Ubicación
 
-**HYTORC Colombia**  
-📍 PARQUE INDUSTRIAL OIKOS CIEM | BODEGA G 106  
-Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cundinamarca.  
-📧 contactanos@hytorccolombia.com.co  
+**HYTORC Colombia** 
+📍 PARQUE INDUSTRIAL OIKOS CIEM | BODEGA G 106 
+Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cundinamarca. 
+📧 contactanos@hytorccolombia.com.co 
 🌐 [www.hytorc.com.co](https://www.hytorc.com.co)
 
 ---

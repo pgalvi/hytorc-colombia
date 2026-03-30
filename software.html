@@ -2,637 +2,637 @@
 <html lang="es">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Softwares | HYTORC Colombia</title>
-    <link rel="apple-touch-icon" href="assets/Logo col.png">
-    <meta name="theme-color" content="#dc143c">
-  <meta name="description"
-    content="Aplicaciones y software de HYTORC. HYTORC Connect, Bolting Manager, convertidor de par y calculadora de bridas." />
-  <meta name="robots" content="index, follow" />
-  <link rel="canonical" href="https://www.hytorc.com.co/software.html" />
-  <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/mobile-fixes.css" />
-  <!-- Google Font -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet" />
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>Softwares | HYTORC Colombia</title>
+ <link rel="apple-touch-icon" href="assets/Logo col.png">
+ <meta name="theme-color" content="#dc143c">
+ <meta name="description"
+ content="Aplicaciones y software de HYTORC. HYTORC Connect, Bolting Manager, convertidor de par y calculadora de bridas." />
+ <meta name="robots" content="index, follow" />
+ <link rel="canonical" href="https://www.hytorc.com.co/software.html" />
+ <link rel="stylesheet" href="css/styles.css" />
+ <link rel="stylesheet" href="css/mobile-fixes.css" />
+ <!-- Google Font -->
+ <link rel="preconnect" href="https://fonts.googleapis.com" />
+ <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap"
+ rel="stylesheet" />
 
-  <style>
-    /* ===== SOFTWARE PAGE SCOPED STYLES ===== */
-    .sw-page {
-      font-family: 'Source Sans 3', Arial, sans-serif;
-    }
+ <style>
+ /* ===== SOFTWARE PAGE SCOPED STYLES ===== */
+ .sw-page {
+ font-family: 'Source Sans 3', Arial, sans-serif;
+ }
 
-    .sw-section {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 15px;
-    }
+ .sw-section {
+ max-width: 1400px;
+ margin: 0 auto;
+ padding: 0 15px;
+ }
 
-    /* Banner */
-    .sw-banner {
-      background: url('assets/dim-background-black.png') no-repeat center center;
-      background-size: cover;
-      padding: 100px 0 50px;
-      position: relative;
-    }
+ /* Banner */
+ .sw-banner {
+ background: url('assets/dim-background-black.png') no-repeat center center;
+ background-size: cover;
+ padding: 100px 0 50px;
+ position: relative;
+ }
 
-    .sw-banner::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.55);
-      z-index: 0;
-    }
+ .sw-banner::before {
+ content: '';
+ position: absolute;
+ top: 0;
+ left: 0;
+ right: 0;
+ bottom: 0;
+ background: rgba(0, 0, 0, 0.55);
+ z-index: 0;
+ }
 
-    .sw-banner .sw-section {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      margin: 0 auto 0 60px;
-    }
+ .sw-banner .sw-section {
+ position: relative;
+ z-index: 1;
+ max-width: 700px;
+ margin: 0 auto 0 60px;
+ }
 
-    .sw-banner h1 {
-      font-size: 42px;
-      color: #999966;
-      font-weight: 700;
-      font-style: normal;
-      text-transform: uppercase;
-      margin-bottom: 15px;
-    }
+ .sw-banner h1 {
+ font-size: 42px;
+ color: #999966;
+ font-weight: 700;
+ font-style: normal;
+ text-transform: uppercase;
+ margin-bottom: 15px;
+ }
 
-    .sw-banner h2 {
-      font-size: 18px;
-      color: #fff;
-      font-weight: 400;
-      margin: 0;
-      line-height: 1.6;
-    }
+ .sw-banner h2 {
+ font-size: 18px;
+ color: #fff;
+ font-weight: 400;
+ margin: 0;
+ line-height: 1.6;
+ }
 
-    /* App Sections */
-    .sw-app {
-      padding: 60px 0;
-    }
+ /* App Sections */
+ .sw-app {
+ padding: 60px 0;
+ }
 
-    .sw-app-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 40px;
-      align-items: center;
-    }
+ .sw-app-grid {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 40px;
+ align-items: center;
+ }
 
-    .sw-app-img {
-      flex: 1 1 400px;
-    }
+ .sw-app-img {
+ flex: 1 1 400px;
+ }
 
-    .sw-app-img img {
-      width: 100%;
-      border-radius: 4px;
-    }
+ .sw-app-img img {
+ width: 100%;
+ border-radius: 4px;
+ }
 
-    .sw-app-text {
-      flex: 1 1 400px;
-    }
+ .sw-app-text {
+ flex: 1 1 400px;
+ }
 
-    .sw-app-text h2 {
-      font-size: 28px;
-      font-weight: 400;
-      color: #333;
-      margin-bottom: 20px;
-      font-style: italic;
-    }
+ .sw-app-text h2 {
+ font-size: 28px;
+ font-weight: 400;
+ color: #333;
+ margin-bottom: 20px;
+ font-style: italic;
+ }
 
-    .sw-app-text h2 span {
-      font-weight: 700;
-      color: #333;
-    }
+ .sw-app-text h2 span {
+ font-weight: 700;
+ color: #333;
+ }
 
-    .sw-app-text p {
-      font-size: 15px;
-      line-height: 1.7;
-      color: #555;
-      text-align: justify;
-    }
+ .sw-app-text p {
+ font-size: 15px;
+ line-height: 1.7;
+ color: #555;
+ text-align: justify;
+ }
 
-    .sw-app-text p b {
-      color: #333;
-    }
+ .sw-app-text p b {
+ color: #333;
+ }
 
-    .sw-store-badges {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      margin: 20px 0;
-      flex-wrap: wrap;
-    }
+ .sw-store-badges {
+ display: flex;
+ align-items: center;
+ gap: 12px;
+ margin: 20px 0;
+ flex-wrap: wrap;
+ }
 
-    .sw-store-badges img {
-      height: 40px;
-      width: auto;
-    }
+ .sw-store-badges img {
+ height: 40px;
+ width: auto;
+ }
 
-    .sw-small-note {
-      font-size: 13px;
-      color: #999;
-    }
+ .sw-small-note {
+ font-size: 13px;
+ color: #999;
+ }
 
-    .sw-btn-outline {
-      display: inline-block;
-      border: 2px solid #333;
-      color: #333;
-      padding: 8px 24px;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      transition: all 0.3s;
-    }
+ .sw-btn-outline {
+ display: inline-block;
+ border: 2px solid #333;
+ color: #333;
+ padding: 8px 24px;
+ text-decoration: none;
+ font-weight: 600;
+ font-size: 14px;
+ text-transform: uppercase;
+ letter-spacing: 1px;
+ transition: all 0.3s;
+ }
 
-    .sw-btn-outline:hover {
-      background: #333;
-      color: #fff;
-    }
+ .sw-btn-outline:hover {
+ background: #333;
+ color: #fff;
+ }
 
-    /* Servicios Web */
-    .sw-web {
-      background: #e8e8e8;
-      padding: 60px 0;
-    }
+ /* Servicios Web */
+ .sw-web {
+ background: #e8e8e8;
+ padding: 60px 0;
+ }
 
-    .sw-web h2 {
-      font-size: 28px;
-      font-weight: 700;
-      font-style: normal;
-      color: #1a2936;
-      margin-bottom: 30px;
-      border-left: 3px solid #e42528;
-      padding-left: 15px;
-      text-transform: uppercase;
-    }
+ .sw-web h2 {
+ font-size: 28px;
+ font-weight: 700;
+ font-style: normal;
+ color: #1a2936;
+ margin-bottom: 30px;
+ border-left: 3px solid #e42528;
+ padding-left: 15px;
+ text-transform: uppercase;
+ }
 
-    .sw-web h2 strong {
-      font-weight: 700;
-    }
+ .sw-web h2 strong {
+ font-weight: 700;
+ }
 
-    .sw-web-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 30px;
-    }
+ .sw-web-grid {
+ display: flex;
+ flex-wrap: wrap;
+ gap: 30px;
+ }
 
-    .sw-web-card {
-      flex: 1 1 400px;
-    }
+ .sw-web-card {
+ flex: 1 1 400px;
+ }
 
-    .sw-web-card img {
-      width: 100%;
-      border-radius: 4px;
-      margin-bottom: 15px;
-    }
+ .sw-web-card img {
+ width: 100%;
+ border-radius: 4px;
+ margin-bottom: 15px;
+ }
 
-    .sw-web-card h4 {
-      font-size: 22px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 10px;
-    }
+ .sw-web-card h4 {
+ font-size: 22px;
+ font-weight: 600;
+ color: #333;
+ margin-bottom: 10px;
+ }
 
-    .sw-web-card ul {
-      padding-left: 20px;
-      color: #555;
-      margin-bottom: 20px;
-    }
+ .sw-web-card ul {
+ padding-left: 20px;
+ color: #555;
+ margin-bottom: 20px;
+ }
 
-    .sw-web-card li {
-      margin-bottom: 6px;
-      font-size: 14px;
-      line-height: 1.6;
-    }
+ .sw-web-card li {
+ margin-bottom: 6px;
+ font-size: 14px;
+ line-height: 1.6;
+ }
 
-    .sw-web-card li strong {
-      color: #333;
-    }
+ .sw-web-card li strong {
+ color: #333;
+ }
 
-    /* Contact */
-    .sw-contact {
-      background: #546670;
-      padding: 50px 0;
-      text-align: center;
-      cursor: pointer;
-    }
+ /* Contact */
+ .sw-contact {
+ background: #546670;
+ padding: 50px 0;
+ text-align: center;
+ cursor: pointer;
+ }
 
-    .sw-contact h2 {
-      font-size: 24px;
-      color: #fff;
-      letter-spacing: 5px;
-      font-weight: 600;
-      text-transform: uppercase;
-      margin: 0;
-    }
+ .sw-contact h2 {
+ font-size: 24px;
+ color: #fff;
+ letter-spacing: 5px;
+ font-weight: 600;
+ text-transform: uppercase;
+ margin: 0;
+ }
 
-    @media (max-width: 991px) {
-      .sw-banner {
-        padding: 100px 0 50px;
-      }
+ @media (max-width: 991px) {
+ .sw-banner {
+ padding: 100px 0 50px;
+ }
 
-      .sw-banner .sw-section {
-        margin: 0 auto;
-        padding: 0 20px;
-      }
+ .sw-banner .sw-section {
+ margin: 0 auto;
+ padding: 0 20px;
+ }
 
-      .sw-banner h1 {
-        font-size: 32px;
-      }
+ .sw-banner h1 {
+ font-size: 32px;
+ }
 
-      .sw-app-grid.sw-reverse {
-        flex-direction: column-reverse;
-      }
-    }
+ .sw-app-grid.sw-reverse {
+ flex-direction: column-reverse;
+ }
+ }
 
-    @media (max-width: 575px) {
-      .sw-banner h1 {
-        font-size: 26px;
-      }
+ @media (max-width: 575px) {
+ .sw-banner h1 {
+ font-size: 26px;
+ }
 
-      .sw-banner h2 {
-        font-size: 16px;
-      }
-    }
-  </style>
+ .sw-banner h2 {
+ font-size: 16px;
+ }
+ }
+ </style>
 </head>
 
 <body>
 
-  <!-- .......... HEADER .......... -->
-  <!-- HEADER -->
-    <header class="site-header" role="banner">
-        <div class="header-inner">
-            <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
-                <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
-            </a>
+ <!-- .......... HEADER .......... -->
+ <!-- HEADER -->
+ <header class="site-header" role="banner">
+ <div class="header-inner">
+ <a href="index.html" class="header-logo" aria-label="HYTORC Colombia Inicio">
+ <img src="assets/Logo col.png" alt="HYTORC Colombia" class="logo-img" / decoding="async">
+ </a>
 
-            <nav aria-label="Navegación principal">
-                <ul class="main-nav" id="main-nav">
-                    <li><a href="index.html">INICIO</a></li>
-                    <li class="has-dropdown mega-dropdown">
-                        <a href="productos.html">PRODUCTOS</a>
-                        <div class="dropdown">
-                            <div class="product-nav-banner" style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
-                                <a href="productos_hidraulica.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png" alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
-                                    <span class="product-nav-text">Hidráulicas</span>
-                                </a>
-                                <a href="productos_neumatica.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
-                                    <span class="product-nav-text">Neumáticas</span>
-                                </a>
-                                <a href="productos_electricas.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Eléctricas</span>
-                                </a>
-                                <a href="herramienta-manual.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Manual</span>
-                                </a>
-                                <a href="productos_tensionadores_bombas.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Tensionadores</span>
-                                </a>
-                                <a href="productos_sujetadores.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Sujetadores</span>
-                                </a>
-                                <a href="productos_accesorios.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Accesorios</span>
-                                </a>
-                                <a href="productos_bombas.html" class="product-nav-item">
-                                    <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
-                                    <span class="product-nav-text">Bombas</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                                                  <li class="has-dropdown mega-dropdown">
-            <a href="servicios.html">SERVICIOS</a>
-            <div class="dropdown">
-              <div class="mega-menu-grid">
-                <a href="taller-servicios.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/taller .png" alt="Taller de Servicios" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Taller de Servicios</span>
-                </a>
-                <a href="calibracion.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/calibracion.png" alt="Calibración" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Calibración</span>
-                </a>
-                <a href="software.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/software.png" alt="Softwares" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Softwares</span>
-                </a>
-                <a href="capacitacion-cech.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/capacitacion.png" alt="Capacitación CECH" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Capacitación CECH</span>
-                </a>
-              </div>
-            </div>
-          </li>
-                              <li class="has-dropdown mega-dropdown">
-            <a href="#">QUIÉNES SOMOS</a>
-            <div class="dropdown">
-              <div class="mega-menu-grid">
-                <a href="sobre-nosotros.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/Sin título-1.png" alt="Sobre nosotros" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Acerca de nosotros</span>
-                </a>
-                <a href="industrias.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/Sin título-5.png" alt="Industria" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Industria</span>
-                </a>
-                <a href="estandar-hytorc.html" class="mega-menu-item">
-                  <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
-                    <img src="assets/hytorc_standard.png" alt="Hytorc Standard" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
-                  </div>
-                  <span>Hytorc Standard</span>
-                </a>
-              </div>
-            </div>
-          </li>
-                    <li class="has-dropdown mega-dropdown">
-                        <a href="contacto.html">CONTÁCTANOS</a>
-                        <div class="dropdown">
-                            <div class="mega-menu-grid">
-                                <a href="contacto-ubicacion.html" class="mega-menu-item">
-                                    <div class="mega-menu-icon" style="width: 50px;">
-                                        <img src="assets/Sin título-4.png" alt="Ubicación" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
-                                    </div>
-                                    <span>Ubicación</span>
-                                </a>
-                                <a href="quejas-y-sugerencias.html" class="mega-menu-item">
-                                    <div class="mega-menu-icon" style="width: 50px;">
-                                        <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
-                                    </div>
-                                    <span>Quejas y Sugerencias</span>
-                                </a>
-                                <a href="cotizaciones.html" class="mega-menu-item">
-                                    <div class="mega-menu-icon" style="width: 50px;">
-                                        <img src="assets/Sin título-3.png" alt="Cotizar" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
-                                    </div>
-                                    <span>Cotizar</span>
-                                </a>
-                                <a href="bolsa-trabajo.html" class="mega-menu-item">
-                                    <div class="mega-menu-icon" style="width: 50px;">
-                                        <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
-                                    </div>
-                                    <span>Bolsa de Trabajo</span>
-                                </a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
+ <nav aria-label="Navegación principal">
+ <ul class="main-nav" id="main-nav">
+ <li><a href="index.html">INICIO</a></li>
+ <li class="has-dropdown mega-dropdown">
+ <a href="productos.html">PRODUCTOS</a>
+ <div class="dropdown">
+ <div class="product-nav-banner" style="margin-bottom: 0; padding: 0; border: none; background: transparent; justify-content: space-between; overflow: visible;">
+ <a href="productos_hidraulica.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Silueta hidraulica.png" alt="Hidráulicas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
+ <span class="product-nav-text">Hidráulicas</span>
+ </a>
+ <a href="productos_neumatica.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/neumaticas.png" alt="Neumáticas" style="width: 100%; height: 100%; object-fit: contain;" decoding="async"></div>
+ <span class="product-nav-text">Neumáticas</span>
+ </a>
+ <a href="productos_electricas.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Electricas.png" alt="Eléctricas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Eléctricas</span>
+ </a>
+ <a href="herramienta-manual.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Manual.png" alt="Manual" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Manual</span>
+ </a>
+ <a href="productos_tensionadores_bombas.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Tensionador.png" alt="Tensionadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Tensionadores</span>
+ </a>
+ <a href="productos_sujetadores.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Sujeteadores.png" alt="Sujetadores" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Sujetadores</span>
+ </a>
+ <a href="productos_accesorios.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Accesorios.png" alt="Accesorios" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Accesorios</span>
+ </a>
+ <a href="productos_bombas.html" class="product-nav-item">
+ <div class="product-nav-icon"><img src="assets/Bombas.png" alt="Bombas" style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async"></div>
+ <span class="product-nav-text">Bombas</span>
+ </a>
+ </div>
+ </div>
+ </li>
+ <li class="has-dropdown mega-dropdown">
+ <a href="servicios.html">SERVICIOS</a>
+ <div class="dropdown">
+ <div class="mega-menu-grid">
+ <a href="taller-servicios.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/taller .png" alt="Taller de Servicios" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Taller de Servicios</span>
+ </a>
+ <a href="calibracion.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/calibracion.png" alt="Calibración" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Calibración</span>
+ </a>
+ <a href="software.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/software.png" alt="Softwares" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Softwares</span>
+ </a>
+ <a href="capacitacion.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/capacitacion.png" alt="Capacitación" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Capacitación</span>
+ </a>
+ </div>
+ </div>
+ </li>
+ <li class="has-dropdown mega-dropdown">
+ <a href="#">QUIÉNES SOMOS</a>
+ <div class="dropdown">
+ <div class="mega-menu-grid">
+ <a href="sobre-nosotros.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/Sin título-1.png" alt="Sobre nosotros" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Acerca de nosotros</span>
+ </a>
+ <a href="industrias.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/Sin título-5.png" alt="Industria" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Industria</span>
+ </a>
+ <a href="estandar-hytorc.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;">
+ <img src="assets/hytorc_standard.png" alt="Hytorc Standard" style="width: 38px; height: 38px; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Hytorc Standard</span>
+ </a>
+ </div>
+ </div>
+ </li>
+ <li class="has-dropdown mega-dropdown">
+ <a href="contacto.html">CONTÁCTANOS</a>
+ <div class="dropdown">
+ <div class="mega-menu-grid">
+ <a href="contacto-ubicacion.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px;">
+ <img src="assets/Sin título-4.png" alt="Ubicación" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Ubicación</span>
+ </a>
+ <a href="quejas-y-sugerencias.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px;">
+ <img src="assets/Sin título-2.png" alt="Quejas y Sugerencias" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Quejas y Sugerencias</span>
+ </a>
+ <a href="cotizaciones.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px;">
+ <img src="assets/Sin título-3.png" alt="Cotizar" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Cotizar</span>
+ </a>
+ <a href="bolsa-trabajo.html" class="mega-menu-item">
+ <div class="mega-menu-icon" style="width: 50px;">
+ <img src="assets/Sin título-1.png" alt="Bolsa de Trabajo" style="width: 100%; height: auto; object-fit: contain;" loading="lazy" decoding="async">
+ </div>
+ <span>Bolsa de Trabajo</span>
+ </a>
+ </div>
+ </div>
+ </li>
+ </ul>
+ </nav>
 
-            <div class="header-cta">
-                <div class="header-social">
-                    <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
-                    <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z"/></svg></a>
-                    <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
-                    <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                </div>
-                <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
-    </header>
+ <div class="header-cta">
+ <div class="header-social">
+ <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg></a>
+ <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z"/></svg></a>
+ <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z"/></svg></a>
+ <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+ </div>
+ <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false">
+ <span></span><span></span><span></span>
+ </button>
+ </div>
+ </div>
+ </header>
 
-  <!-- .......... MAIN .......... -->
-  <main class="page-content sw-page">
+ <!-- .......... MAIN .......... -->
+ <main class="page-content sw-page">
 
-    <!-- BANNER -->
-    <section class="sw-banner">
-      <div class="sw-section">
-        <h1>APLICACIONES Y SOFTWARE DE HYTORC</h1>
-        <h2>Explore nuestro conjunto de soluciones de software diseñadas para llevar su empernado a la era moderna.</h2>
-      </div>
-    </section>
+ <!-- BANNER -->
+ <section class="sw-banner">
+ <div class="sw-section">
+ <h1>APLICACIONES Y SOFTWARE DE HYTORC</h1>
+ <h2>Explore nuestro conjunto de soluciones de software diseñadas para llevar su empernado a la era moderna.</h2>
+ </div>
+ </section>
 
-    <!-- APLICACIÓN HYTORC CONNECT -->
-    <section class="sw-app">
-      <div class="sw-section">
-        <div class="sw-app-grid">
-          <div class="sw-app-img">
-            <img src="assets/Captura de pantalla 2026-03-04 141927.png" alt="Aplicación HYTORC Connect" loading="lazy" decoding="async">
-          </div>
-          <div class="sw-app-text">
-            <h2><span>APLICACIÓN</span> HYTORC CONNECT</h2>
-            <p>
-              <b>Creación de plantillas de empernado sin inconvenientes:</b> cree y envíe sin esfuerzo plantillas de
-              atornillado a su herramienta de torsión eléctrica HYTORC con Bluetooth®* habilitada para lograr precisión
-              y eficiencia.
-            </p>
-            <p>
-              <b>Documentación completa del proyecto:</b> simplifique los flujos de trabajo de su proyecto con
-              herramientas de documentación fáciles de usar, garantizando la precisión y el cumplimiento. Operaciones de
-              empernado avanzadas simplificadas: navegue con confianza por operaciones de empernado secuenciales de
-              ruedas complejas y de múltiples pasadas, ahorrando tiempo y reduciendo errores.
-            </p>
-            <p>
-              <b>Accesibilidad desde múltiples dispositivos:</b> mantenga el control dondequiera que esté, ya sea en un
-              dispositivo móvil, una tableta o una PC con Windows®, la aplicación HYTORC Connect lo mantiene conectado y
-              productivo.
-            </p>
-            <div class="sw-store-badges">
-              <a href="https://apps.apple.com/us/app/hytorc-connect/id1596349132" target="_blank">
-                <img src="assets/Captura de pantalla 2026-03-04 141843.png" alt="App Store" loading="lazy" decoding="async">
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.hytorc.hytorcconnect" target="_blank">
-                <img src="assets/Captura de pantalla 2026-03-04 141920.png" alt="Google Play" loading="lazy" decoding="async">
-              </a>
-              <a href="https://apps.microsoft.com/detail/9pj1s051mq5r?mode=direct" target="_blank">
-                <img src="assets/Captura de pantalla 2026-03-04 141955.png" alt="Microsoft Store" loading="lazy" decoding="async">
-              </a>
-            </div>
-            <p class="sw-small-note">
-              *Herramientas LION GUN, LION GUN X y LITHIUM SERIES II que están equipadas con Bluetooth®.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+ <!-- APLICACIÓN HYTORC CONNECT -->
+ <section class="sw-app">
+ <div class="sw-section">
+ <div class="sw-app-grid">
+ <div class="sw-app-img">
+ <img src="assets/Captura de pantalla 2026-03-04 141927.png" alt="Aplicación HYTORC Connect" loading="lazy" decoding="async">
+ </div>
+ <div class="sw-app-text">
+ <h2><span>APLICACIÓN</span> HYTORC CONNECT</h2>
+ <p>
+ <b>Creación de plantillas de empernado sin inconvenientes:</b> cree y envíe sin esfuerzo plantillas de
+ atornillado a su herramienta de torsión eléctrica HYTORC con Bluetooth®* habilitada para lograr precisión
+ y eficiencia.
+ </p>
+ <p>
+ <b>Documentación completa del proyecto:</b> simplifique los flujos de trabajo de su proyecto con
+ herramientas de documentación fáciles de usar, garantizando la precisión y el cumplimiento. Operaciones de
+ empernado avanzadas simplificadas: navegue con confianza por operaciones de empernado secuenciales de
+ ruedas complejas y de múltiples pasadas, ahorrando tiempo y reduciendo errores.
+ </p>
+ <p>
+ <b>Accesibilidad desde múltiples dispositivos:</b> mantenga el control dondequiera que esté, ya sea en un
+ dispositivo móvil, una tableta o una PC con Windows®, la aplicación HYTORC Connect lo mantiene conectado y
+ productivo.
+ </p>
+ <div class="sw-store-badges">
+ <a href="https://apps.apple.com/us/app/hytorc-connect/id1596349132" target="_blank">
+ <img src="assets/Captura de pantalla 2026-03-04 141843.png" alt="App Store" loading="lazy" decoding="async">
+ </a>
+ <a href="https://play.google.com/store/apps/details?id=com.hytorc.hytorcconnect" target="_blank">
+ <img src="assets/Captura de pantalla 2026-03-04 141920.png" alt="Google Play" loading="lazy" decoding="async">
+ </a>
+ <a href="https://apps.microsoft.com/detail/9pj1s051mq5r?mode=direct" target="_blank">
+ <img src="assets/Captura de pantalla 2026-03-04 141955.png" alt="Microsoft Store" loading="lazy" decoding="async">
+ </a>
+ </div>
+ <p class="sw-small-note">
+ *Herramientas LION GUN, LION GUN X y LITHIUM SERIES II que están equipadas con Bluetooth®.
+ </p>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- BOLTING MANAGER -->
-    <section class="sw-app">
-      <div class="sw-section">
-        <div class="sw-app-grid sw-reverse">
-          <div class="sw-app-text">
-            <h2><span>APLICACIÓN</span> HYTORC CONNECT</h2>
-            <p>Bolting Manager es un sistema de gestión de empernado basado en la nube que simplifica la configuración,
-              la documentación y el control del trabajo.</p>
-            <p>
-              <b>Simplifique la configuración del trabajo:</b> cree y guarde plantillas de trabajos de atornillado
-              personalizadas para ahorrar tiempo y reducir errores. Conectividad sin esfuerzo: conecte su bomba a Wi-Fi
-              para una integración perfecta a su red.
-            </p>
-            <p>
-              <b>Compatibilidad mejorada:</b> Soporte de protocolo abierto disponible en modelos seleccionados para una
-              fácil integración con sus sistemas.
-            </p>
-            <p>
-              <b>Control y documentación optimizados:</b> obtenga un mejor control de calidad, una gestión de datos
-              organizada e informes detallados para cada operación de empernado.
-            </p>
-            <a href="cotizaciones.html" class="sw-btn-outline">Contacta con un vendedor</a>
-          </div>
-          <div class="sw-app-img">
-            <img src="assets/Captura de pantalla 2026-03-04 141859.png" alt="Bolting Manager" loading="lazy" decoding="async">
-          </div>
-        </div>
-      </div>
-    </section>
+ <!-- BOLTING MANAGER -->
+ <section class="sw-app">
+ <div class="sw-section">
+ <div class="sw-app-grid sw-reverse">
+ <div class="sw-app-text">
+ <h2><span>APLICACIÓN</span> HYTORC CONNECT</h2>
+ <p>Bolting Manager es un sistema de gestión de empernado basado en la nube que simplifica la configuración,
+ la documentación y el control del trabajo.</p>
+ <p>
+ <b>Simplifique la configuración del trabajo:</b> cree y guarde plantillas de trabajos de atornillado
+ personalizadas para ahorrar tiempo y reducir errores. Conectividad sin esfuerzo: conecte su bomba a Wi-Fi
+ para una integración perfecta a su red.
+ </p>
+ <p>
+ <b>Compatibilidad mejorada:</b> Soporte de protocolo abierto disponible en modelos seleccionados para una
+ fácil integración con sus sistemas.
+ </p>
+ <p>
+ <b>Control y documentación optimizados:</b> obtenga un mejor control de calidad, una gestión de datos
+ organizada e informes detallados para cada operación de empernado.
+ </p>
+ <a href="cotizaciones.html" class="sw-btn-outline">Contacta con un vendedor</a>
+ </div>
+ <div class="sw-app-img">
+ <img src="assets/Captura de pantalla 2026-03-04 141859.png" alt="Bolting Manager" loading="lazy" decoding="async">
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- APLICACIÓN MÓVIL -->
-    <section class="sw-app">
-      <div class="sw-section">
-        <div class="sw-app-grid">
-          <div class="sw-app-img">
-            <img src="assets/Captura de pantalla 2026-03-04 141936.png" alt="Aplicación Móvil HYTORC" loading="lazy" decoding="async">
-          </div>
-          <div class="sw-app-text">
-            <h2><span>APLICACIÓN MÓVIL</span> HYTORC CONNECT</h2>
-            <p>
-              <b>Acceso instantáneo:</b> obtenga tablas de torsión, videos operativos y manuales de productos, todo en
-              un solo lugar.
-            </p>
-            <p>
-              <b>Localizador de servicios:</b> encuentre fácilmente el centro de servicio HYTORC más cercano.
-            </p>
-            <p>
-              <b>Disponibilidad multiplataforma:</b> disponible para dispositivos Android e iOS.
-            </p>
-            <div class="sw-store-badges">
-              <a href="https://apps.apple.com/us/app/hytorc-industrial-bolting-systems/id904956429" target="_blank">
-                <img src="assets/Captura de pantalla 2026-03-04 141843.png" alt="App Store" loading="lazy" decoding="async">
-              </a>
-              <a href="https://play.google.com/store/apps/details?id=com.app.hytorc&hl=en" target="_blank">
-                <img src="assets/Captura de pantalla 2026-03-04 141920.png" alt="Google Play" loading="lazy" decoding="async">
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+ <!-- APLICACIÓN MÓVIL -->
+ <section class="sw-app">
+ <div class="sw-section">
+ <div class="sw-app-grid">
+ <div class="sw-app-img">
+ <img src="assets/Captura de pantalla 2026-03-04 141936.png" alt="Aplicación Móvil HYTORC" loading="lazy" decoding="async">
+ </div>
+ <div class="sw-app-text">
+ <h2><span>APLICACIÓN MÓVIL</span> HYTORC CONNECT</h2>
+ <p>
+ <b>Acceso instantáneo:</b> obtenga tablas de torsión, videos operativos y manuales de productos, todo en
+ un solo lugar.
+ </p>
+ <p>
+ <b>Localizador de servicios:</b> encuentre fácilmente el centro de servicio HYTORC más cercano.
+ </p>
+ <p>
+ <b>Disponibilidad multiplataforma:</b> disponible para dispositivos Android e iOS.
+ </p>
+ <div class="sw-store-badges">
+ <a href="https://apps.apple.com/us/app/hytorc-industrial-bolting-systems/id904956429" target="_blank">
+ <img src="assets/Captura de pantalla 2026-03-04 141843.png" alt="App Store" loading="lazy" decoding="async">
+ </a>
+ <a href="https://play.google.com/store/apps/details?id=com.app.hytorc&hl=en" target="_blank">
+ <img src="assets/Captura de pantalla 2026-03-04 141920.png" alt="Google Play" loading="lazy" decoding="async">
+ </a>
+ </div>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- SERVICIOS WEB -->
-    <section class="sw-web">
-      <div class="sw-section">
-        <h2>SERVICIOS<strong> WEB</strong></h2>
-        <div class="sw-web-grid">
-          <div class="sw-web-card">
-            <img src="assets/Captura de pantalla 2026-03-04 141944.png" alt="Convertidor de par y presión" loading="lazy" decoding="async">
-            <h4>Convertidor de par y presión</h4>
-            <ul>
-              <li><strong>Preciso:</strong> elimina errores manuales para una aplicación de torque precisa.</li>
-              <li><strong>Fácil de usar:</strong> Interfaz sencilla para entrada y conversión rápidas.</li>
-              <li><strong>Versátil:</strong> compatible con múltiples herramientas HYTORC.</li>
-            </ul>
-            <a href="https://hytorc.com/converter" target="_blank" class="sw-btn-outline">Convertidor de par y
-              presión</a>
-          </div>
-          <div class="sw-web-card">
-            <img src="assets/Captura de pantalla 2026-03-04 141912.png" alt="Calculadora de bridas" loading="lazy" decoding="async">
-            <h4>Calculadora de bridas</h4>
-            <ul>
-              <li><strong>Personalizable:</strong> ingrese las especificaciones de la brida, el tamaño del perno y el
-                material de la junta.</li>
-              <li><strong>Cumplimiento de estándares:</strong> se alinea con las pautas ASME y API.</li>
-              <li><strong>Eficiente:</strong> ahorra tiempo y garantiza una distribución precisa de la carga del perno.
-              </li>
-            </ul>
-            <a href="https://hytorc.com/app01/calculator" target="_blank" class="sw-btn-outline">Calculadora de
-              bridas</a>
-          </div>
-        </div>
-      </div>
-    </section>
+ <!-- SERVICIOS WEB -->
+ <section class="sw-web">
+ <div class="sw-section">
+ <h2>SERVICIOS<strong> WEB</strong></h2>
+ <div class="sw-web-grid">
+ <div class="sw-web-card">
+ <img src="assets/Captura de pantalla 2026-03-04 141944.png" alt="Convertidor de par y presión" loading="lazy" decoding="async">
+ <h4>Convertidor de par y presión</h4>
+ <ul>
+ <li><strong>Preciso:</strong> elimina errores manuales para una aplicación de torque precisa.</li>
+ <li><strong>Fácil de usar:</strong> Interfaz sencilla para entrada y conversión rápidas.</li>
+ <li><strong>Versátil:</strong> compatible con múltiples herramientas HYTORC.</li>
+ </ul>
+ <a href="https://hytorc.com/converter" target="_blank" class="sw-btn-outline">Convertidor de par y
+ presión</a>
+ </div>
+ <div class="sw-web-card">
+ <img src="assets/Captura de pantalla 2026-03-04 141912.png" alt="Calculadora de bridas" loading="lazy" decoding="async">
+ <h4>Calculadora de bridas</h4>
+ <ul>
+ <li><strong>Personalizable:</strong> ingrese las especificaciones de la brida, el tamaño del perno y el
+ material de la junta.</li>
+ <li><strong>Cumplimiento de estándares:</strong> se alinea con las pautas ASME y API.</li>
+ <li><strong>Eficiente:</strong> ahorra tiempo y garantiza una distribución precisa de la carga del perno.
+ </li>
+ </ul>
+ <a href="https://hytorc.com/app01/calculator" target="_blank" class="sw-btn-outline">Calculadora de
+ bridas</a>
+ </div>
+ </div>
+ </div>
+ </section>
 
-    <!-- CONTACTANOS -->
-    <section class="sw-contact">
-      <h2 style="text-align: center;">CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
-    </section>
+ <!-- CONTACTANOS -->
+ <section class="sw-contact">
+ <h2 style="text-align: center;">CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
+ </section>
 
-  </main>
-  </main>
+ </main>
+ </main>
 
-  <!-- ?.??.??.??.??.??.??.??.??.??.? FOOTER ?.??.??.??.??.??.??.??.??.??.? -->
-  <!-- *************************************** FOOTER *************************************** -->
-  <section class="wrapFooter">
-    <div class="container-xxl">
-      <div class="row">
-        <div class="col-12 col-md-4 text-center">
-          <h4 class="titLineRed">Ubicación</h4>
-          <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cund.</p>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-          <h4 class="titLineRed">Síguenos</h4>
-          <div class="social-links-container" style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
-            <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg></a>
-            <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" /></svg></a>
-            <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg></a>
-            <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg></a>
-          </div>
-        </div>
-        <div class="col-12 col-md-4 text-center">
-          <h4 class="titLineRed">Links</h4>
-          <div class="links-col">
-            <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a>
-            <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a>
-            <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank" class="linkFinal">Política
-              de Privacidad</a>
-          </div>
-        </div>
+ <!-- ?.??.??.??.??.??.??.??.??.??.? FOOTER ?.??.??.??.??.??.??.??.??.??.? -->
+ <!-- *************************************** FOOTER *************************************** -->
+ <section class="wrapFooter">
+ <div class="container-xxl">
+ <div class="row">
+ <div class="col-12 col-md-4 text-center">
+ <h4 class="titLineRed">Ubicación</h4>
+ <p>Parque Industrial Oikos Ciem Bodega G 106,<br>Autopista Medellín Km 5 Vía Bogotá a Siberia, Cota, Cund.</p>
+ </div>
+ <div class="col-12 col-md-4 text-center">
+ <h4 class="titLineRed">Síguenos</h4>
+ <div class="social-links-container" style="display:flex; justify-content:center; gap:16px; margin-top:15px;">
+ <a href="https://www.facebook.com/profile.php?id=61577268942223&mibextid=wwXIfr&rdid=00YfWasYFNHiPXY9&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1C3YQPkv8W%2F%3Fmibextid%3DwwXIfr#" target="_blank" class="h-social-link" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg></a>
+ <a href="https://www.instagram.com/hytorccolombia/" target="_blank" class="h-social-link" aria-label="Instagram"><svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm3.975-9.658a1.44 1.44 0 100-2.881 1.44 1.44 0 000 2.88z" /></svg></a>
+ <a href="https://www.linkedin.com/company/hytorc-colombia/" target="_blank" class="h-social-link" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.603 6.029-5.051 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" /></svg></a>
+ <a href="https://www.youtube.com/@HytorcColombia" target="_blank" class="h-social-link" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.5 12 3.5 12 3.5s-7.505 0-9.377.55a3.016 3.016 0 0 0-2.122 2.136C0 8.07 0 12 0 12s0 3.93.501 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.55 9.377.55 9.377.55s7.505 0 9.377-.55a3.016 3.016 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" /></svg></a>
+ </div>
+ </div>
+ <div class="col-12 col-md-4 text-center">
+ <h4 class="titLineRed">Links</h4>
+ <div class="links-col">
+ <a href="productos_hidraulica.html" class="linkFinal">Herramientas Hidráulicas</a>
+ <a href="productos_electricas.html" class="linkFinal">Herramientas Eléctricas</a>
+ <a href="https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf" target="_blank" class="linkFinal">Política
+ de Privacidad</a>
+ </div>
+ </div>
 
-        <!-- SITEMAP HEADER -->
-        <div class="col-12">
-          <div class="sitemap-header" id="sitemap-toggle">
-            Mapa de sitio
-          </div>
-        </div>
+ <!-- SITEMAP HEADER -->
+ <div class="col-12">
+ <div class="sitemap-header" id="sitemap-toggle">
+ Mapa de sitio
+ </div>
+ </div>
 
-      </div><!-- /.row -->
-    </div><!-- /.container -->
-  </section>
-  <!-- *************************************** FOOTER *************************************** -->
-    
+ </div><!-- /.row -->
+ </div><!-- /.container -->
+ </section>
+ <!-- *************************************** FOOTER *************************************** -->
+ 
 
 
-  <script src="js/nav.js"></script>
-  <script src="js/prod-carousel.js"></script>
-  <script src="js/animations.js"></script>
+ <script src="js/nav.js"></script>
+ <script src="js/prod-carousel.js"></script>
+ <script src="js/animations.js"></script>
 
-    <!-- *************************************** CREDITS *************************************** -->
-    <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
-        <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
-            <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
-        </div>
-    </section>
-    <!-- *************************************** CREDITS *************************************** -->
+ <!-- *************************************** CREDITS *************************************** -->
+ <section class="footer-credits" style="background: #000000 !important; color: #ffffff !important; padding: 15px 0 !important; text-align: center !important; width: 100% !important; display: block !important; clear: both !important; border-top: 1px solid rgba(255,255,255,0.1) !important;">
+ <div class="container-xxl" style="width: 100% !important; max-width: 1320px !important; margin: 0 auto !important; text-align: center !important;">
+ <p style="margin: 0 !important; color: #ffffff !important; text-align: center !important; font-family: sans-serif !important; font-size: 13px !important; letter-spacing: 0.5px !important;">© 2026 Hytorc Colombia. Todos los derechos reservados. Diseño web por Galvis Tech Solutions</p>
+ </div>
+ </section>
+ <!-- *************************************** CREDITS *************************************** -->
 </body>
 
 </html>

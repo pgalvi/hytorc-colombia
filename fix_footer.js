@@ -5,12 +5,12 @@ const replacement = 'class="linkFinal">Política de Privacidad</a>';
 
 let updated = 0;
 for (const file of files) {
-    let content = fs.readFileSync(file, 'utf8');
-    if (content.includes(target)) {
-        content = content.replaceAll(target, replacement);
-        fs.writeFileSync(file, content);
-        console.log('Fixed ' + file);
-        updated++;
-    }
+ let content = fs.readFileSync(file, 'utf8');
+ if (content.includes(target)) {
+ content = content.replaceAll(target, replacement);
+ fs.writeFileSync(file, content);
+ console.log('Fixed ' + file);
+ updated++;
+ }
 }
 console.log('Files updated: ' + updated);

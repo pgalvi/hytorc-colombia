@@ -7,24 +7,24 @@ const actionRegex = /<div class=\"hero-actions-mx fade-in\"[^>]*>[\s\S]*?<a href
 
 const actionMatch = html.match(actionRegex);
 if (actionMatch) {
-    console.log('Found hero actions block');
-    const newActions = '<div class="hero-actions-mx fade-in" style="transition-delay: 0.2s;">\n          <a href="contacto.html" class="btn btn-outline">Solicitar Asesoría</a>\n        </div>';
-    html = html.replace(actionRegex, newActions);
+ console.log('Found hero actions block');
+ const newActions = '<div class="hero-actions-mx fade-in" style="transition-delay: 0.2s;">\n <a href="contacto.html" class="btn btn-outline">Solicitar Asesoría</a>\n </div>';
+ html = html.replace(actionRegex, newActions);
 } else {
-    // Fallback for more flexible matching
-    html = html.replace(/<a href=\"productos\.html\" class=\"btn btn-primary\">Ver Productos<\/a>\s*/, '');
-    html = html.replace(/style=\"margin-left:8px;\"/, '');
+ // Fallback for more flexible matching
+ html = html.replace(/<a href=\"productos\.html\" class=\"btn btn-primary\">Ver Productos<\/a>\s*/, '');
+ html = html.replace(/style=\"margin-left:8px;\"/, '');
 }
 
 // 2. Remove "Ver Catálogo Completo" block
 const catalogBlockRegex = /<div class=\"text-center\" style=\"margin-top:32px;\">\s*<a href=\"productos\.html\" class=\"btn btn-dark\">Ver Catálogo Completo<\/a>\s*<\/div>/;
 
 if (html.match(catalogBlockRegex)) {
-    console.log('Found catalog buttons block');
-    html = html.replace(catalogBlockRegex, '');
+ console.log('Found catalog buttons block');
+ html = html.replace(catalogBlockRegex, '');
 } else {
-    // Fallback
-    html = html.replace(/<a href=\"productos\.html\" class=\"btn btn-dark\">Ver Catálogo Completo<\/a>/, '');
+ // Fallback
+ html = html.replace(/<a href=\"productos\.html\" class=\"btn btn-dark\">Ver Catálogo Completo<\/a>/, '');
 }
 
 fs.writeFileSync('index.html', html);

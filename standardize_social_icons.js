@@ -11,60 +11,60 @@ const youtubeSVG = `<svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 
 let totalFixed = 0;
 
 for (const file of files) {
-    let content = fs.readFileSync(file, 'utf8');
+ let content = fs.readFileSync(file, 'utf8');
 
-    // Replace the entire social-links-container block
-    // We look for the container and its content
-    const containerRegex = /<div class="social-links-container"[\s\S]*?<\/div>/g;
+ // Replace the entire social-links-container block
+ // We look for the container and its content
+ const containerRegex = /<div class="social-links-container"[\s\S]*?<\/div>/g;
 
-    let match;
-    let changed = false;
+ let match;
+ let changed = false;
 
-    // We need to preserve the specific URLs in the footer
-    // Let's find each link individually within the footer container
-    const newContent = content.replace(containerRegex, (oldContainer) => {
-        let updated = oldContainer;
+ // We need to preserve the specific URLs in the footer
+ // Let's find each link individually within the footer container
+ const newContent = content.replace(containerRegex, (oldContainer) => {
+ let updated = oldContainer;
 
-        // Facebook
-        const fbMatch = updated.match(/<a href="(https:\/\/www\.facebook\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
-        if (fbMatch) {
-            updated = updated.replace(fbMatch[0], `<a href="${fbMatch[1]}" target="_blank" class="h-social-link" aria-label="Facebook">${facebookSVG}</a>`);
-        }
+ // Facebook
+ const fbMatch = updated.match(/<a href="(https:\/\/www\.facebook\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
+ if (fbMatch) {
+ updated = updated.replace(fbMatch[0], `<a href="${fbMatch[1]}" target="_blank" class="h-social-link" aria-label="Facebook">${facebookSVG}</a>`);
+ }
 
-        // Instagram
-        const igMatch = updated.match(/<a href="(https:\/\/www\.instagram\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
-        if (igMatch) {
-            updated = updated.replace(igMatch[0], `<a href="${igMatch[1]}" target="_blank" class="h-social-link" aria-label="Instagram">${instagramSVG}</a>`);
-        }
+ // Instagram
+ const igMatch = updated.match(/<a href="(https:\/\/www\.instagram\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
+ if (igMatch) {
+ updated = updated.replace(igMatch[0], `<a href="${igMatch[1]}" target="_blank" class="h-social-link" aria-label="Instagram">${instagramSVG}</a>`);
+ }
 
-        // LinkedIn
-        const liMatch = updated.match(/<a href="(https:\/\/www\.linkedin\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
-        if (liMatch) {
-            updated = updated.replace(liMatch[0], `<a href="${liMatch[1]}" target="_blank" class="h-social-link" aria-label="LinkedIn">${linkedinSVG}</a>`);
-        }
+ // LinkedIn
+ const liMatch = updated.match(/<a href="(https:\/\/www\.linkedin\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
+ if (liMatch) {
+ updated = updated.replace(liMatch[0], `<a href="${liMatch[1]}" target="_blank" class="h-social-link" aria-label="LinkedIn">${linkedinSVG}</a>`);
+ }
 
-        // YouTube
-        const ytMatch = updated.match(/<a href="(https:\/\/www\.youtube\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
-        if (ytMatch) {
-            updated = updated.replace(ytMatch[0], `<a href="${ytMatch[1]}" target="_blank" class="h-social-link" aria-label="YouTube">${youtubeSVG}</a>`);
-        }
+ // YouTube
+ const ytMatch = updated.match(/<a href="(https:\/\/www\.youtube\.com\/[^"]+)"[^>]*>[\s\S]*?<img[^>]*>[\s\S]*?<\/a>/);
+ if (ytMatch) {
+ updated = updated.replace(ytMatch[0], `<a href="${ytMatch[1]}" target="_blank" class="h-social-link" aria-label="YouTube">${youtubeSVG}</a>`);
+ }
 
-        if (updated !== oldContainer) {
-            changed = true;
-            // Ensure container has horizontal flex styling if not present
-            if (!updated.includes('display:flex')) {
-                updated = updated.replace('<div class="social-links-container"', '<div class="social-links-container" style="display:flex; justify-content:center; gap:16px; margin-top:15px;"');
-            }
-            return updated;
-        }
-        return oldContainer;
-    });
+ if (updated !== oldContainer) {
+ changed = true;
+ // Ensure container has horizontal flex styling if not present
+ if (!updated.includes('display:flex')) {
+ updated = updated.replace('<div class="social-links-container"', '<div class="social-links-container" style="display:flex; justify-content:center; gap:16px; margin-top:15px;"');
+ }
+ return updated;
+ }
+ return oldContainer;
+ });
 
-    if (changed) {
-        fs.writeFileSync(file, newContent);
-        console.log(`Updated social icons in ${file}`);
-        totalFixed++;
-    }
+ if (changed) {
+ fs.writeFileSync(file, newContent);
+ console.log(`Updated social icons in ${file}`);
+ totalFixed++;
+ }
 }
 
 console.log(`Total files updated: ${totalFixed}`);

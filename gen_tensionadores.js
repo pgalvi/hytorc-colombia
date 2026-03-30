@@ -28,12 +28,12 @@ productosContent = productosContent.replace(/<img[^>]+class="img-fluid p-4"[^>]*
 
 const mainContent = `
 <body>
-  ${headerContent}
-  <main class="page-content">
-  ${bannerContent}
-  ${productosContent}
-  </main>
-  ${footerContent}
+ ${headerContent}
+ <main class="page-content">
+ ${bannerContent}
+ ${productosContent}
+ </main>
+ ${footerContent}
 `;
 
 fs.writeFileSync('productos_tensionadores_bombas.html', headContent + '\\n' + mainContent, 'utf8');
