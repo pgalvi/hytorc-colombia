@@ -3251,7 +3251,7 @@ button {
 
 .banner-productos {
  background: url('../assets/dim-background-black.png') center/cover fixed;
- padding: 160px 0 80px;
+ padding: 80px 0 40px;
  position: relative;
  overflow: hidden;
 }

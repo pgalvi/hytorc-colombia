@@ -512,7 +512,7 @@ body {
 /* PRODUCTOS ------------------------------------------- */
 .banner-productos {
 	background: url('../img/var/dim-background-black.png') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 }
 
 .banner-productos h1 {
@@ -913,7 +913,7 @@ body {
 /* BOMBAS ---------------------------------------- */
 .banner-bombas {
 	background: url('../img/productos/bombas/Copia\ de\ pumps.jpg') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 	position: relative;
 }
 
@@ -943,7 +943,7 @@ body {
 /* TENSIONADORES ---------------------------------------- */
 .banner-tensionadores {
 	background: url('../img/productos/tensionadores/banner-tensioning.webp') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 	position: relative;
 }
 
@@ -973,7 +973,7 @@ body {
 /* SUJETADORES ---------------------------------------- */
 .banner-sujetadores {
 	background: url('../img/productos/arandelas/banner-sujetadores.webp') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 	position: relative;
 }
 
@@ -1067,7 +1067,7 @@ body {
 /* ACCESORIOS ---------------------------------------- */
 .banner-accesorios {
 	background: url('../img/productos/accesorios/accessories-banner.png') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 	position: relative;
 }
 
@@ -1254,7 +1254,7 @@ body {
 /* TALLER DE SERVICIO ---------------------------------------- */
 .banner-tallerServicio {
 	background: url('../img/var/banner-taller.jpg') center/cover fixed;
-	padding: 160px 0 80px;
+	padding: 80px 0 40px;
 	position: relative;
 	color: #fff;
 }
@@ -1321,7 +1321,7 @@ body {
 /* SOFTWARE ---------------------------------------- */
 .banner-software {
 	background: url('../img/servicios/software/banner.jpg') center/cover fixed;
-	padding: 160px 0 80px;
+	padding: 80px 0 40px;
 	position: relative;
 	color: #fff;
 }
@@ -1362,7 +1362,7 @@ body {
 /* CAPACITACION ---------------------------------------- */
 .banner-capacitacion {
 	background: url('../img/servicios/capacitacion/banner.jpg') center/cover fixed;
-	padding: 160px 0 80px;
+	padding: 80px 0 40px;
 	position: relative;
 	color: #fff;
 }
@@ -1527,7 +1527,7 @@ body {
 /* CALIBRACION ---------------------------------------- */
 .banner-calibracion {
 	background: url('../img/var/banner-calibracion.jpg') center/cover fixed;
-	padding: 160px 0 80px;
+	padding: 80px 0 40px;
 	position: relative;
 	color: #fff;
 }
@@ -1887,7 +1887,7 @@ body {
 /* UBICACION ---------------------------------------- */
 .banner-ubica-bolsa {
 	background: url('../img/var/dim-background-black.png') center/cover fixed;
-	padding: 200px 0 80px;
+	padding: 100px 0 40px;
 }
 
 .banner-ubica-bolsa h1 {
@@ -2377,7 +2377,7 @@ body {
 	/* UBICACION ---------------------------------------- */
 	.banner-ubica-bolsa {
 		background: url('../img/var/dim-background-black.png') center/cover fixed;
-		padding: 160px 0 80px;
+		padding: 80px 0 40px;
 	}
 
 	/* UBICACION ---------------------------------------- */
