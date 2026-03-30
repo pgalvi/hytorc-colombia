@@ -583,9 +583,20 @@
  </div>
  </section>
 
- <!-- FULL IMAGE -->
- <section class="cal-fullimg">
+   <!-- FULL IMAGE -->
+ <section class="cal-fullimg" style="position: relative; width: 100%; overflow: hidden;">
+ <!-- Base image (shows the middle photo and the white separators perfectly preserving the aspect ratio) -->
  <img src="assets/Captura de pantalla 2026-03-04 140508.png" alt="Calibración" style="width:100%; display:block;" loading="lazy" decoding="async">
+ 
+ <!-- Left Replacement: RR -->
+ <div style="position: absolute; top: 0; left: 0; width: 33.70%; height: 100%; clip-path: polygon(0 0, 100% 0, 89.85% 100%, 0 100%); overflow: hidden;">
+    <img src="assets/RR.png" alt="RR" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+ </div>
+ 
+ <!-- Right Replacement: Sin título (28) -->
+ <div style="position: absolute; top: 0; right: 0; width: 34.05%; height: 100%; clip-path: polygon(9.86% 0, 100% 0, 100% 100%, 0 100%); overflow: hidden;">
+    <img src="assets/Sin título (28).png" alt="Vehiculo" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+ </div>
  </section>
 
  <!-- SERVICIOS -->
