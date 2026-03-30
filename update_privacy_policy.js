@@ -16,13 +16,13 @@ for (const file of htmlFiles) {
  // Replace anything that looks like <a href="...">Política de Privacidad</a>
  content = content.replace(
  /<a\s+[^>]*href=\"([^\"]*)\"[^>]*>Política de Privacidad<\/a>/gi,
- '<a href=\"https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf\" target=\"_blank\" class=\"linkFinal\">Política de Privacidad</a>'
+ '<a href=\"assets/SHC-PO-DIR-03%20POLITICA%20DE%20CONFIDENCIALIDAD%20V3.pdf#toolbar=0\" target=\"_blank\" class=\"linkFinal\">Política de Privacidad</a>'
  );
 
  // Also look for POLÍTICA DE PRIVACIDAD in upper case
  content = content.replace(
  /<a\s+[^>]*href=\"([^\"]*)\"[^>]*>POLÍTICA DE PRIVACIDAD<\/a>/gi,
- '<a href=\"https://www.hytorc.com.mx/aviso-privacidad-hytorc.pdf\" target=\"_blank\" class=\"btn-outlineNosotros\">POLÍTICA DE PRIVACIDAD</a>'
+ '<a href=\"assets/SHC-PO-DIR-03%20POLITICA%20DE%20CONFIDENCIALIDAD%20V3.pdf#toolbar=0\" target=\"_blank\" class=\"btn-outlineNosotros\">POLÍTICA DE PRIVACIDAD</a>'
  );
 
  if (content !== originalContent) {
