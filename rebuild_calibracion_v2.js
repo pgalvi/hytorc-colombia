@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const dir = 'C:\\Users\\EIADMIN\\.gemini\\antigravity\\scratch\\hytorc-colombia';
+const dir = __dirname;
 
 // Read the WORKING taller-servicios.html as template
 const template = fs.readFileSync(path.join(dir, 'taller-servicios.html'), 'utf8');
@@ -14,11 +14,18 @@ const lines = template.split('\n');
 // MAIN start: line 174 (index 173) — we replace everything from here
 // FOOTER: lines 376-443 (index 375-442) — keep exactly as is
 
-// Extract the header HTML (from <body> through </header>) 
-const headerBlock = lines.slice(20, 171).join('\n'); // Lines 21-171
+// Extract the header HTML dynamically (from <body> through </header>)
+let bodyIndex = lines.findIndex(line => line.includes('<body>'));
+if (bodyIndex === -1) bodyIndex = 123;
+let headerEndIndex = lines.findIndex(line => line.includes('</header>'));
+if (headerEndIndex === -1) headerEndIndex = 306;
+const headerBlock = lines.slice(bodyIndex, headerEndIndex + 1).join('\n');
 
-// Extract the footer HTML (from </main> through </html>)
-const footerBlock = lines.slice(375).join('\n'); // Lines 376 onwards
+// Extract the footer HTML dynamically (from wrapFooter/FOOTER through </html>)
+let footerIndex = lines.findIndex(line => line.includes('FOOTER') && line.includes('?.??.'));
+if (footerIndex === -1) footerIndex = lines.findIndex(line => line.includes('wrapFooter'));
+if (footerIndex === -1) footerIndex = 500;
+const footerBlock = lines.slice(footerIndex).join('\n');
 
 const calibracionStyles = `
  <style>
@@ -139,18 +146,18 @@ const calibracionStyles = `
  </style>`;
 
 const calibracionContent = `
- <!-- .......... MAIN .......... -->
- <main class="page-content cal-page">
+<main class="page-content cal-page">
 
  <!-- BANNER -->
  <section class="cal-banner">
- <div class="cal-section" style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
+ <div class="cal-section"
+ style="display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:20px;">
  <div>
  <h1>LABORATORIO DE CALIBRACIÓN</h1>
  <h2>Tu Aliado en Calibración de Herramientas Hytorc</h2>
  </div>
  <div>
- <img src="assets/LogoCoisa.png" alt="COISA" style="max-height:80px; width:auto;">
+ 
  </div>
  </div>
  </section>
@@ -160,60 +167,79 @@ const calibracionContent = `
  <div class="cal-section">
  <div class="cal-lab">
  <div class="cal-lab-text">
- <h2>Laboratorio de Calibración</h2>
+ <h2 class="tit-LineRedLeft">Laboratorio de Calibración</h2>
  <p>
- El laboratorio de calibración forma parte del grupo de trabajo de HYTORC, y ofrece servicios de calibración en las magnitudes de par torsional y presión relativa, contamos con:
+ El laboratorio de calibración forma parte del grupo de trabajo de HYTORC, y ofrece servicios de
+ calibración en las magnitudes de par torsional y presión relativa, contamos con:
  </p>
-  <div class="cal-features" style="grid-template-columns: 1fr;">
+ <div class="cal-features" style="grid-template-columns: 1fr;">
   <div class="cal-feature">
   En SOLUCIONES HYTORC COLOMBIA SAS contamos Acreditación ONAC, vigente a la fecha, con código de acreditación 19-LAC-008 bajo la norma ISO/IEC 17025:2017”.
   <br><br>
-  <a href="assets/8. ISO17025 19-LAC-008 Certificado (1).pdf#toolbar=0" target="_blank" class="cal-btn">ACREDITACIONES</a>
+  <a href="assets/8. ISO17025 19-LAC-008 Certificado (1).pdf#toolbar=0"
+  target="_blank" class="cal-btn">ACREDITACIONES</a>
   </div>
   </div>
-  <div style="margin-top: 25px; display: flex; align-items: center;">
+  <div style="margin-top: 25px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
    <img src="assets/1.jpeg" alt="ONAC Acreditado" style="max-height: 80px; width: auto; border-radius: 4px;">
+   <img src="assets/2.png" alt="Acreditación 2" style="max-height: 80px; width: auto; border-radius: 4px;">
+   <img src="assets/hytorc-black-logo.png" alt="HYTORC Logo" style="max-height: 80px; width: auto; border-radius: 4px;">
   </div>
  </div>
  <div class="cal-lab-img">
- <img src="assets/Captura de pantalla 2026-03-04 140529.png" alt="Laboratorio de Calibración">
+ <img src="assets/RR.png" alt="Laboratorio de Calibración" loading="lazy" decoding="async">
  </div>
  </div>
  </div>
  </section>
 
- <!-- RUTA MOVIL -->
+ <!-- SERVICIOS DE CALIBRACIÓN EN SITIO -->
  <section class="cal-ruta">
  <div class="cal-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:40px;">
  <div class="cal-ruta-text">
- <h2>RUTA MÓVIL</h2>
+ <h2 class="tit-LineRedLeft">SERVICIOS DE CALIBRACIÓN EN SITIO</h2>
  <p>
- Los servicios de mantenimiento y calibración en sitio, han sido completamente diseñados para incluir la más reciente tecnología de calibración móvil y mano de obra con experiencia en un ambiente controlado, con la capacidad de atender herramientas hidráulicas y accesorios a fin de 250 lbf.ft hasta 20 000 lbf.ft.
+ Los servicios de mantenimiento y calibración en sitio, han sido completamente diseñados para incluir la más
+ reciente tecnología de calibración móvil y mano de obra con experiencia en un ambiente controlado, con la
+ capacidad de atender herramientas hidráulicas y accesorios a fin de 250 lbf.ft hasta 20 000 lbf.ft.
  </p>
  </div>
  <div class="cal-ruta-img">
- <img src="assets/Captura de pantalla 2026-03-04 140500.png" alt="Ruta Móvil">
+ <video src="assets/VIDEO 02.mp4" autoplay loop muted playsinline title="Servicios de calibración en sitio" style="width: 100%; height: auto; border-radius: 6px;"></video>
  </div>
  </div>
  </section>
 
- <!-- FULL IMAGE -->
- <section class="cal-fullimg">
- <img src="assets/Captura de pantalla 2026-03-04 140508.png" alt="Calibración" style="width:100%; display:block;">
+   <!-- FULL IMAGE -->
+ <section class="cal-fullimg" style="position: relative; width: 100%; overflow: hidden;">
+ <!-- Base image (shows the middle photo and the white separators perfectly preserving the aspect ratio) -->
+ <img src="assets/Captura de pantalla 2026-03-04 140508.png" alt="Calibración" style="width:100%; display:block;" loading="lazy" decoding="async">
+ 
+ <!-- Left Replacement: RR -->
+ <div style="position: absolute; top: 0; left: 0; width: 33.70%; height: 100%; clip-path: polygon(0 0, 100% 0, 89.85% 100%, 0 100%); overflow: hidden;">
+    <img src="assets/RR.png" alt="RR" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+ </div>
+ 
+ <!-- Right Replacement: Sin título (28) -->
+ <div style="position: absolute; top: 0; right: 0; width: 34.05%; height: 100%; clip-path: polygon(9.86% 0, 100% 0, 100% 100%, 0 100%); overflow: hidden;">
+    <img src="assets/Sin título (28).png" alt="Vehiculo" style="width: 100%; height: 100%; object-fit: cover; object-position: center;">
+ </div>
  </section>
 
  <!-- SERVICIOS -->
  <section class="cal-servicios">
  <div class="cal-section">
- <h2>SERVICIOS</h2>
+ <h2 class="tit-LineRedLeft">SERVICIOS</h2>
  <p>
- Los servicios de calibración se llevan a cabo de acuerdo con métodos y procedimientos internos basados en normas nacionales e internacionales. Contamos con personal calificado en las magnitudes de presión y par torsional, con el fin de satisfacer las necesidades de nuestros clientes.
+ Los servicios de calibración se llevan a cabo de acuerdo con métodos y procedimientos internos basados en
+ normas nacionales e internacionales. Contamos con personal calificado en las magnitudes de presión y par
+ torsional, con el fin de satisfacer las necesidades de nuestros clientes.
  </p>
 
  <div class="cal-serv-grid">
  <div class="cal-serv-col">
- <img src="assets/Captura de pantalla 2026-03-04 140522.png" alt="Par Torsional">
- <h5>Magnitud: Par Torsional</h5>
+ <img src="assets/Captura de pantalla 2026-03-04 140522.png" alt="Par Torsional" loading="lazy" decoding="async">
+ <h5 class="tit-LineRedLeft">Magnitud: Par Torsional</h5>
  <ul>
  <li>Torquímetros hidráulicos.</li>
  <li>Herramientas rotativas (neumáticas y eléctricas).</li>
@@ -222,8 +248,8 @@ const calibracionContent = `
  </ul>
  </div>
  <div class="cal-serv-col">
- <img src="assets/Captura de pantalla 2026-03-04 140516.png" alt="Presión Relativa">
- <h5>Magnitud: presión relativa</h5>
+ <img src="assets/Captura de pantalla 2026-03-04 140516.png" alt="Presión Relativa" loading="lazy" decoding="async">
+ <h5 class="tit-LineRedLeft">Magnitud: presión relativa</h5>
  <ul>
  <li>Calibración de manómetros secundarios de presión.</li>
  <li>Medición de dinamómetros hidráulicos (Ofertado solo con Trazabilidad Metrológica).</li>
@@ -235,32 +261,64 @@ const calibracionContent = `
 
  <!-- TABLES -->
  <div class="cal-tables">
- <h3>PAR TORSIONAL</h3>
- <p>Acreditación ante EMA en Par Torsional No. PT-10. Para mayor información visitar www.ema.org.mx</p>
+ <h3 class="tit-LineRedLeft" style="font-size: 22px;">PAR TORSIONAL</h3>
+ <p>Acreditación ante ONAC en Par Torsional 19-LAC-008. Para mayor información visitar www.onac.org.co</p>
  <div class="cal-table">
  <table>
- <tr><th>Instrumentos que calibramos</th><th>Intervalo de medida</th></tr>
- <tr><td>Torquímetros hidráulicos de la marca Hytorc</td><td>50 lbf.ft a 25 000 lbf.ft</td></tr>
- <tr><td>Torquímetros hidráulicos de la marca Hytorc (Servicio en Sitio)</td><td>185 lbf.ft a 20 000 lbf.ft</td></tr>
- <tr><td>Torquímetros neumáticos y eléctricos de la marca Hytorc</td><td>50 lbf.ft a 7 375 lbf.ft</td></tr>
- <tr><td>Torquímetros neumáticos y eléctricos de la marca Hytorc (Servicio en Sitio)</td><td>185 lbf.ft a 7 375 lbf.ft</td></tr>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td>Torquímetros hidráulicos de la marca Hytorc</td>
+ <td>50 lbf.ft a 25 000 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros hidráulicos de la marca Hytorc (Servicio en Sitio)</td>
+ <td>185 lbf.ft a 20 000 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros neumáticos y eléctricos de la marca Hytorc</td>
+ <td>50 lbf.ft a 7 375 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros neumáticos y eléctricos de la marca Hytorc (Servicio en Sitio)</td>
+ <td>185 lbf.ft a 7 375 lbf.ft</td>
+ </tr>
  </table>
  </div>
  <div class="cal-table">
  <table>
- <tr><th>Instrumentos que calibramos</th><th>Intervalo de medida</th></tr>
- <tr><td rowspan="3"><br><strong>Torquímetros Manuales</strong></td><td>2 lbf.ft a 20 lbf.ft</td></tr>
- <tr><td>20 lbf.ft a 200 lbf.ft</td></tr>
- <tr><td>200 lbf.ft a 2000 lbf.ft</td></tr>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td rowspan="3"><br><strong>Torquímetros Manuales</strong></td>
+ <td>2 lbf.ft a 20 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>20 lbf.ft a 200 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>200 lbf.ft a 2000 lbf.ft</td>
+ </tr>
  </table>
  </div>
 
- <h3>PRESIÓN RELATIVA</h3>
- <p>Acreditación ante EMA en Presión Relativa No. PT-144. Para mayor información visitar www.ema.org.mx</p>
+ <h3 class="tit-LineRedLeft" style="font-size: 22px;">PRESIÓN RELATIVA</h3>
+ <p>Acreditación ante ONAC en Presión Relativa No. PT-144. Para mayor información visitar www.onac.org.co</p>
  <div class="cal-table">
  <table>
- <tr><th>Instrumentos que calibramos</th><th>Intervalo de medida</th></tr>
- <tr><td>Manómetros Secundarios de Presión Manómetros de Presión con Elemento Elástico Sensible, Manómetros Digitales y/o Graficadores de Presión, Manómetros de Proceso, etc.</td><td>1.5 psi a 29 700 psi</td></tr>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td>Manómetros Secundarios de Presión Manómetros de Presión con Elemento Elástico Sensible, Manómetros
+ Digitales y/o Graficadores de Presión, Manómetros de Proceso, etc.</td>
+ <td>1.5 psi a 29 700 psi</td>
+ </tr>
  </table>
  </div>
  </div>
@@ -269,10 +327,12 @@ const calibracionContent = `
 
  <!-- CONTACTANOS -->
  <section class="cal-contact">
- <h2>CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
+ <h2 style="text-align: center;">CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
  </section>
 
- </main>`;
+ </main>
+ </main>
+`;
 
 // Build the complete file
 const headSection = `<!DOCTYPE html>
@@ -282,11 +342,18 @@ const headSection = `<!DOCTYPE html>
  <meta charset="UTF-8" />
  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
  <title>Laboratorio Calibración | HYTORC Colombia</title>
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon-192x192.png">
+ <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+ <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+ <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48x48.png">
+ <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192x192.png">
+ <meta name="theme-color" content="#dc143c">
  <meta name="description"
  content="Laboratorio de calibración HYTORC Colombia. Calibración de manómetros, torquímetros y equipos de medición." />
  <meta name="robots" content="index, follow" />
  <link rel="canonical" href="https://www.hytorc.com.co/calibracion.html" />
  <link rel="stylesheet" href="css/styles.css" />
+ <link rel="stylesheet" href="css/mobile-fixes.css" />
  <!-- Google Font -->
  <link rel="preconnect" href="https://fonts.googleapis.com" />
  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
