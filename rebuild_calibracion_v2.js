@@ -171,6 +171,9 @@ const calibracionContent = `
   <a href="assets/8. ISO17025 19-LAC-008 Certificado (1).pdf#toolbar=0" target="_blank" class="cal-btn">ACREDITACIONES</a>
   </div>
   </div>
+  <div style="margin-top: 25px; display: flex; align-items: center;">
+   <img src="assets/1.jpeg" alt="ONAC Acreditado" style="max-height: 80px; width: auto; border-radius: 4px;">
+  </div>
  </div>
  <div class="cal-lab-img">
  <img src="assets/Captura de pantalla 2026-03-04 140529.png" alt="Laboratorio de Calibración">
