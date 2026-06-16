@@ -282,12 +282,30 @@ const calibracionContent = `
   </div>
  </section>
 
+  <!-- SERVICIOS EN SITIO FOTO -->
+  <section style="padding: 60px 0; background: #fff;">
+  <div class="cal-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:50px;">
+  <div style="flex: 1 1 420px;">
+  <h2 class="tit-LineRedLeft">SERVICIOS DE CALIBRACION EN SITIO<br><span style="font-size:0.8em; font-weight:400;">(Ofertados solo por Trazabilidad Metrológica).</span></h2>
+  <p style="font-size:14px; line-height:1.8; color:#555; margin-top:20px;">
+  Nuestros servicios de calibración pueden ser prestados en sitio, han sido completamente diseñados para
+  incluir la más reciente tecnología de calibración móvil y mano de obra con experiencia en un ambiente
+  controlado, con la capacidad de atender herramientas hidráulicas y accesorios para mayor informacion
+  por favor contactarse con nosotros.
+  </p>
+  </div>
+  <div style="flex: 1 1 380px;">
+  <img src="assets/3.png" alt="Servicios de Calibración en Sitio" loading="lazy" decoding="async"
+  style="width:100%; border-radius:8px; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
+  </div>
+  </div>
+  </section>
+
  <!-- CONTACTANOS -->
  <section class="cal-contact">
  <h2 style="text-align: center;">CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
  </section>
 
- </main>
  </main>
 `;
 
