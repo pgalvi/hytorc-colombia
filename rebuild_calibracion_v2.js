@@ -287,42 +287,8 @@ const calibracionContent = `
  </tr>
  </table>
  </div>
- <div class="cal-table">
- <table>
- <tr>
- <th>Instrumentos que calibramos</th>
- <th>Intervalo de medida</th>
- </tr>
- <tr>
- <td rowspan="3"><br><strong>Torquímetros Manuales</strong></td>
- <td>2 lbf.ft a 20 lbf.ft</td>
- </tr>
- <tr>
- <td>20 lbf.ft a 200 lbf.ft</td>
- </tr>
- <tr>
- <td>200 lbf.ft a 2000 lbf.ft</td>
- </tr>
- </table>
- </div>
-
- <h3 class="tit-LineRedLeft" style="font-size: 22px;">PRESIÓN RELATIVA</h3>
- <p>Acreditación ante ONAC en Presión Relativa No. PT-144. Para mayor información visitar www.onac.org.co</p>
- <div class="cal-table">
- <table>
- <tr>
- <th>Instrumentos que calibramos</th>
- <th>Intervalo de medida</th>
- </tr>
- <tr>
- <td>Manómetros Secundarios de Presión Manómetros de Presión con Elemento Elástico Sensible, Manómetros
- Digitales y/o Graficadores de Presión, Manómetros de Proceso, etc.</td>
- <td>1.5 psi a 29 700 psi</td>
- </tr>
- </table>
- </div>
- </div>
- </div>
+  </div>
+  </div>
  </section>
 
  <!-- CONTACTANOS -->
