@@ -111,30 +111,12 @@ const calibracionStyles = `
  .cal-serv-col ul { padding-left: 20px; color: #555; }
  .cal-serv-col li { margin-bottom: 6px; font-size: 14px; }
 
- /* Logos de acreditación */
- .cal-logos-row {
- display: flex;
- align-items: center;
- gap: 20px;
- flex-wrap: wrap;
- margin-top: 25px;
- padding: 16px 0;
- border-top: 1px solid #e0e0e0;
- }
- .cal-logos-row img {
- max-height: 80px;
- width: auto;
- border-radius: 4px;
- object-fit: contain;
- flex-shrink: 0;
- }
-
  /* Tables */
- .cal-tables { margin-top: 40px; padding-bottom: 40px; }
+ .cal-tables { margin-top: 40px; }
  .cal-tables h3 { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 5px; }
  .cal-tables p { font-size: 14px; color: #555; margin-bottom: 15px; }
- .cal-table { overflow-x: auto; margin-bottom: 30px; -webkit-overflow-scrolling: touch; }
- .cal-table table { width: 100%; border-collapse: collapse; min-width: 400px; }
+ .cal-table { overflow-x: auto; margin-bottom: 30px; }
+ .cal-table table { width: 100%; border-collapse: collapse; }
  .cal-table th {
  background: #666; color: #fff; font-weight: 700;
  padding: 12px 15px; font-size: 14px; border: 1px solid #dee2e6; text-align: left;
@@ -156,15 +138,10 @@ const calibracionStyles = `
  .cal-banner { padding: 100px 0 50px; }
  .cal-banner h1 { font-size: 36px; }
  .cal-features { grid-template-columns: 1fr; }
- .cal-logos-row { gap: 14px; }
- .cal-logos-row img { max-height: 60px; }
  }
  @media (max-width: 575px) {
  .cal-banner h1 { font-size: 28px; }
  .cal-banner h2 { font-size: 16px; }
- .cal-logos-row { gap: 10px; }
- .cal-logos-row img { max-height: 48px; }
- .cal-table td, .cal-table th { padding: 9px 10px; font-size: 13px; }
  }
  </style>`;
 
@@ -179,10 +156,13 @@ const calibracionContent = `
  <h1>LABORATORIO DE CALIBRACIÓN</h1>
  <h2>Tu Aliado en Calibración de Herramientas Hytorc</h2>
  </div>
+ <div>
+ 
+ </div>
  </div>
  </section>
 
- <!-- LABORATORIO (con logos + tablas inmediatamente después) -->
+ <!-- LABORATORIO -->
  <section>
  <div class="cal-section">
  <div class="cal-lab">
@@ -200,82 +180,16 @@ const calibracionContent = `
   target="_blank" class="cal-btn">ACREDITACIONES</a>
   </div>
   </div>
-  <!-- LOGOS DE ACREDITACIÓN -->
-  <div class="cal-logos-row">
-   <img src="assets/1.jpeg" alt="ONAC Acreditado">
-   <img src="assets/2.png" alt="Acreditación 2">
-   <img src="assets/hytorc-black-logo.png" alt="HYTORC Logo">
+  <div style="margin-top: 25px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;">
+   <img src="assets/1.jpeg" alt="ONAC Acreditado" style="max-height: 80px; width: auto; border-radius: 4px;">
+   <img src="assets/2.png" alt="Acreditación 2" style="max-height: 80px; width: auto; border-radius: 4px;">
+   <img src="assets/hytorc-black-logo.png" alt="HYTORC Logo" style="max-height: 80px; width: auto; border-radius: 4px;">
   </div>
  </div>
  <div class="cal-lab-img">
  <img src="assets/RR.png" alt="Laboratorio de Calibración" loading="lazy" decoding="async">
  </div>
  </div>
-
- <!-- TABLAS INMEDIATAMENTE BAJO LAS IMÁGENES -->
- <div class="cal-tables">
-  <h3 class="tit-LineRedLeft" style="font-size: 22px;">PAR TORSIONAL</h3>
-  <p>Acreditación ante ONAC en Par Torsional 19-LAC-008. Para mayor información visitar www.onac.org.co</p>
-  <div class="cal-table">
-  <table>
-  <tr>
-  <th>Instrumentos que calibramos</th>
-  <th>Intervalo de medida</th>
-  </tr>
-  <tr>
-  <td>Torquímetros hidráulicos de la marca Hytorc</td>
-  <td>50 lbf.ft a 25 000 lbf.ft</td>
-  </tr>
-  <tr>
-  <td>Torquímetros hidráulicos de la marca Hytorc (Servicio en Sitio)</td>
-  <td>185 lbf.ft a 20 000 lbf.ft</td>
-  </tr>
-  <tr>
-  <td>Torquímetros neumáticos y eléctricos de la marca Hytorc</td>
-  <td>50 lbf.ft a 7 375 lbf.ft</td>
-  </tr>
-  <tr>
-  <td>Torquímetros neumáticos y eléctricos de la marca Hytorc (Servicio en Sitio)</td>
-  <td>185 lbf.ft a 7 375 lbf.ft</td>
-  </tr>
-  </table>
-  </div>
-  <div class="cal-table">
-  <table>
-  <tr>
-  <th>Instrumentos que calibramos</th>
-  <th>Intervalo de medida</th>
-  </tr>
-  <tr>
-  <td rowspan="3"><br><strong>Torquímetros Manuales</strong></td>
-  <td>2 lbf.ft a 20 lbf.ft</td>
-  </tr>
-  <tr>
-  <td>20 lbf.ft a 200 lbf.ft</td>
-  </tr>
-  <tr>
-  <td>200 lbf.ft a 2000 lbf.ft</td>
-  </tr>
-  </table>
-  </div>
-
-  <h3 class="tit-LineRedLeft" style="font-size: 22px;">PRESIÓN RELATIVA</h3>
-  <p>Acreditación ante ONAC en Presión Relativa No. PT-144. Para mayor información visitar www.onac.org.co</p>
-  <div class="cal-table">
-  <table>
-  <tr>
-  <th>Instrumentos que calibramos</th>
-  <th>Intervalo de medida</th>
-  </tr>
-  <tr>
-  <td>Manómetros Secundarios de Presión Manómetros de Presión con Elemento Elástico Sensible, Manómetros
-  Digitales y/o Graficadores de Presión, Manómetros de Proceso, etc.</td>
-  <td>1.5 psi a 29 700 psi</td>
-  </tr>
-  </table>
-  </div>
- </div>
-
  </div>
  </section>
 
@@ -298,6 +212,7 @@ const calibracionContent = `
 
    <!-- FULL IMAGE -->
  <section class="cal-fullimg" style="position: relative; width: 100%; overflow: hidden;">
+ <!-- Base image (shows the middle photo and the white separators perfectly preserving the aspect ratio) -->
  <img src="assets/Captura de pantalla 2026-03-04 140508.png" alt="Calibración" style="width:100%; display:block;" loading="lazy" decoding="async">
  
  <!-- Left Replacement: RR -->
@@ -343,6 +258,70 @@ const calibracionContent = `
  </ul>
  </div>
  </div>
+
+ <!-- TABLES -->
+ <div class="cal-tables">
+ <h3 class="tit-LineRedLeft" style="font-size: 22px;">PAR TORSIONAL</h3>
+ <p>Acreditación ante ONAC en Par Torsional 19-LAC-008. Para mayor información visitar www.onac.org.co</p>
+ <div class="cal-table">
+ <table>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td>Torquímetros hidráulicos de la marca Hytorc</td>
+ <td>50 lbf.ft a 25 000 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros hidráulicos de la marca Hytorc (Servicio en Sitio)</td>
+ <td>185 lbf.ft a 20 000 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros neumáticos y eléctricos de la marca Hytorc</td>
+ <td>50 lbf.ft a 7 375 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>Torquímetros neumáticos y eléctricos de la marca Hytorc (Servicio en Sitio)</td>
+ <td>185 lbf.ft a 7 375 lbf.ft</td>
+ </tr>
+ </table>
+ </div>
+ <div class="cal-table">
+ <table>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td rowspan="3"><br><strong>Torquímetros Manuales</strong></td>
+ <td>2 lbf.ft a 20 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>20 lbf.ft a 200 lbf.ft</td>
+ </tr>
+ <tr>
+ <td>200 lbf.ft a 2000 lbf.ft</td>
+ </tr>
+ </table>
+ </div>
+
+ <h3 class="tit-LineRedLeft" style="font-size: 22px;">PRESIÓN RELATIVA</h3>
+ <p>Acreditación ante ONAC en Presión Relativa No. PT-144. Para mayor información visitar www.onac.org.co</p>
+ <div class="cal-table">
+ <table>
+ <tr>
+ <th>Instrumentos que calibramos</th>
+ <th>Intervalo de medida</th>
+ </tr>
+ <tr>
+ <td>Manómetros Secundarios de Presión Manómetros de Presión con Elemento Elástico Sensible, Manómetros
+ Digitales y/o Graficadores de Presión, Manómetros de Proceso, etc.</td>
+ <td>1.5 psi a 29 700 psi</td>
+ </tr>
+ </table>
+ </div>
+ </div>
  </div>
  </section>
 
@@ -351,6 +330,7 @@ const calibracionContent = `
  <h2 style="text-align: center;">CONTÁCTANOS PARA MÁS INFORMACIÓN</h2>
  </section>
 
+ </main>
  </main>
 `;
 
