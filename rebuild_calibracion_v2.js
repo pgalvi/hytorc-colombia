@@ -29,110 +29,130 @@ const footerBlock = lines.slice(footerIndex).join('\n');
 
 const calibracionStyles = `
  <style>
- /* ===== CALIBRACIÓN PAGE SCOPED STYLES ===== */
- .cal-page { font-family: 'Source Sans 3', Arial, sans-serif; }
- .cal-page .cal-section { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
+  /* ===== CALIBRACIÓN PAGE SCOPED STYLES ===== */
+  /* --- SISTEMA DE TIPOGRAFÍA UNIFICADO --- */
+  /* Base: Source Sans 3, 14px, #555, line-height 1.75  */
+  /* H2 secciones: 26px, 700, #222, uppercase         */
+  /* H5 subsecciones: 18px, 700, #333                 */
+  /* ---------------------------------------- */
+  .cal-page {
+  font-family: 'Source Sans 3', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #555;
+  }
+  .cal-page .cal-section { max-width: 1400px; margin: 0 auto; padding: 0 15px; }
 
- /* Banner */
- .cal-banner {
- background: url('assets/Captura de pantalla 2026-03-04 140516.png') no-repeat center center;
- background-size: cover;
- padding: 160px 0 80px;
- position: relative;
- }
- .cal-banner::before {
- content: '';
- position: absolute; top:0; left:0; right:0; bottom:0;
- background: rgba(0,0,0,0.5);
- z-index: 0;
- }
- .cal-banner .cal-section { position: relative; z-index: 1; }
- .cal-banner h1 {
- font-size: 54px; color: #999966; font-weight: 600;
- margin: 0 0 10px; text-transform: uppercase;
- }
- .cal-banner h2 { font-size: 20px; color: #fff; font-weight: 400; margin: 0; }
+  /* --- Todos los párrafos de contenido (unificado) --- */
+  .cal-page p {
+  font-size: 14px;
+  line-height: 1.75;
+  color: #555;
+  margin-bottom: 0;
+  }
 
- /* Laboratorio Section */
- .cal-lab {
- display: flex; flex-wrap: wrap; gap: 40px;
- padding: 60px 0;
- }
- .cal-lab-text { flex: 1 1 500px; }
- .cal-lab-img { flex: 1 1 400px; }
- .cal-lab-img img { width: 100%; border-radius: 8px; }
- .cal-lab h2 { font-size: 30px; font-weight: 600; color: #333; text-transform: uppercase; margin-bottom: 20px; }
- .cal-lab p { font-size: 15px; line-height: 1.7; color: #555; }
+  /* --- Todos los H2 de sección (unificado) --- */
+  .cal-page h2.tit-LineRedLeft {
+  font-size: 26px;
+  font-weight: 700;
+  color: #222;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  }
 
- .cal-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
- .cal-feature {
- padding: 15px 15px 15px 50px;
- position: relative;
- font-size: 14px; line-height: 1.6; color: #555;
- background: #f9f9f9; border-radius: 6px;
- }
- .cal-feature::before {
- content: '★';
- position: absolute; left: 15px; top: 15px;
- color: #d63031; font-size: 20px;
- }
- .cal-btn {
- display: inline-block;
- background: #999966; color: #fff; padding: 8px 24px;
- text-decoration: none; font-weight: 600; font-size: 13px;
- letter-spacing: 1px; margin-top: 10px; border: none;
- text-transform: uppercase; transition: background 0.3s;
- }
- .cal-btn:hover { background: #7a7a50; color: #fff; }
+  /* --- H5 de subsección (unificado) --- */
+  .cal-page h5.tit-LineRedLeft {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  }
 
- /* Ruta Movil */
- .cal-ruta {
- display: flex; flex-wrap: wrap; align-items: center; gap: 40px;
- padding: 70px 0; background: #f5f5f5;
- }
- .cal-ruta-text { flex: 1 1 400px; }
- .cal-ruta-img { flex: 1 1 400px; }
- .cal-ruta-img img { width: 100%; border-radius: 8px; }
- .cal-ruta h2 { font-size: 32px; font-weight: 600; color: #333; text-transform: uppercase; margin-bottom: 15px; }
- .cal-ruta p { font-size: 15px; line-height: 1.7; color: #555; }
+  /* Banner — conserva su diseño propio */
+  .cal-banner {
+  background: url('assets/Captura de pantalla 2026-03-04 140516.png') no-repeat center center;
+  background-size: cover;
+  padding: 160px 0 80px;
+  position: relative;
+  }
+  .cal-banner::before {
+  content: '';
+  position: absolute; top:0; left:0; right:0; bottom:0;
+  background: rgba(0,0,0,0.5);
+  z-index: 0;
+  }
+  .cal-banner .cal-section { position: relative; z-index: 1; }
+  .cal-banner h1 {
+  font-size: 54px; color: #999966; font-weight: 600;
+  margin: 0 0 10px; text-transform: uppercase;
+  }
+  .cal-banner h2 { font-size: 20px !important; color: #fff !important; font-weight: 400 !important; margin: 0 !important; text-transform: none !important; }
 
- /* Full-width image */
- .cal-fullimg { padding: 0; }
- .cal-fullimg img { width: 100%; display: block; }
+  /* Laboratorio Section */
+  .cal-lab { display: flex; flex-wrap: wrap; gap: 40px; padding: 60px 0; }
+  .cal-lab-text { flex: 1 1 500px; }
+  .cal-lab-img { flex: 1 1 400px; }
+  .cal-lab-img img { width: 100%; border-radius: 8px; }
 
- /* Servicios */
- .cal-servicios { padding: 80px 0; }
- .cal-servicios h2 { font-size: 32px; font-weight: 600; color: #333; text-transform: uppercase; margin-bottom: 15px; }
- .cal-servicios p { font-size: 15px; line-height: 1.7; color: #555; }
- .cal-serv-grid { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; }
- .cal-serv-col { flex: 1 1 400px; }
- .cal-serv-col img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
- .cal-serv-col h5 { font-size: 20px; font-weight: 600; color: #333; }
- .cal-serv-col ul { padding-left: 20px; color: #555; }
- .cal-serv-col li { margin-bottom: 6px; font-size: 14px; }
+  .cal-features { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px; }
+  .cal-feature {
+  padding: 15px 15px 15px 50px;
+  position: relative;
+  font-size: 14px; line-height: 1.75; color: #555;
+  background: #f9f9f9; border-radius: 6px;
+  }
+  .cal-feature::before {
+  content: '★';
+  position: absolute; left: 15px; top: 15px;
+  color: #d63031; font-size: 20px;
+  }
+  .cal-btn {
+  display: inline-block;
+  background: #999966; color: #fff; padding: 8px 24px;
+  text-decoration: none; font-weight: 600; font-size: 13px;
+  letter-spacing: 1px; margin-top: 10px; border: none;
+  text-transform: uppercase; transition: background 0.3s;
+  }
+  .cal-btn:hover { background: #7a7a50; color: #fff; }
 
- /* Tables */
- .cal-tables { margin-top: 40px; }
- .cal-tables h3 { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 5px; }
- .cal-tables p { font-size: 14px; color: #555; margin-bottom: 15px; }
- .cal-table { overflow-x: auto; margin-bottom: 30px; }
- .cal-table table { width: 100%; border-collapse: collapse; }
- .cal-table th {
- background: #666; color: #fff; font-weight: 700;
- padding: 12px 15px; font-size: 14px; border: 1px solid #dee2e6; text-align: left;
- }
- .cal-table td { padding: 12px 15px; font-size: 14px; border: 1px solid #dee2e6; }
- .cal-table tr:nth-child(odd) td { background: rgba(100,100,100,0.12); }
- .cal-table tr:nth-child(even) td { background: rgba(100,100,100,0.25); }
+  /* Ruta / Servicios en Sitio */
+  .cal-ruta { display: flex; flex-wrap: wrap; align-items: center; gap: 40px; padding: 70px 0; background: #f5f5f5; }
+  .cal-ruta-text { flex: 1 1 400px; }
+  .cal-ruta-img { flex: 1 1 400px; }
+  .cal-ruta-img img { width: 100%; border-radius: 8px; }
 
- /* Contactanos */
- .cal-contact {
- background: #546670; padding: 50px 0; text-align: center;
- }
- .cal-contact h2 {
- font-size: 24px; color: #fff; letter-spacing: 5px;
- font-weight: 600; text-transform: uppercase; margin: 0;
- }
+  /* Full-width image */
+  .cal-fullimg { padding: 0; }
+  .cal-fullimg img { width: 100%; display: block; }
+
+  /* Servicios */
+  .cal-servicios { padding: 80px 0; }
+  .cal-serv-grid { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 20px; }
+  .cal-serv-col { flex: 1 1 400px; }
+  .cal-serv-col img { width: 100%; border-radius: 8px; margin-bottom: 15px; }
+  .cal-serv-col ul { padding-left: 20px; color: #555; }
+  .cal-serv-col li { margin-bottom: 6px; font-size: 14px; line-height: 1.75; }
+
+  /* Tables */
+  .cal-tables { margin-top: 40px; }
+  .cal-tables h3 { font-size: 16px; font-weight: 700; color: #333; margin-bottom: 5px; }
+  .cal-tables p { font-size: 14px; color: #555; margin-bottom: 15px; }
+  .cal-table { overflow-x: auto; margin-bottom: 30px; }
+  .cal-table table { width: 100%; border-collapse: collapse; }
+  .cal-table th {
+  background: #666; color: #fff; font-weight: 700;
+  padding: 12px 15px; font-size: 14px; border: 1px solid #dee2e6; text-align: left;
+  }
+  .cal-table td { padding: 12px 15px; font-size: 14px; line-height: 1.75; border: 1px solid #dee2e6; }
+  .cal-table tr:nth-child(odd) td { background: rgba(100,100,100,0.12); }
+  .cal-table tr:nth-child(even) td { background: rgba(100,100,100,0.25); }
+
+  /* Contactanos */
+  .cal-contact { background: #546670; padding: 50px 0; text-align: center; }
+  .cal-contact h2 {
+  font-size: 24px !important; color: #fff !important; letter-spacing: 5px;
+  font-weight: 600 !important; text-transform: uppercase !important; margin: 0 !important;
+  }
 
  @media (max-width: 991px) {
  .cal-banner { padding: 100px 0 50px; }
@@ -258,7 +278,7 @@ const calibracionContent = `
 
   <!-- TABLES -->
   <div class="cal-tables">
-  <h3 class="tit-LineRedLeft" style="font-size: 22px;">ALCANCE MAGNITUD DE PAR TORSIONAL</h3>
+  <h3 class="tit-LineRedLeft">ALCANCE MAGNITUD DE PAR TORSIONAL</h3>
   <div class="cal-table">
   <table>
   <tr>
@@ -275,7 +295,7 @@ const calibracionContent = `
   </tr>
   </table>
   </div>
-  <p style="font-size:13px; color:#d63031; margin-top:6px;">
+  <p style="color:#d63031; margin-top:6px;">
   Para mayores detalles de la Acreditación ante ONAC en Par Torsional 19-LAC-008. pueden consultar / visitar www.onac.org.co
   </p>
    </div>
@@ -287,7 +307,7 @@ const calibracionContent = `
   <div class="cal-section" style="display:flex; flex-wrap:wrap; align-items:center; gap:50px;">
   <div style="flex: 1 1 420px;">
   <h2 class="tit-LineRedLeft">SERVICIOS DE CALIBRACION EN SITIO<br><span style="font-size:0.8em; font-weight:400;">(Ofertados solo por Trazabilidad Metrológica).</span></h2>
-  <p style="font-size:14px; line-height:1.8; color:#555; margin-top:20px;">
+  <p style="margin-top:20px;">
   Nuestros servicios de calibración pueden ser prestados en sitio, han sido completamente diseñados para
   incluir la más reciente tecnología de calibración móvil y mano de obra con experiencia en un ambiente
   controlado, con la capacidad de atender herramientas hidráulicas y accesorios para mayor informacion
