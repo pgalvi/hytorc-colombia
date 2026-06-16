@@ -248,7 +248,7 @@ const calibracionContent = `
  </div>
  <div class="cal-serv-col">
  <img src="assets/Captura de pantalla 2026-03-04 140516.png" alt="Presión Relativa" loading="lazy" decoding="async">
-  <h5 class="tit-LineRedLeft">MAGNITUD: PRESIÓN RELATIVA</h5>
+  <h5 class="tit-LineRedLeft">MAGNITUD: PRESIÓN RELATIVA MAGNITUD: PRESIÓN RELATIVA</h5>
   <ul>
   <li>Calibración de manómetros secundarios de presión. (Ofertado solo por Trazabilidad Metrológica).</li>
   <li>Medición de dinamómetros hidráulicos (Ofertado solo por Trazabilidad Metrológica).</li>
