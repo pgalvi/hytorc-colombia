@@ -164,25 +164,13 @@ const calibracionContent = `
  <p>
  El laboratorio de calibración forma parte del grupo de trabajo de HYTORC, y ofrece servicios de calibración en las magnitudes de par torsional y presión relativa, contamos con:
  </p>
- <div class="cal-features">
- <div class="cal-feature">
- Acreditación ante la ema a.c. en la magnitud de Par Torsional (No. De Acreditación PT-10)
- <br><br>
- <a href="#" class="cal-btn">ACREDITACIONES</a>
- </div>
- <div class="cal-feature">
- Sistema de gestión de la calidad basado en la norma NMX-EC-17025-IMNC-vigente (ISO/IEC vigente).<br>
- "Requisitos generales para la competencia de los laboratorios de ensayo y de calibración".
- </div>
- <div class="cal-feature">
- Acreditación ante la ema a.c. en la magnitud de Presión Relativa (No. De Acreditación PT-144)
- <br><br>
- <a href="#" class="cal-btn">ACREDITACIONES</a>
- </div>
- <div class="cal-feature">
- Trazabilidad Metrológica a Patrones Nacionales de Presión y Par Torsional mantenidos en el CENAM.
- </div>
- </div>
+  <div class="cal-features" style="grid-template-columns: 1fr;">
+  <div class="cal-feature">
+  En SOLUCIONES HYTORC COLOMBIA SAS contamos Acreditación ONAC, vigente a la fecha, con código de acreditación 19-LAC-008 bajo la norma ISO/IEC 17025:2017”.
+  <br><br>
+  <a href="assets/8. ISO17025 19-LAC-008 Certificado (1).pdf#toolbar=0" target="_blank" class="cal-btn">ACREDITACIONES</a>
+  </div>
+  </div>
  </div>
  <div class="cal-lab-img">
  <img src="assets/Captura de pantalla 2026-03-04 140529.png" alt="Laboratorio de Calibración">
