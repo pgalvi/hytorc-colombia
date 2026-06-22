@@ -512,7 +512,7 @@ body {
 /* PRODUCTOS ------------------------------------------- */
 .banner-productos {
 	background: url('../img/var/dim-background-black.png') center/cover fixed;
-	padding: 100px 0 40px;
+	padding: 60px 0 24px;
 }
 
 .banner-productos h1 {
