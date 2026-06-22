@@ -1311,7 +1311,7 @@ button {
  ══════════════════════════════════════════ */
 .page-hero {
  background: var(--black);
- min-height: 280px;
+ min-height: 168px;
  display: flex;
  align-items: center;
  position: relative;
@@ -2822,7 +2822,7 @@ button {
 
  /* Page hero (inner pages) */
  .page-hero {
- min-height: 180px;
+ min-height: 108px;
  }
 
  /* Google reviews */
